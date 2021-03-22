@@ -1,0 +1,264 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  letter-spacing: .4px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: whitesmoke;
+  margin: 0;
+}
+
+/*--Header Styles----------------------
+---------------------------------------*/
+header {
+  position: relative;
+  padding: 20px 15px;
+}
+
+.header-right,
+.header-left,
+.header-right a,
+.header-left a * {
+  display: inline-block;
+  text-align: center;
+}
+
+.header-right,
+.header-left {
+  height: 6vh;
+}
+
+.header-left {
+  width: 75%;
+  font-size: 1.8rem;
+}
+
+.header-left a {
+  position: relative;
+  height: 100%;
+  float: left;
+}
+
+.header-left a h1, .header-left a p {
+  margin: 0;
+}
+
+.header-left a h1 {
+  height: 100%;
+  line-height: 1;
+}
+
+.header-left a h1 small {
+  font-size: 1rem;
+}
+
+.header-right {
+  float: right;
+  width: 25%;
+}
+
+.header-right .contact {
+  float: left;
+}
+
+.nav {
+  position: absolute;
+  background: black;
+  color: white;
+  margin: 0 15px 0 20px;
+  padding: 3px 15px;
+  height: auto;
+  right: 0;
+  border: none;
+  border-radius: 4px;
+}
+
+.nav p {
+  text-align: center;
+}
+
+.nav-bars {
+  width: auto;
+  height: 4px;
+  background-color: white;
+  margin: 5px 0 0 0;
+}
+
+.contact {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.search-container {
+  height: 5vh;
+  margin-top: 5px;
+  border: 2px solid #bbb;
+}
+
+.search-container div {
+  height: 100%;
+  background-color: #eee;
+}
+
+.search-container div input,
+.search-container div button {
+  border: none;
+  height: 100%;
+  width: 100%;
+  background-color: #ddd;
+}
+
+.search-container div.search-bar {
+  width: 90%;
+  float: left;
+}
+
+.search-container div.search-btn {
+  width: 10%;
+  float: right;
+}
+
+.search-container div.search-btn button {
+  cursor: pointer;
+}
+
+/*-- Section 1 Styles --------------------
+---------------------------------------*/
+#first-section {
+  position: relative;
+  background-color: hotpink;
+  height: 80vh;
+  width: 100%;
+}
+
+#first-section img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/*-- Section 2 Styles --------------------
+---------------------------------------*/
+#second-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 50px 15px;
+}
+
+#second-section a:not(#first-block) {
+  margin-top: 30px;
+}
+
+#second-section .block {
+  background-color: white;
+  max-width: 720px;
+  min-height: 290px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#second-section .block-logo {
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: black;
+}
+
+/*-- Section 3 Styles --------------------
+---------------------------------------*/
+#third-section {
+  background-color: #333645;
+  color: white;
+  margin: 0;
+  padding: 50px 15px;
+}
+
+#third-section h2 {
+  font-weight: normal;
+  font-size: 2.25rem;
+  margin: -6px 0 28px 0;
+}
+
+#third-section p {
+  margin: 0 0 25px 0;
+}
+
+#third-section a {
+  display: inline-block;
+  height: 47px;
+  width: 30%;
+}
+
+#third-section a * {
+  display: inline-block;
+  margin: auto;
+  font-size: 1rem;
+}
+
+#third-section a button {
+  height: 100%;
+  width: 100%;
+}
+
+/*-- Section 4 Styles --------------------
+---------------------------------------*/
+#fourth-section {
+  padding: 0 15px;
+}
+
+#fourth-section .header-latest,
+#fourth-section .header-latest ul,
+#fourth-section .header-latest ul span {
+  display: inline-block;
+}
+
+#fourth-section .header-latest {
+  height: 104px;
+  width: 100%;
+}
+
+#fourth-section .header-latest ul {
+  margin: auto;
+  padding: 0;
+}
+
+#fourth-section .header-latest ul span {
+  height: 100%;
+  padding: 34px 0;
+  font-size: 20px;
+  border-bottom: 5px solid #333645;
+}
+
+#fourth-section .cards-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  padding: 50px 0;
+  width: 100%;
+}
+
+#fourth-section .cards-container .cards {
+  width: 100%;
+}
+
+#fourth-section .cards-container .cards div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=styles.css.map */
