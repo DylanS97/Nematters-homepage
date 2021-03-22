@@ -1,13 +1,10 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   letter-spacing: .4px;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   background-color: whitesmoke;
-  margin: 0;
 }
 
 /*--Header Styles----------------------
@@ -22,7 +19,6 @@ header {
 .header-right a,
 .header-left a * {
   display: inline-block;
-  text-align: center;
 }
 
 .header-right,
@@ -35,31 +31,21 @@ header {
   font-size: 1.8rem;
 }
 
-.header-left a {
-  position: relative;
-  height: 100%;
-  float: left;
-}
-
-.header-left a h1 {
+.header-left h1 {
   color: black;
   font-weight: bold;
   margin: 0;
-  height: 100%;
   line-height: 1;
 }
 
-.header-left a h1 small {
+.header-left h1 small {
   font-size: 1rem;
 }
 
 .header-right {
   float: right;
   width: 25%;
-}
-
-.header-right .contact {
-  float: left;
+  min-width: 110px;
 }
 
 .nav {
@@ -68,18 +54,12 @@ header {
   color: white;
   margin: 0 15px 0 20px;
   padding: 3px 15px;
-  height: auto;
   right: 0;
   border: none;
   border-radius: 4px;
 }
 
-.nav p {
-  text-align: center;
-}
-
 .nav-bars {
-  width: auto;
   height: 4px;
   background-color: white;
   margin: 5px 0 0 0;
@@ -128,13 +108,10 @@ header {
 ---------------------------------------*/
 #first-section {
   position: relative;
-  background-color: hotpink;
   height: 80vh;
-  width: 100%;
 }
 
 #first-section img {
-  position: absolute;
   width: 100%;
   height: 100%;
 }
@@ -149,7 +126,6 @@ header {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   background-color: whitesmoke;
-  width: 100%;
   padding: 50px 15px;
 }
 
@@ -159,8 +135,6 @@ header {
 
 #second-section .block {
   background-color: white;
-  max-width: 720px;
-  min-height: 290px;
   padding: 30px;
   text-align: center;
   font-size: .8rem;
@@ -296,7 +270,6 @@ header {
 #third-section {
   background-color: #333645;
   color: white;
-  margin: 0;
   padding: 50px 15px;
 }
 
@@ -321,7 +294,6 @@ header {
 
 #third-section a * {
   margin: auto;
-  font-size: 1rem;
 }
 
 #third-section a button {
@@ -346,7 +318,6 @@ header {
 }
 
 #fourth-section .header-latest {
-  height: 104px;
   width: 100%;
 }
 
@@ -356,7 +327,6 @@ header {
 }
 
 #fourth-section .header-latest ul span {
-  height: 100%;
   padding: 34px 0;
   font-size: 20px;
   border-bottom: 5px solid #333645;
@@ -369,7 +339,7 @@ header {
       grid-template-columns: 1fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  padding: 20px 0 50px 0;
+  padding: 0 0 50px 0;
 }
 
 #fourth-section .card-container .card {
@@ -384,7 +354,6 @@ header {
 
 #fourth-section .card-footer img {
   float: left;
-  margin: auto 0;
   margin-right: 15px;
 }
 
@@ -397,7 +366,6 @@ header {
 #fifth-section {
   background-color: #ddd;
   color: #333645;
-  margin: 0;
   padding: 50px 30px;
 }
 
@@ -425,7 +393,6 @@ header {
 
 #fifth-section a * {
   margin: auto;
-  font-size: 1rem;
 }
 
 #fifth-section a button {
@@ -435,10 +402,7 @@ header {
   border-radius: 4px;
   background: #333645;
   color: white;
-}
-
-#fifth-section label {
-  width: auto;
+  cursor: pointer;
 }
 
 #fifth-section label a {
@@ -471,17 +435,11 @@ header {
   width: 32px;
   border: 2px solid #333645;
   border-radius: 4px;
-  margin: auto 0;
   margin-right: 20px;
-  padding: 0;
 }
 
 /*-- Footer Styles --------------------
 ---------------------------------------*/
-footer > ul {
-  margin: 0;
-}
-
 footer, footer a {
   color: white;
 }
@@ -495,21 +453,6 @@ footer ul {
   list-style-type: none;
   padding: 0;
   font-size: 13px;
-}
-
-footer ul li {
-  width: 100%;
-  font-size: 13px;
-}
-
-footer ul li a {
-  width: auto;
-  height: auto;
-  text-decoration: none;
-}
-
-footer ul li a:hover {
-  text-decoration: underline;
 }
 
 footer h2 {
@@ -538,7 +481,6 @@ footer .social .grid {
 }
 
 footer .social .grid a {
-  height: 56px;
   text-align: center;
   background: #00000040;
   padding: 12px 0;
@@ -556,4 +498,7 @@ footer .social .grid #tw-social:hover {
 footer .social .grid #li-social:hover {
   background: #0077b5;
 }
+
+/*-- Media queries --------------------
+---------------------------------------*/
 /*# sourceMappingURL=styles.css.map */
