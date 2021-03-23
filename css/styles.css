@@ -1,10 +1,13 @@
+/*-- Main Styles ----------------------
+---------------------------------------*/
 * {
   letter-spacing: .4px;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: whitesmoke;
+  color: #333645;
 }
 
 /*--Header Styles----------------------
@@ -32,7 +35,7 @@ header {
 }
 
 .header-left h1 {
-  color: black;
+  color: #333645;
   font-weight: bold;
   margin: 0;
   line-height: 1;
@@ -46,29 +49,6 @@ header {
   float: right;
   width: 25%;
   min-width: 110px;
-}
-
-.nav {
-  position: absolute;
-  background: black;
-  color: white;
-  margin: 0 15px 0 20px;
-  padding: 3px 15px;
-  right: 0;
-  border: none;
-  border-radius: 4px;
-}
-
-.nav-bars {
-  height: 4px;
-  background-color: white;
-  margin: 5px 0 0 0;
-}
-
-.contact {
-  display: inline-block;
-  margin: 5px 0;
-  padding: 5px;
 }
 
 .search-container {
@@ -104,21 +84,50 @@ header {
   cursor: pointer;
 }
 
-/*-- Section 1 Styles --------------------
+/*-- Container styles -----------------
 ---------------------------------------*/
-#first-section {
-  position: relative;
+/*--- Image Slider ---*/
+#img-slider {
   height: 80vh;
 }
 
-#first-section img {
-  width: 100%;
-  height: 100%;
+#img-slider .slide-img-container {
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
-/*-- Section 2 Styles --------------------
----------------------------------------*/
-#second-section {
+#img-slider .slide-img-container .inner-slide {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: auto;
+}
+
+#img-slider .slide-img-container .inner-slide h2 {
+  font-size: 3rem;
+  margin: 0 0 25px 0;
+}
+
+#img-slider .slide-img-container .inner-slide > p {
+  margin: 0 auto 35px auto;
+}
+
+#img-slider .slide-img-container .inner-slide .web-img-btn {
+  color: white;
+  background-color: #926fb1;
+}
+
+#img-slider .slide-img {
+  width: 100vw;
+  height: 80vh;
+}
+
+/*--- Blocks ---*/
+#block-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -129,11 +138,11 @@ header {
   padding: 50px 15px;
 }
 
-#second-section a:not(#first-block) {
+#block-container a:not(#first-block) {
   margin-top: 30px;
 }
 
-#second-section .block {
+#block-container .block {
   background-color: white;
   padding: 30px;
   text-align: center;
@@ -143,7 +152,7 @@ header {
   cursor: pointer;
 }
 
-#second-section .block-bar {
+#block-container .block-bar {
   width: 28px;
   height: 3px;
   margin: auto;
@@ -151,7 +160,7 @@ header {
   background: black;
 }
 
-#second-section .block-logo {
+#block-container .block-logo {
   height: 60px;
   width: 60px;
   margin: auto;
@@ -159,180 +168,146 @@ header {
   border-radius: 50%;
 }
 
-#second-section .block h5 {
+#block-container .block h5 {
   margin: 0 0 11px 0;
 }
 
-#second-section .block button {
-  color: white;
-  height: 47px;
-  width: 130px;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-#second-section .block:hover {
+#block-container .block:hover {
   color: white;
 }
 
-#second-section .block:hover > .logo, #second-section .block:hover button {
+#block-container .block:hover > .logo, #block-container .block:hover button {
   background: white;
 }
 
-#second-section .bespoke > .logo, #second-section .bespoke button {
+#block-container .bespoke > .logo, #block-container .bespoke button {
   background: #67809f;
 }
 
-#second-section .bespoke:hover {
+#block-container .bespoke:hover {
   background: #67809f;
 }
 
-#second-section .bespoke:hover button {
+#block-container .bespoke:hover button {
   color: #67809f;
 }
 
-#second-section .support > .logo, #second-section .support button {
+#block-container .support > .logo, #block-container .support button {
   background: #4183d7;
 }
 
-#second-section .support:hover {
+#block-container .support:hover {
   background: #4183d7;
 }
 
-#second-section .support:hover button {
+#block-container .support:hover button {
   color: #4183d7;
 }
 
-#second-section .marketing > .logo, #second-section .marketing button {
+#block-container .marketing > .logo, #block-container .marketing button {
   background: #2ecc71;
 }
 
-#second-section .marketing:hover {
+#block-container .marketing:hover {
   background: #2ecc71;
 }
 
-#second-section .marketing:hover button {
+#block-container .marketing:hover button {
   color: #2ecc71;
 }
 
-#second-section .telecoms > .logo, #second-section .telecoms button {
+#block-container .telecoms > .logo, #block-container .telecoms button {
   background: #d64541;
 }
 
-#second-section .telecoms:hover {
+#block-container .telecoms:hover {
   background: #d64541;
 }
 
-#second-section .telecoms:hover button {
+#block-container .telecoms:hover button {
   color: #d64541;
 }
 
-#second-section .web > .logo, #second-section .web button {
+#block-container .web > .logo, #block-container .web button {
   background: #926fb1;
 }
 
-#second-section .web:hover {
+#block-container .web:hover {
   background: #926fb1;
 }
 
-#second-section .web:hover button {
+#block-container .web:hover button {
   color: #926fb1;
 }
 
-#second-section .cyber > .logo, #second-section .cyber button {
+#block-container .cyber > .logo, #block-container .cyber button {
   background: #f62459;
 }
 
-#second-section .cyber:hover {
+#block-container .cyber:hover {
   background: #f62459;
 }
 
-#second-section .cyber:hover button {
+#block-container .cyber:hover button {
   color: #f62459;
 }
 
-#second-section .training > .logo, #second-section .training button {
+#block-container .training > .logo, #block-container .training button {
   background: #926fb1;
 }
 
-#second-section .training:hover {
+#block-container .training:hover {
   background: #926fb1;
 }
 
-#second-section .training:hover button {
+#block-container .training:hover button {
   color: #926fb1;
 }
 
-/*-- Section 3 Styles --------------------
----------------------------------------*/
-#third-section {
+/*--- Culture ---*/
+#our-culture {
   background-color: #333645;
   color: white;
   padding: 50px 15px;
 }
 
-#third-section h2 {
+#our-culture h2 {
   font-weight: normal;
   font-size: 2.25rem;
   margin: -6px 0 28px 0;
 }
 
-#third-section p {
+#our-culture p {
   margin: 0 0 25px 0;
 }
 
-#third-section a, #third-section a * {
-  display: inline-block;
-}
-
-#third-section a {
-  height: 47px;
-  width: 30%;
-}
-
-#third-section a * {
-  margin: auto;
-}
-
-#third-section a button {
-  height: 100%;
-  width: 100%;
-  color: #333645;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-/*-- Section 4 Styles --------------------
----------------------------------------*/
-#fourth-section {
+/*--- User Posted Cards ---*/
+#latest-cards {
   padding: 0 15px;
 }
 
-#fourth-section .header-latest,
-#fourth-section .header-latest ul,
-#fourth-section .header-latest ul span {
+#latest-cards .header-latest,
+#latest-cards .header-latest ul,
+#latest-cards .header-latest ul span {
   display: inline-block;
 }
 
-#fourth-section .header-latest {
+#latest-cards .header-latest {
   width: 100%;
 }
 
-#fourth-section .header-latest ul {
+#latest-cards .header-latest ul {
   margin: auto;
   padding: 0;
 }
 
-#fourth-section .header-latest ul span {
+#latest-cards .header-latest ul span {
   padding: 34px 0;
   font-size: 20px;
   border-bottom: 5px solid #333645;
 }
 
-#fourth-section .card-container {
+#latest-cards .card-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -342,76 +317,55 @@ header {
   padding: 0 0 50px 0;
 }
 
-#fourth-section .card-container .card {
+#latest-cards .card-container .card {
   margin-top: 30px;
 }
 
-#fourth-section .card-footer {
+#latest-cards .card-footer {
   border: none;
   background: white;
   padding: 20px 0 0 0;
 }
 
-#fourth-section .card-footer img {
+#latest-cards .card-footer img {
   float: left;
   margin-right: 15px;
 }
 
-#fourth-section .card-footer p {
+#latest-cards .card-footer p {
+  color: #666;
   margin: 0;
 }
 
-/*-- Section 5 Styles --------------------
----------------------------------------*/
-#fifth-section {
+/*--- Newsletter Sign Up ---*/
+#newsletter-container {
   background-color: #ddd;
-  color: #333645;
   padding: 50px 30px;
 }
 
-#fifth-section h2 {
+#newsletter-container h2 {
   font-weight: normal;
   font-size: 2.25rem;
   margin: 0 0 15px 0;
 }
 
-#fifth-section .name,
-#fifth-section .email {
+#newsletter-container .name,
+#newsletter-container .email {
   margin: 0 0 15px 0;
 }
 
-#fifth-section p {
+#newsletter-container p {
   font-weight: 600;
   margin: 0 0 5px 0;
 }
 
-#fifth-section a {
-  display: inline-block;
-  height: 47px;
-  width: 120px;
-}
-
-#fifth-section a * {
-  margin: auto;
-}
-
-#fifth-section a button {
-  height: 100%;
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  background: #333645;
-  color: white;
-  cursor: pointer;
-}
-
-#fifth-section label a {
+#newsletter-container label a {
   width: auto;
   height: auto;
 }
 
-#fifth-section input[type="text"],
-#fifth-section input[type="email"] {
+#newsletter-container input[type="text"],
+#newsletter-container input[type="email"] {
   width: 100%;
   height: 47px;
   border: 1px solid #ccc;
@@ -419,7 +373,7 @@ header {
   padding: 5px 15px;
 }
 
-#fifth-section .grid {
+#newsletter-container .grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 32px 1fr;
@@ -430,7 +384,7 @@ header {
   margin-bottom: 20px;
 }
 
-#fifth-section input[type="checkbox"] {
+#newsletter-container input[type="checkbox"] {
   height: 32px;
   width: 32px;
   border: 2px solid #333645;
@@ -438,7 +392,31 @@ header {
   margin-right: 20px;
 }
 
-/*-- Footer Styles --------------------
+/*--- Clients ---*/
+#clients {
+  display: none;
+  padding: 50px 0;
+}
+
+#clients div {
+  display: inline-block;
+  width: auto;
+  height: 45px;
+  padding: 0 20px;
+}
+
+#clients img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  height: 100%;
+}
+
+#clients img:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
+/*--- Footer Styles --------------------
 ---------------------------------------*/
 footer, footer a {
   color: white;
@@ -499,6 +477,93 @@ footer .social .grid #li-social:hover {
   background: #0077b5;
 }
 
+/*-- Button Styles --------------------
+---------------------------------------*/
+.nav {
+  position: absolute;
+  background: #333645;
+  margin: 0 15px 0 20px;
+  padding: 3px 15px;
+  right: 0;
+}
+
+.nav-bars {
+  height: 4px;
+  background-color: white;
+  margin: 5px 0 0 0;
+}
+
+.contact {
+  margin: 5px 0;
+  padding: 5px;
+}
+
+#subscribe-btn,
+.contact {
+  display: inline-block;
+}
+
+#arrow-btn,
+.inner-slide #arrow-btn,
+#subscribe-btn,
+.block-btn {
+  display: inline-block;
+  height: 5vh;
+  min-height: 47px;
+}
+
+#arrow-btn button,
+#arrow-btn button *,
+.inner-slide #arrow-btn button,
+.inner-slide #arrow-btn button *,
+#subscribe-btn button,
+#subscribe-btn button *,
+.block-btn button,
+.block-btn button * {
+  display: inline-block;
+  margin: auto;
+  max-width: 225px;
+}
+
+#arrow-btn button,
+#subscribe-btn button {
+  height: 100%;
+  width: 100%;
+}
+
+#arrow-btn button,
+.block-btn,
+.nav,
+#subscribe-btn button {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.block-btn {
+  font-size: 1rem;
+}
+
+#subscribe-btn button {
+  background-color: #333645;
+  padding: 0 10px;
+}
+
+#subscribe-btn button,
+.block-btn,
+.nav {
+  color: white;
+}
+
+.web-img-btn {
+  display: inline-block;
+}
+
 /*-- Media queries --------------------
 ---------------------------------------*/
+@media screen and (min-width: 768px) {
+  #clients {
+    display: inline-block;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

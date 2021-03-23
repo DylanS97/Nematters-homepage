@@ -44,70 +44,82 @@
         </header><!-- /Header -->
 
         <!-- Section 1 -->
-        <section id="first-section">
-            <img src="images/temp-img.jpg" alt="Image">
+        <section id="img-slider">
+            <div class="slide-img-container">
+                <img class="slide-img" src="images/temp-img.jpg" alt="Image">
+                <div class="inner-slide">
+                    <h2>WEB DESIGN</h2>
+                    <p>For businesses looking to make a strong and effective first impression.</p>
+                    <a id="arrow-btn" href="#">
+                        <button class="web-img-btn">
+                            <p>FIND OUT MORE</p>
+                            <img src="logos/317-arrow-right2.png">
+                        </button>
+                    </a>
+                </div>
+            </div>
         </section><!-- /Section 1 -->
 
         <!-- Section 2 -->
-        <section id="second-section">
+        <section id="block-container">
             <a id="first-block" class="block bespoke">
                 <div class="block-logo logo"></div>
                 <h5>Bespoke Software</h5>
                 <div class="block-bar"></div>
                 <p>Tailored software solutions to improve business productivity and online profits. Our expert team will ensure a software solution.</p>
-                <button>READ MORE</button>
+                <button class="block-btn">READ MORE</button>
             </a>
             <a class="block support">
                 <div class="block-logo logo"></div>
                 <h5>IT Support</h5>
                 <div class="block-bar"></div>
                 <p>Remotely managed IT services that is catered to your businesses needs, adds value and reduces cost.</p>
-                <button>READ MORE</button>
+                <button class="block-btn">READ MORE</button>
             </a>
             <a class="block marketing">
                 <div class="block-logo logo"></div>
                 <h5>Digital Marketing</h5>
                 <div class="block-bar"></div>
                 <p>Driving brand awareness and ROI through creative digital marketing campaigns. We Review and monitor online performance.</p>
-                <button>READ MORE</button>
+                <button class="block-btn">READ MORE</button>
             </a>
             <a class="block telecoms">
                 <div class="block-logo logo"></div>
                 <h5>Telecoms Services</h5>
                 <div class="block-bar"></div>
                 <p>Stay connected with bespoke telecoms solutions when you need it most.</p>
-                <button>READ MORE</button>
+                <button class="block-btn">READ MORE</button>
             </a>
             <a class="block web">
                 <div class="block-logo logo"></div>
                 <h5>Web Design</h5>
                 <div class="block-bar"></div>
                 <p>User-centric design for businesses looking to make a lasting first impression.</p>
-                <button>READ MORE</button>
+                <button class="block-btn">READ MORE</button>
             </a>
             <a class="block cyber">
                 <div class="block-logo logo"></div>
                 <h5>Cyber Security</h5>
                 <div class="block-bar"></div>
                 <p>Ensuring your online business stays secure 24/7, 365 days of the year.</p>
-                <button>READ MORE</button>
+                <button class="block-btn">READ MORE</button>
             </a>
             <a class="block training">
                 <div class="block-logo logo"></div>
                 <h5>Developer Training</h5>
                 <div class="block-bar"></div>
                 <p>Have you considered a career in web development but you aren't sure where to start?.</p>
-                <button>READ MORE</button>
+                <button class="block-btn">READ MORE</button>
             </a>
         </section><!-- /Section 2 -->
         
         <!-- Section 3 -->
-        <section id="third-section">
+        <section id="our-culture">
             <h2>NETMATTERS</h2>
             <p><strong>Netmatters Ltd is a leading wed design, IT support and digital marketing agency based in Wymondham, Norfolk.</strong></p>
             <p>Founded in 2008, we work with businesses from a variety of industries to gain new prospects, nurture existing leads and further grow their sales.</p>
             <p>We provide cost effective, reliable solutions to a range of services; from bespoke cloud-based management systems, workflow and IT solutions through to creative website development and integrated digital campaigning.</p>
-            <a href="#">
+            <a id="arrow-btn" href="#">
                 <button>
                     <p>OUR CULTURE</p>
                     <img src="logos/317-arrow-right2.png">
@@ -116,7 +128,7 @@
         </section><!-- /Section 3 -->
 
         <!-- Section 4 -->
-        <section id="fourth-section">
+        <section id="latest-cards">
             <div class="header-latest">
                 <ul>
                     <span>LATEST</span>
@@ -169,7 +181,7 @@
         </section><!-- /Section 4 -->
 
         <!-- Section 5 -->
-        <section id="fifth-section">
+        <section id="newsletter-container">
             <h2>Email Newsletter Sign-Up</h2>
             <div class="name">
                 <p>Your Name *</p>
@@ -179,10 +191,6 @@
                 <p>Your Email *</p>
                 <input type="email">
             </div>
-            <!-- <div class="checkbox-inline">
-                <input id="newsletter-checkbox" type="checkbox">
-                <label for="newsletter-checkbox"><span>Please tick this box if you wish to receive marketing information from us. Please see our <a>Privacy Policy</a> for more information on how we use your data.</span></label>
-            </div> -->
             <div class="grid">
                 <div class="checkbox">
                     <input id="newsletter" type="checkbox">
@@ -194,12 +202,27 @@
                 </div>
             </div>
 
-            <a href="#">
+            <a id="subscribe-btn" href="#">
                 <button>
                     <p>SUBSCRIBE</p>
                 </button>
             </a>
         </section><!-- /Section 5 -->
+
+        <section id="clients">
+            <div>
+                <img src="images/client-busseys.png" alt="Busseys">
+            </div>
+            <div>
+                <img src="images/client-crane.png" alt="CRANE">
+            </div>
+            <div>
+                <img src="images/client-beat.png" alt="Beat">
+            </div>
+            <div>
+                <img src="images/client-northern-diver.png" alt="NORTHERN DIVER">
+            </div>
+        </section>
 
         <!-- Footer -->
         <footer>
@@ -211,7 +234,7 @@
                     <li>Norfolk</li>
                     <li>NR18 0WZ</li>
                     <br>
-                    <li>Tel: 01603 70 40 20</li>
+                    <li>Tel: <a href="tel:#">01603 70 40 20</a></li>
                     <li>Email: <a href="mailto:support@netmatters.com">support@netmatters.com</a></li>
                 </ul>
             </div>
