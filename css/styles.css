@@ -1,6 +1,8 @@
-/*-- Main Styles ----------------------
+/*-- Body Styles ----------------------
 ---------------------------------------*/
 * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   letter-spacing: .4px;
 }
 
@@ -10,94 +12,124 @@ body {
   color: #333645;
 }
 
-/*--Header Styles----------------------
+button, a {
+  cursor: pointer;
+}
+
+/*--Header Layout----------------------
 ---------------------------------------*/
-header {
-  position: relative;
+.flex-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: flex-end, space-between;
+      -ms-flex-pack: flex-end, space-between;
+          justify-content: flex-end, space-between;
+  width: 100%;
   padding: 20px 15px;
 }
 
-.header-right,
-.header-left,
-.header-right a,
-.header-left a * {
-  display: inline-block;
+#header-logo {
+  height: auto;
+  width: auto;
+  margin-right: auto;
 }
 
-.header-right,
-.header-left {
-  height: 6vh;
+.inner-logo {
+  height: 100%;
 }
 
-.header-left {
-  width: 75%;
-  font-size: 1.8rem;
+/*--Header styles----------------------
+---------------------------------------*/
+.inner-nav {
+  background: #333645;
+  color: white;
 }
 
-.header-left h1 {
-  color: #333645;
-  font-weight: bold;
-  margin: 0;
-  line-height: 1;
+.inner-nav .nav-bars {
+  background: white;
 }
 
-.header-left h1 small {
-  font-size: 1rem;
-}
-
-.header-right {
-  float: right;
-  width: 25%;
-  min-width: 110px;
-}
-
-.search-container {
-  height: 5vh;
-  margin-top: 5px;
+#search-bar {
   border: 2px solid #bbb;
 }
 
-.search-container div {
-  height: 100%;
-  background-color: #eee;
+#search-bar div {
+  background: #eee;
 }
 
-.search-container div input,
-.search-container div button {
-  border: none;
-  height: 100%;
-  width: 100%;
+#search-bar div input,
+#search-bar div button {
   background-color: #ddd;
 }
 
-.search-container div.search-bar {
+/*--Header Buttons & Search Bar--------
+---------------------------------------*/
+.inner-nav,
+.inner-contact {
+  display: inline-block;
+  padding: 3px 15px;
+  height: 100%;
+}
+
+.inner-nav {
+  margin: 0 0 0 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.inner-nav .nav-bars {
+  height: 4px;
+  margin: 5px 0 0 0;
+}
+
+.inner-contact {
+  margin: 5px 0;
+}
+
+#search-bar {
+  height: 5vh;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#search-bar div {
+  height: 100%;
+}
+
+#search-bar div input,
+#search-bar div button {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+#search-bar div.search-bar {
   width: 90%;
   float: left;
 }
 
-.search-container div.search-btn {
+#search-bar div.search-btn {
   width: 10%;
   float: right;
 }
 
-.search-container div.search-btn button {
-  cursor: pointer;
-}
-
-/*-- Container styles -----------------
+/*-- Image Slide Layout ---------------
 ---------------------------------------*/
-/*--- Image Slider ---*/
-#img-slider {
+#img-slider,
+.slide-img {
   height: 80vh;
 }
 
-#img-slider .slide-img-container {
+.slide-img-container {
   position: relative;
   text-align: center;
-  color: white;
 }
 
-#img-slider .slide-img-container .inner-slide {
+.slide-img-container .inner-slide {
   position: absolute;
   width: 100%;
   top: 50%;
@@ -107,34 +139,68 @@ header {
   margin: auto;
 }
 
-#img-slider .slide-img-container .inner-slide h2 {
-  font-size: 3rem;
+.slide-img-container .inner-slide h2 {
   margin: 0 0 25px 0;
 }
 
-#img-slider .slide-img-container .inner-slide > p {
+.slide-img-container .inner-slide > p {
   margin: 0 auto 35px auto;
 }
 
-#img-slider .slide-img-container .inner-slide .web-img-btn {
+.slide-img {
+  width: 100%;
+}
+
+/*-- Image Slide Styles ---------------
+---------------------------------------*/
+.slide-img-container {
+  color: white;
+}
+
+.slide-img-container .inner-slide h2 {
+  font-size: 3rem;
+}
+
+.slide-img-container .web-img-btn {
   color: white;
   background-color: #926fb1;
 }
 
-#img-slider .slide-img {
-  width: 100vw;
-  height: 80vh;
+.arrow-btn button {
+  border: none;
+  border-radius: 4px;
 }
 
-/*--- Blocks ---*/
+/*-- Image Slide Buttons --------------
+---------------------------------------*/
+.arrow-btn {
+  display: inline-block;
+  height: 5vh;
+  min-height: 47px;
+}
+
+.arrow-btn button,
+.arrow-btn button * {
+  display: inline-block;
+  margin: auto;
+  max-width: 225px;
+}
+
+.arrow-btn button {
+  height: 100%;
+  width: 100%;
+}
+
+/*-- Blocks Layout --------------------
+---------------------------------------*/
 #block-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  background-color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 50px 15px;
 }
 
@@ -143,33 +209,42 @@ header {
 }
 
 #block-container .block {
-  background-color: white;
   padding: 30px;
-  text-align: center;
-  font-size: .8rem;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  cursor: pointer;
+}
+
+#block-container .block-bar, #block-container .block-logo {
+  margin: auto;
+  margin-bottom: 17px;
 }
 
 #block-container .block-bar {
   width: 28px;
   height: 3px;
-  margin: auto;
-  margin-bottom: 17px;
   background: black;
 }
 
 #block-container .block-logo {
   height: 60px;
   width: 60px;
-  margin: auto;
-  margin-bottom: 17px;
   border-radius: 50%;
 }
 
 #block-container .block h5 {
   margin: 0 0 11px 0;
+}
+
+/*-- Blocks Styles --------------------
+---------------------------------------*/
+#block-container {
+  background: whitesmoke;
+}
+
+#block-container .block {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: center;
+  font-size: .8rem;
 }
 
 #block-container .block:hover {
@@ -180,100 +255,98 @@ header {
   background: white;
 }
 
+#block-container .bespoke:hover,
 #block-container .bespoke > .logo, #block-container .bespoke button {
   background: #67809f;
 }
 
-#block-container .bespoke:hover {
-  background: #67809f;
-}
-
-#block-container .bespoke:hover button {
+#block-container .bespoke:hover button,
+#block-container .bespoke > .logo button, #block-container .bespoke button button {
   color: #67809f;
 }
 
+#block-container .support:hover,
 #block-container .support > .logo, #block-container .support button {
   background: #4183d7;
 }
 
-#block-container .support:hover {
-  background: #4183d7;
-}
-
-#block-container .support:hover button {
+#block-container .support:hover button,
+#block-container .support > .logo button, #block-container .support button button {
   color: #4183d7;
 }
 
+#block-container .marketing:hover,
 #block-container .marketing > .logo, #block-container .marketing button {
   background: #2ecc71;
 }
 
-#block-container .marketing:hover {
-  background: #2ecc71;
-}
-
-#block-container .marketing:hover button {
+#block-container .marketing:hover button,
+#block-container .marketing > .logo button, #block-container .marketing button button {
   color: #2ecc71;
 }
 
+#block-container .telecoms:hover,
 #block-container .telecoms > .logo, #block-container .telecoms button {
   background: #d64541;
 }
 
-#block-container .telecoms:hover {
-  background: #d64541;
-}
-
-#block-container .telecoms:hover button {
+#block-container .telecoms:hover button,
+#block-container .telecoms > .logo button, #block-container .telecoms button button {
   color: #d64541;
 }
 
+#block-container .web:hover,
 #block-container .web > .logo, #block-container .web button {
   background: #926fb1;
 }
 
-#block-container .web:hover {
-  background: #926fb1;
-}
-
-#block-container .web:hover button {
+#block-container .web:hover button,
+#block-container .web > .logo button, #block-container .web button button {
   color: #926fb1;
 }
 
+#block-container .cyber:hover,
 #block-container .cyber > .logo, #block-container .cyber button {
   background: #f62459;
 }
 
-#block-container .cyber:hover {
-  background: #f62459;
-}
-
-#block-container .cyber:hover button {
+#block-container .cyber:hover button,
+#block-container .cyber > .logo button, #block-container .cyber button button {
   color: #f62459;
 }
 
+#block-container .training:hover,
 #block-container .training > .logo, #block-container .training button {
   background: #926fb1;
 }
 
-#block-container .training:hover {
-  background: #926fb1;
-}
-
-#block-container .training:hover button {
+#block-container .training:hover button,
+#block-container .training > .logo button, #block-container .training button button {
   color: #926fb1;
 }
 
-/*--- Culture ---*/
-#our-culture {
-  background-color: #333645;
+.block-btn {
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
   color: white;
+}
+
+/*-- Blocks Buttons --------------------
+---------------------------------------*/
+.block-btn {
+  display: inline-block;
+  height: 5vh;
+  min-height: 47px;
+}
+
+/*-- Culture Layout -------------------
+---------------------------------------*/
+#our-culture {
   padding: 50px 15px;
 }
 
 #our-culture h2 {
-  font-weight: normal;
-  font-size: 2.25rem;
   margin: -6px 0 28px 0;
 }
 
@@ -281,14 +354,30 @@ header {
   margin: 0 0 25px 0;
 }
 
-/*--- User Posted Cards ---*/
+#our-culture > .arrow-btn p {
+  margin: 0;
+}
+
+/*-- Culture Styles -------------------
+---------------------------------------*/
+#our-culture {
+  background: #333645;
+  color: white;
+}
+
+#our-culture h2 {
+  font-size: 2.25rem;
+  font-weight: normal;
+}
+
+/*-- Posted Cards Layout --------------
+---------------------------------------*/
 #latest-cards {
   padding: 0 15px;
 }
 
 #latest-cards .header-latest,
-#latest-cards .header-latest ul,
-#latest-cards .header-latest ul span {
+#latest-cards .header-latest * {
   display: inline-block;
 }
 
@@ -303,17 +392,16 @@ header {
 
 #latest-cards .header-latest ul span {
   padding: 34px 0;
-  font-size: 20px;
-  border-bottom: 5px solid #333645;
 }
 
 #latest-cards .card-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 0 0 50px 0;
 }
 
@@ -322,8 +410,6 @@ header {
 }
 
 #latest-cards .card-footer {
-  border: none;
-  background: white;
   padding: 20px 0 0 0;
 }
 
@@ -333,19 +419,32 @@ header {
 }
 
 #latest-cards .card-footer p {
-  color: #666;
   margin: 0;
 }
 
-/*--- Newsletter Sign Up ---*/
+/*-- Posted Cards Styles --------------
+---------------------------------------*/
+.header-latest span {
+  font-size: 20px;
+  border-bottom: 5px solid #333645;
+}
+
+.card-footer {
+  border: none;
+  background: white;
+}
+
+.card-footer p {
+  color: #666;
+}
+
+/*-- Newsletter Layout ----------------
+---------------------------------------*/
 #newsletter-container {
-  background-color: #ddd;
   padding: 50px 30px;
 }
 
 #newsletter-container h2 {
-  font-weight: normal;
-  font-size: 2.25rem;
   margin: 0 0 15px 0;
 }
 
@@ -355,7 +454,6 @@ header {
 }
 
 #newsletter-container p {
-  font-weight: 600;
   margin: 0 0 5px 0;
 }
 
@@ -368,8 +466,6 @@ header {
 #newsletter-container input[type="email"] {
   width: 100%;
   height: 47px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
   padding: 5px 15px;
 }
 
@@ -387,67 +483,96 @@ header {
 #newsletter-container input[type="checkbox"] {
   height: 32px;
   width: 32px;
-  border: 2px solid #333645;
-  border-radius: 4px;
   margin-right: 20px;
 }
 
-/*--- Clients ---*/
-#clients {
-  display: none;
-  padding: 50px 0;
-}
-
-#clients div {
-  display: inline-block;
-  width: auto;
-  height: 45px;
-  padding: 0 20px;
-}
-
-#clients img {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  height: 100%;
-}
-
-#clients img:hover {
-  -webkit-filter: none;
-          filter: none;
-}
-
-/*--- Footer Styles --------------------
+/*-- Newsletter Styles ----------------
 ---------------------------------------*/
-footer, footer a {
-  color: white;
+#newsletter-container {
+  background: #ddd;
 }
 
-footer {
-  background-color: #333645;
+#newsletter-container h2 {
+  font-size: 2.25rem;
+  font-weight: normal;
+}
+
+#newsletter-container p {
+  font-weight: 600;
+}
+
+#newsletter-container input[type="text"],
+#newsletter-container input[type="email"] {
+  font-size: 1rem;
+  border: 1px solid #ccc;
+}
+
+#newsletter-container input[type="checkbox"] {
+  border: 2px solid #333645;
+  border-radius: 4px;
+}
+
+.subscribe-btn button {
+  color: white;
+  background: #333645;
+  border: none;
+  border-radius: 4px;
+}
+
+/*-- Newsletter Button ----------------
+---------------------------------------*/
+.subscribe-btn,
+.subscribe-btn button,
+.subscribe-btn button * {
+  display: inline-block;
+}
+
+.subscribe-btn {
+  height: 5vh;
+  min-height: 47px;
+}
+
+.subscribe-btn button,
+.subscribe-btn button * {
+  margin: auto;
+  max-width: 225px;
+}
+
+.subscribe-btn button {
+  height: 100%;
+  width: 100%;
+  padding: 0 10px;
+}
+
+/*-- Clients Layout -------------------
+---------------------------------------*/
+.flex-clients {
+  display: none;
+}
+
+/*-- Contact Footer Layout ------------
+---------------------------------------*/
+#contact-footer {
   padding: 50px 0;
 }
 
-footer ul {
-  list-style-type: none;
+#contact-footer ul {
   padding: 0;
-  font-size: 13px;
 }
 
-footer h2 {
-  font-weight: normal;
-  font-size: 1rem;
+#contact-footer h2 {
   margin: 0 0 26px 0;
 }
 
-footer > div {
+#contact-footer > div {
   margin: 0 0 30px 0;
 }
 
-footer div:not(.social), footer .social h2 {
+#contact-footer div:not(.social), #contact-footer .social h2 {
   padding: 0 15px;
 }
 
-footer .social .grid {
+#contact-footer .social .social-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -458,112 +583,104 @@ footer .social .grid {
   padding: 0;
 }
 
-footer .social .grid a {
-  text-align: center;
-  background: #00000040;
+#contact-footer .social .social-grid a {
   padding: 12px 0;
   margin: 0 15px;
 }
 
-footer .social .grid #fb-social:hover {
-  background: #3b5998;
-}
-
-footer .social .grid #tw-social:hover {
-  background: #00aced;
-}
-
-footer .social .grid #li-social:hover {
-  background: #0077b5;
-}
-
-/*-- Button Styles --------------------
+/*-- Contact Footer Styles ------------
 ---------------------------------------*/
-.nav {
-  position: absolute;
-  background: #333645;
-  margin: 0 15px 0 20px;
-  padding: 3px 15px;
-  right: 0;
-}
-
-.nav-bars {
-  height: 4px;
-  background-color: white;
-  margin: 5px 0 0 0;
-}
-
-.contact {
-  margin: 5px 0;
-  padding: 5px;
-}
-
-#subscribe-btn,
-.contact {
-  display: inline-block;
-}
-
-#arrow-btn,
-.inner-slide #arrow-btn,
-#subscribe-btn,
-.block-btn {
-  display: inline-block;
-  height: 5vh;
-  min-height: 47px;
-}
-
-#arrow-btn button,
-#arrow-btn button *,
-.inner-slide #arrow-btn button,
-.inner-slide #arrow-btn button *,
-#subscribe-btn button,
-#subscribe-btn button *,
-.block-btn button,
-.block-btn button * {
-  display: inline-block;
-  margin: auto;
-  max-width: 225px;
-}
-
-#arrow-btn button,
-#subscribe-btn button {
-  height: 100%;
-  width: 100%;
-}
-
-#arrow-btn button,
-.block-btn,
-.nav,
-#subscribe-btn button {
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.block-btn {
-  font-size: 1rem;
-}
-
-#subscribe-btn button {
-  background-color: #333645;
-  padding: 0 10px;
-}
-
-#subscribe-btn button,
-.block-btn,
-.nav {
+#contact-footer, #contact-footer a {
   color: white;
 }
 
-.web-img-btn {
-  display: inline-block;
+#contact-footer {
+  background: #333645;
+}
+
+#contact-footer ul {
+  font-size: 13px;
+  list-style-type: none;
+}
+
+#contact-footer h2 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+#contact-footer .social-grid #fb-social:hover {
+  background: #3b5998;
+}
+
+#contact-footer .social-grid #tw-social:hover {
+  background: #00aced;
+}
+
+#contact-footer .social-grid #li-social:hover {
+  background: #0077b5;
+}
+
+#contact-footer .social-grid a {
+  background: #00000040;
+  text-align: center;
+}
+
+/*-- Footer Layout --------------------
+---------------------------------------*/
+.footer-container {
+  display: none;
 }
 
 /*-- Media queries --------------------
 ---------------------------------------*/
 @media screen and (min-width: 768px) {
-  #clients {
-    display: inline-block;
+  .clients {
+    padding: 50px 0;
+  }
+  .clients .flex-clients {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 0 15px;
+  }
+  .clients .flex-clients div {
+    padding: 0 20px;
+    height: 47px;
+  }
+  .flex-clients img,
+  .footer-container img {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    height: 100%;
+  }
+  .flex-clients img:hover,
+  .footer-container img:hover {
+    -webkit-filter: none;
+            filter: none;
+  }
+  footer {
+    padding: 50px 0;
+  }
+  footer .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 0 15px;
+  }
+  footer .footer-container div {
+    padding: 0 20px;
+    height: 88px;
+  }
+  footer .footer-container div:not(:first-child) {
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
