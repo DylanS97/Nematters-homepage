@@ -1,0 +1,43 @@
+
+/*-- Cards Layout --------------
+---------------------------------------*/
+
+#latest-cards {
+    @include sizing($padding: 0 15px);
+    .header-latest,
+    .header-latest *,
+    ul {
+        display: inline-block;
+    }
+    .header-latest {
+        @include sizing($width: 100%);
+        ul {
+            @include sizing($margin: auto, $padding: 0);
+            span {
+                @include sizing($padding: 34px 0);
+            }
+        }
+    }
+    .card-container {
+        @include sizing($padding: 0 0 50px 0);
+        .card {
+            @include sizing($margin: 30px 0 0 0);
+        }
+    }
+    .card-footer {
+        @include sizing($padding: 20px 0 0 0);
+        .net-logo {
+            @include sizing($height: 3rem, $width: 3rem);
+            float: left;
+            img {
+                @include sizing($height: 100%);
+            }
+        }
+        ul {
+            @include sizing($margin: 0 0 0 15px, $padding: 0);
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+}

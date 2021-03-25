@@ -1,0 +1,29 @@
+
+/*-- Blocks Layout --------------------
+---------------------------------------*/
+
+#block-container  {
+    @include flexy($dir: column);
+    @include sizing($padding: 50px 15px);
+    a:not(#first-block) {
+        @include sizing($margin: 30px 0 0 0);
+    }
+    .block {
+        @include sizing($padding: 30px);
+        &-bar,
+        &-logo {
+            @include sizing($margin: auto auto 17px auto);
+        }
+        &-bar {
+            @include sizing($height: 3px, $width: 28px);
+            background: black;
+        }
+        &-logo {
+            @include sizing($height: 60px, $width: 60px);
+            border-radius: 50%;
+        }
+        h5 {
+            @include sizing($margin: 0 0 11px 0);
+        }
+    }
+}

@@ -1,0 +1,33 @@
+
+/*-- Footer Styles ------------
+---------------------------------------*/
+
+footer, footer a {
+    @include colours($colour: $main-colour);
+}
+footer {
+    @include colours($background: $theme-colour);
+    ul {
+        font-size: 13px;
+        list-style-type: none;
+    }
+    h2 {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+    .social-grid {
+        #fb-social:hover {
+            @include colours($background: $facebook-colour);
+        }
+        #tw-social:hover {
+            @include colours($background: $twitter-colour);
+        }
+        #li-social:hover {
+            @include colours($background: $linked-in-colour);
+        }
+        a {
+            @include colours($background: #00000040);
+            text-align: center;
+        }
+    }
+}

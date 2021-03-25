@@ -1,0 +1,11 @@
+
+/*-- Culture Styles -------------------
+---------------------------------------*/
+
+#our-culture {
+    @include colours($colour: $main-colour, $background: $theme-colour);
+    h2 {
+        font-size: 2.25rem;
+        font-weight: normal;
+    }
+}

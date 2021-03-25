@@ -1,0 +1,99 @@
+
+/*-- Media queries --------------------
+---------------------------------------*/
+
+@media screen and (min-width: 768px) {
+    header {
+        flex-wrap: nowrap;
+        #header-logo {
+            order: 0;
+            @include sizing($width: 345px);
+            img {
+                @include sizing($width: 100%);
+            }
+        }
+        #contact {
+            display: none;
+        }
+        #search-container {
+            @include sizing($height: auto, $width: auto, $padding: 7px 0);
+        }
+        #search-bar {
+            order: 1;
+            @include sizing($height: 100%, $margin: 0);
+            @include borders($border: 1px solid #999aa2);
+            .search-bar {
+                @include sizing($width: 75%);
+                input {
+                    background: #fff;
+                }
+            }
+            .search-btn {
+                @include sizing($width: 25%);
+                button {
+                    background: #999aa2;
+                }
+            }
+        }
+        #nav {
+            order: 2;
+        }
+    }
+    // #block-container {
+    //     flex-wrap: wrap;
+    //     flex-direction: row;
+    //     justify-content:stretch;
+    //     a {
+    //         flex-grow: 1;
+    //         flex-basis: 345px;
+    //         margin-top: 30px;
+    //     }
+    // }
+    // #latest-cards {
+    // }
+
+    /*--- Clients Styles ---*/
+    .clients {
+        @include sizing($padding: 50px 0);
+        .flex-clients {
+            @include flexy($just: space-evenly);
+            div {
+                @include sizing($height: 47px, $padding: 0 20px);
+            }
+        }
+    }
+    .flex-clients img,
+    .partners-container img {
+        filter: grayscale(100%);
+        @include sizing($height: 100%);
+        &:hover {
+            filter: none;
+        }
+    }
+    /*--- Partners ---*/
+    .partners {
+        @include sizing($padding: 50px 0);
+        .partners-container {
+            @include flexy($wrap: wrap, $just: space-evenly);
+            div {
+                @include sizing($height: 88px, $padding: 0 20px);
+            }
+            div:not(:first-child) {
+                @include sizing($margin: 20px 0 0 0);
+            }
+        }
+    }
+    /*--- Footer ---*/
+    footer {
+        @include flexy($wrap: wrap);
+        div {
+            @include sizing($width: 50%);
+        }
+        .social-grid {
+            @include sizing($margin: 0);
+            a {
+                @include sizing($min-w: 157px);
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+
+/*-- Slider Styles ---------------
+---------------------------------------*/
+
+.slide-img-container {
+    @include colours($colour: $main-colour);
+    .inner-slide h2 {
+        font-size: 3rem;
+    }
+    // .inner-slide > p {
+    //     font-size: 1.25rem;
+    // }
+    .web-img-btn {
+        @include colours($colour: $main-colour, $background: $web-training-colour);
+    }
+}
+.arrow-btn button {
+    @include borders($border: none, $border-radius: 4px);
+}

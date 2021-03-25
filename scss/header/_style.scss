@@ -1,0 +1,20 @@
+
+/*--Header styles----------------------
+---------------------------------------*/
+
+.inner-nav {
+    @include colours($colour: $main-colour, $background: $theme-colour);
+    .nav-bars {
+        @include colours($background: $main-colour);
+    }
+}
+#search-bar {
+    @include borders($border: 2px solid #bbb);
+    div {
+        @include colours($background: #eee);
+        input,
+        button {
+            @include colours($background: #ddd);
+        }
+    }
+}

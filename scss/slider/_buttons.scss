@@ -1,0 +1,16 @@
+
+/*-- Slider Buttons --------------
+---------------------------------------*/
+
+.arrow-btn {
+    display: inline-block;
+    @include sizing($height: 5vh, $min-h: 47px);
+    button,
+    button * {
+        display: inline-block;
+        @include sizing($max-w: 225px, $margin: auto);
+    }
+    button {
+        @include sizing($height: 100%, $width: 100%);
+    }
+}

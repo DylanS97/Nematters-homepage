@@ -1,0 +1,27 @@
+
+/*-- Slider Layout ---------------
+---------------------------------------*/
+#img-slider,
+.slide-img {
+    @include sizing($height: 80vh);
+}
+.slide-img-container {
+    position: relative;
+    text-align: center;
+    .inner-slide {
+        position: absolute;
+        @include sizing($margin: 0 auto);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h2 {
+            @include sizing($margin: 0 0 25px 0);
+        }
+        > p {
+            @include sizing($margin: 0 auto 35px auto);
+        }
+    }
+}
+.slide-img {
+    @include sizing($width: 100%);
+}

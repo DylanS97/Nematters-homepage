@@ -1,0 +1,15 @@
+
+/*-- Cards Styles --------------
+---------------------------------------*/
+
+.header-latest span {
+    font-size: 20px;
+    border-bottom: 5px solid $theme-colour;
+}
+.card-footer {
+    @include borders($border: none);
+    @include colours($background: $main-colour);
+    p {
+        @include colours($colour: #666);
+    }
+}

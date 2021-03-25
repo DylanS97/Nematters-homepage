@@ -1,0 +1,30 @@
+
+/*-- Body Styles ----------------------
+---------------------------------------*/
+* {
+    box-sizing: border-box;
+    letter-spacing: .4px;
+}
+
+body {
+    font-family: $font;
+    @include colours($colour: $theme-colour, $background: $body-colour);
+}
+
+button, a {
+    cursor: pointer;
+}
+
+/*-- Clients Layout -------------------
+---------------------------------------*/
+
+.flex-clients {
+    display: none;
+}
+
+/*-- Partner Layout --------------------
+---------------------------------------*/
+
+.partners-container {
+    display: none;
+}

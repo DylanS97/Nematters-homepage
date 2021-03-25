@@ -1,0 +1,16 @@
+
+/*-- Culture Layout -------------------
+---------------------------------------*/
+
+#our-culture {
+    @include sizing($padding: 50px 15px);
+    h2 {
+        @include sizing($margin: -6px 0 28px 0);
+    }
+    p {
+        @include sizing($margin: 0 0 25px 0);
+    }
+    > .arrow-btn p {
+        @include sizing($margin: 0);
+    }
+}

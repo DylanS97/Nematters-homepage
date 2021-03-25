@@ -1,0 +1,43 @@
+
+/*--Header Buttons & Search Bar--------
+---------------------------------------*/
+#nav {
+    padding: 7px 0;
+}
+.inner-nav,
+.inner-contact {
+    display: inline-block;
+    @include sizing($height: 100%, $padding: 3px 15px);
+}
+.inner-nav {
+    @include sizing($margin: 0 0 0 20px);
+    @include borders($border: none, $border-radius: 4px);
+    .nav-bars {
+        @include sizing($height: 4px, $margin: 5px 0 0 0);
+    }
+}
+.inner-contact {
+    @include sizing($margin: 5px 0);
+}
+#search-container {
+    @include sizing($width: 100%);
+}
+#search-bar {
+    @include sizing($height: 5vh, $width: 100%, $margin: 10px 0 0 0);
+    div {
+        @include sizing($height: 100%);
+        input,
+        button {
+            @include sizing($height: 100%, $width: 100%);
+            @include borders($border: none);
+        }
+    }
+    div.search-bar {
+        @include sizing($width: 90%);
+        float: left;
+    }
+    div.search-btn {
+        @include sizing($width: 10%);
+        float: right;
+    }
+}

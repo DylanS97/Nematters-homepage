@@ -20,12 +20,12 @@
         <header class="flex-header">
             <div id="header-logo">
                 <a class="inner-logo" href="#home">
-                    <div><img src="images/title.png"></div>
+                    <img src="logos/title.png">
                 </a>
             </div>
             <div id="contact">
                 <a class="inner-contact" href="#contact">
-                    <div><img src="logos/phone.png"></div>
+                    <img src="logos/phone.png">
                 </a>
             </div>
             <div id="nav">
@@ -35,18 +35,20 @@
                     <div class="nav-bars"></div>
                     <small>MENU</small>
                 </a>
-             </div>
-            <form id="search-bar">
-                <div class="search-bar">
-                    <input type="text" placeholder="Search...">
-                </div>
-                <div class="search-btn">
-                    <button><img src="logos/135-search.png"></button>
-                </div>
-            </form>
+            </div>
+            <div id="search-container">
+                <form id="search-bar">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="search-btn">
+                        <button><img src="logos/135-search.png"></button>
+                    </div>
+                </form>
+            </div>
         </header><!-- /Header -->
 
-        <!-- Section 1 -->
+        <!-- Image Slider -->
         <section id="img-slider">
             <div class="slide-img-container">
                 <img class="slide-img" src="images/temp-img.jpg" alt="Image">
@@ -61,64 +63,62 @@
                     </a>
                 </div>
             </div>
-        </section>
-        <!-- /Section 1 -->
+        </section><!-- /Image Slider -->
 
-        <!-- Section 2 -->
+        <!-- Blocks -->
         <section id="block-container">
             <a id="first-block" class="block bespoke">
                 <div class="block-logo logo"></div>
                 <h5>Bespoke Software</h5>
                 <div class="block-bar"></div>
-                <p>Tailored software solutions to improve business productivity and online profits. Our expert team will ensure a software solution.</p>
+                <span><p>Tailored software solutions to improve business productivity and online profits. Our expert team will ensure a software solution.</p></span>
                 <button class="block-btn">READ MORE</button>
             </a>
             <a class="block support">
                 <div class="block-logo logo"></div>
                 <h5>IT Support</h5>
                 <div class="block-bar"></div>
-                <p>Remotely managed IT services that is catered to your businesses needs, adds value and reduces cost.</p>
+                <span><p>Remotely managed IT services that is catered to your businesses needs, adds value and reduces cost.</p></span>
                 <button class="block-btn">READ MORE</button>
             </a>
             <a class="block marketing">
                 <div class="block-logo logo"></div>
                 <h5>Digital Marketing</h5>
                 <div class="block-bar"></div>
-                <p>Driving brand awareness and ROI through creative digital marketing campaigns. We Review and monitor online performance.</p>
+                <span><p>Driving brand awareness and ROI through creative digital marketing campaigns. We Review and monitor online performance.</p></span>
                 <button class="block-btn">READ MORE</button>
             </a>
             <a class="block telecoms">
                 <div class="block-logo logo"></div>
                 <h5>Telecoms Services</h5>
                 <div class="block-bar"></div>
-                <p>Stay connected with bespoke telecoms solutions when you need it most.</p>
+                <span><p>Stay connected with bespoke telecoms solutions when you need it most.</p></span>
                 <button class="block-btn">READ MORE</button>
             </a>
             <a class="block web">
                 <div class="block-logo logo"></div>
                 <h5>Web Design</h5>
                 <div class="block-bar"></div>
-                <p>User-centric design for businesses looking to make a lasting first impression.</p>
+                <span><p>User-centric design for businesses looking to make a lasting first impression.</p></span>
                 <button class="block-btn">READ MORE</button>
             </a>
             <a class="block cyber">
                 <div class="block-logo logo"></div>
                 <h5>Cyber Security</h5>
                 <div class="block-bar"></div>
-                <p>Ensuring your online business stays secure 24/7, 365 days of the year.</p>
+                <span><p>Ensuring your online business stays secure 24/7, 365 days of the year.</p></span>
                 <button class="block-btn">READ MORE</button>
             </a>
             <a class="block training">
                 <div class="block-logo logo"></div>
                 <h5>Developer Training</h5>
                 <div class="block-bar"></div>
-                <p>Have you considered a career in web development but you aren't sure where to start?.</p>
+                <span><p>Have you considered a career in web development but you aren't sure where to start?.</p></span>
                 <button class="block-btn">READ MORE</button>
             </a>
-        </section>
-        <!-- /Section 2 -->
+        </section><!-- /Blocks -->
         
-        <!-- Section 3 -->
+        <!-- Culture -->
         <section id="our-culture">
             <h2>NETMATTERS</h2>
             <p><strong>Netmatters Ltd is a leading wed design, IT support and digital marketing agency based in Wymondham, Norfolk.</strong></p>
@@ -130,10 +130,9 @@
                     <img src="logos/317-arrow-right2.png">
                 </button>
             </a>
-        </section>
-        <!-- /Section 3 -->
+        </section><!-- /Culture -->
 
-        <!-- Section 4 -->
+        <!-- Posted Cards -->
         <section id="latest-cards">
             <div class="header-latest">
                 <ul>
@@ -149,9 +148,11 @@
                       <a href="#" class="btn btn-primary">READ MORE</a>
                       <hr>
                       <div class="card-footer">
-                          <img class="latest-logo" src="logos/023-pacman.png">
-                          <span>Posted by User</span>
-                          <p>Date</p>
+                          <div class="net-logo"><img src="logos/netmatters-logo.png"></div>
+                          <ul>
+                              <li><span>Posted by User</span></li>
+                              <li><span id="date-posted">Date</span></li>
+                          </ul>
                       </div>
                     </div>
                 </div>
@@ -163,9 +164,11 @@
                       <a href="#" class="btn btn-primary">READ MORE</a>
                       <hr>
                       <div class="card-footer">
-                          <img class="latest-logo" src="logos/023-pacman.png">
-                          <span>Posted by User</span>
-                          <p>Date</p>
+                        <div class="net-logo"><img src="logos/netmatters-logo.png"></div>
+                        <ul>
+                            <li><span>Posted by User</span></li>
+                            <li><span id="date-posted">Date</span></li>
+                        </ul>
                       </div>
                     </div>
                 </div>
@@ -177,17 +180,18 @@
                       <a href="#" class="btn btn-primary">READ MORE</a>
                       <hr>
                       <div class="card-footer">
-                          <img class="latest-logo" src="logos/023-pacman.png">
-                          <span>Posted by User</span>
-                          <p>Date</p>
+                        <div class="net-logo"><img src="logos/netmatters-logo.png"></div>
+                        <ul>
+                            <li><span>Posted by User</span></li>
+                            <li><span id="date-posted">Date</span></li>
+                        </ul>
                       </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- /Section 4 -->
+        </section><!-- /Posted Cards -->
 
-        <!-- Section 5 -->
+        <!-- Newsletter -->
         <section id="newsletter-container">
             <h2>Email Newsletter Sign-Up</h2>
             <div class="name">
@@ -214,28 +218,28 @@
                     <p>SUBSCRIBE</p>
                 </button>
             </a>
-        </section>
-        <!-- /Section 5 -->
+        </section><!-- /Newsletter -->
 
+        <!-- Clients -->
         <section class="clients">
             <div class="flex-clients">
                 <div>
-                    <img src="images/client-busseys.png" alt="Busseys">
+                    <img src="images/client-busseys.png">
                 </div>
                 <div>
-                    <img src="images/client-crane.png" alt="CRANE">
+                    <img src="images/client-crane.png">
                 </div>
                 <div>
-                    <img src="images/client-beat.png" alt="Beat">
+                    <img src="images/client-beat.png">
                 </div>
                 <div>
-                    <img src="images/client-northern-diver.png" alt="NORTHERN DIVER">
+                    <img src="images/client-northern-diver.png">
                 </div>
             </div>
-        </section>
+        </section><!-- /Clients -->
 
-        <!-- Contact footer -->
-        <section id="contact-footer">
+        <!-- Footer -->
+        <footer>
             <div class="contact">
                 <h2>CONTACT US</h2>
                 <ul>
@@ -277,11 +281,11 @@
                     <a id="li-social" target="_blank" href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEMQaS4encnawAAAXhaUflowv6n8EhOB041l96rap2nxD0TveRMESffvqKlM9Ogcam8a-595LAei4gDoftlD35NQdU-kF0wILSdgIW0PyLe9GU5mfancAYG-w-q7rC1aASWDAo=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fnetmatters-ltd%2F"><img src="logos/linkedin.png"></a>
                 </div>
             </div>
-        </section>
-        <!-- /Contact footer -->
+        </footer><!-- /Footer -->
 
-        <footer>
-            <div class="footer-container">
+        <!-- Partners -->
+        <div class="partners">
+            <div class="partners-container">
                 <div>
                     <img src="images/google-partner.png" alt="Google partner">
                 </div>
@@ -307,6 +311,6 @@
                     <img src="images/Skills-For-Tomorrow.png" alt="Skills for tomorrow">
                 </div>
             </div>
-        </footer>
+        </div><!-- /Partners -->
     </body>
 </html>

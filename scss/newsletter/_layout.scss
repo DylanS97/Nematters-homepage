@@ -1,0 +1,29 @@
+
+/*-- Newsletter Layout ----------------
+---------------------------------------*/
+
+#newsletter-container {
+    @include sizing($padding: 50px 30px);
+    h2,
+    .name,
+    .email {
+        @include sizing($margin: 0 0 15px 0);
+    }
+    p {
+        @include sizing($margin: 0 0 5px 0);
+    }
+    label a {
+        @include sizing($height: auto, $width: auto);
+    }
+    input[type="text"],
+    input[type="email"] {
+        @include sizing($height: 47px, $width: 100%, $padding: 5px 15px);
+    }
+    .grid {
+        @include grids($g-t-c: 32px 1fr, $g-t-r: 1fr, $gap: 20px);
+        @include sizing($margin: 0 0 20px 0);
+    }
+    input[type="checkbox"] {
+        @include sizing($height: 32px, $width: 32px);
+    }
+}
