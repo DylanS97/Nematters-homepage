@@ -1,12 +1,19 @@
 
 /*--Header Buttons & Search Bar--------
 ---------------------------------------*/
-#nav {
+.inner-nav {
+    display: inline-block;
+}
+#nav,
+#support .inner,
+#contact .inner {
     padding: 7px 0;
 }
-.inner-nav,
-.inner-contact {
-    display: inline-block;
+
+/*--- Nav ---*/
+#nav {
+}
+.inner-nav {
     @include sizing($height: 100%, $padding: 3px 15px);
 }
 .inner-nav {
@@ -16,14 +23,49 @@
         @include sizing($height: 4px, $margin: 5px 0 0 0);
     }
 }
-.inner-contact {
-    @include sizing($margin: 5px 0);
+
+/*--- Contact ---*/
+#contact {
+    .fa-phone-volume {
+        color: $theme-colour;
+        font-size: 2rem;
+    }
+    .fa-paper-plane,
+    span {
+        display: none; 
+    }
 }
+
+/*--- Support ---*/
+#support {
+    display: none;
+}
+
+/*--- Search bar ---*/
 #search-container {
     @include sizing($width: 100%);
 }
 #search-bar {
+    display: none;
+    @include sizing($margin: 10px 0 0 0);
+    div {
+        @include sizing($height: 100%);
+        input,
+        button {
+            @include sizing($height: 100%, $width: 100%);
+            @include borders($border: 1px solid #999aa2);
+        }
+    }
+    div.search-bar {
+        float: left;
+    }
+    div.search-btn {
+        float: right;
+    }
+}
+#first-search-bar {
     @include sizing($height: 5vh, $width: 100%, $margin: 10px 0 0 0);
+    @include borders($border-radius: 4px);
     div {
         @include sizing($height: 100%);
         input,
@@ -32,15 +74,13 @@
             @include borders($border: none);
         }
     }
-    div.search-bar {
+    div.first-search-bar {
         @include sizing($width: 90%);
         float: left;
     }
-    div.search-btn {
+    div.first-search-btn {
         @include sizing($width: 10%);
         float: right;
     }
 }
-#support {
-    display: none;
-}
+

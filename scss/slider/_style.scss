@@ -7,9 +7,9 @@
     .inner-slide h2 {
         font-size: 3rem;
     }
-    // .inner-slide > p {
-    //     font-size: 1.25rem;
-    // }
+    .inner-slide > p {
+        font-size: 1.25rem;
+    }
     .web-img-btn {
         @include colours($colour: $main-colour, $background: $web-training-colour);
     }

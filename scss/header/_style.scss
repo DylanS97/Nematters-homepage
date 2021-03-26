@@ -8,7 +8,7 @@
         @include colours($background: $main-colour);
     }
 }
-#search-bar {
+#first-search-bar {
     @include borders($border: 2px solid #bbb);
     div {
         @include colours($background: #eee);

@@ -2,12 +2,16 @@
 /*-- Media queries --------------------
 ---------------------------------------*/
 
-@media screen and (min-width: 768px) {
-    header {
-        flex-wrap: nowrap;
+@media only screen and (min-width: 768px) {
+    .flex-header {
+        justify-content: space-around;
+        .header-left,
+        .header-right {
+            justify-content: center;
+        }
         #header-logo {
             order: 0;
-            @include sizing($width: 345px);
+            @include sizing($width: 345px, $margin: 0 20px 0 0);
             img {
                 @include sizing($width: 100%);
             }
@@ -19,6 +23,7 @@
             @include sizing($height: auto, $width: auto, $padding: 7px 0);
         }
         #search-bar {
+            display: contents;
             order: 1;
             @include sizing($height: 100%, $margin: 0);
             @include borders($border: 1px solid #999aa2);
@@ -39,6 +44,10 @@
             order: 2;
         }
     }
+    #first-search-bar {
+        display: none;
+    }
+    
     #block-container {
         flex-wrap: wrap;
         flex-direction: row;
@@ -59,7 +68,6 @@
         .card {
             flex: 1;
         }
-    }
     }
 
     /*--- Clients Styles ---*/
@@ -108,32 +116,62 @@
     }
 }
 
-@media screen and (min-width: 992px) {
-    header {
-        @include flexy($dir: row, $wrap: wrap, $just: space-evenly);
+@media only screen and (min-width: 992px) {
+    .flex-header {
+        justify-content: space-around;
+        .header-left,
+        .header-right {
+            justify-content: center;
+        }
+        #header-logo {
+            @include sizing($margin: 0 20px 0 0);
+        }
+        #support,
+        #contact,
+        #contact .fa-paper-plane,
+        #contact span {
+            display: contents;
+        }
+        #support a,
+        #contact a {
+            display: inline-block;
+            @include sizing($height: 100%, $padding: 5px 15px, $margin: 0 20px 0 0);
+            font-size: 1.125rem;
+            @include borders($border-radius: 4px);
+            @include colours($colour: #fff);
+            .contents {
+                position: relative;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+        #support .fa-mouse,
+        #contact .fa-paper-plane {
+            font-size: 1.5rem;
+        }
         #support {
-            display: inherit;
             order: 1;
-            background: purple;
+        }
+        #support a {
+            @include colours($background: $it-support-colour);
+        }
+
+        #contact a {
+            @include colours($background: #999aa2);
         }
         #contact {
             order: 2;
-        }
-        #search-container {
-            @include sizing($height: auto, $width: auto, $padding: 7px 0);
+            .fa-phone-volume {
+                display: none;
+            }
         }
         #search-bar {
             order: 3;
-            @include sizing($height: 100%, $min-w: 63px, $margin: 0);
-            @include borders($border: 1px solid #999aa2);
             .search-bar {
                 display: none;
             }
             .search-btn {
-                @include sizing($width: 100%);
-                button {
-                    background: #999aa2;
-                }
+                @include sizing($width: 63px);
             }
         }
         #nav {
