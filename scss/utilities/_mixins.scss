@@ -44,9 +44,10 @@
 @mixin block-colours($background: null,
                      $colour: null) {
     &:hover,
-    > .logo, button {
+    > .block-logo, button {
         background: $background;
-        button {
+        button,
+        .block-logo {
             color: $colour;
         }
     }

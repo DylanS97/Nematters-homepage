@@ -163,6 +163,7 @@ header {
 }
 
 #search-bar div.search-btn {
+  font-size: 1.68rem;
   float: right;
 }
 
@@ -191,6 +192,8 @@ header {
 
 #first-search-bar div.first-search-btn {
   width: 10%;
+  color: #333645;
+  font-size: 1.5rem;
   float: right;
 }
 
@@ -302,6 +305,14 @@ header {
   height: 60px;
   width: 60px;
   border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+#block-container .block-logo .logo {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 #block-container .block h5 {
@@ -322,81 +333,106 @@ header {
   font-size: .8rem;
 }
 
+#block-container .block-logo {
+  color: #fff;
+}
+
 #block-container .block:hover {
   color: #fff;
 }
 
-#block-container .block:hover > .logo, #block-container .block:hover button {
+#block-container .block:hover > .block-logo, #block-container .block:hover button {
   background: #fff;
 }
 
 #block-container .bespoke:hover,
-#block-container .bespoke > .logo, #block-container .bespoke button {
+#block-container .bespoke > .block-logo, #block-container .bespoke button {
   background: #67809f;
 }
 
 #block-container .bespoke:hover button,
-#block-container .bespoke > .logo button, #block-container .bespoke button button {
+#block-container .bespoke:hover .block-logo,
+#block-container .bespoke > .block-logo button,
+#block-container .bespoke > .block-logo .block-logo, #block-container .bespoke button button,
+#block-container .bespoke button .block-logo {
   color: #67809f;
 }
 
 #block-container .support:hover,
-#block-container .support > .logo, #block-container .support button {
+#block-container .support > .block-logo, #block-container .support button {
   background: #4183d7;
 }
 
 #block-container .support:hover button,
-#block-container .support > .logo button, #block-container .support button button {
+#block-container .support:hover .block-logo,
+#block-container .support > .block-logo button,
+#block-container .support > .block-logo .block-logo, #block-container .support button button,
+#block-container .support button .block-logo {
   color: #4183d7;
 }
 
 #block-container .marketing:hover,
-#block-container .marketing > .logo, #block-container .marketing button {
+#block-container .marketing > .block-logo, #block-container .marketing button {
   background: #2ecc71;
 }
 
 #block-container .marketing:hover button,
-#block-container .marketing > .logo button, #block-container .marketing button button {
+#block-container .marketing:hover .block-logo,
+#block-container .marketing > .block-logo button,
+#block-container .marketing > .block-logo .block-logo, #block-container .marketing button button,
+#block-container .marketing button .block-logo {
   color: #2ecc71;
 }
 
 #block-container .telecoms:hover,
-#block-container .telecoms > .logo, #block-container .telecoms button {
+#block-container .telecoms > .block-logo, #block-container .telecoms button {
   background: #d64541;
 }
 
 #block-container .telecoms:hover button,
-#block-container .telecoms > .logo button, #block-container .telecoms button button {
+#block-container .telecoms:hover .block-logo,
+#block-container .telecoms > .block-logo button,
+#block-container .telecoms > .block-logo .block-logo, #block-container .telecoms button button,
+#block-container .telecoms button .block-logo {
   color: #d64541;
 }
 
 #block-container .web:hover,
-#block-container .web > .logo, #block-container .web button {
+#block-container .web > .block-logo, #block-container .web button {
   background: #926fb1;
 }
 
 #block-container .web:hover button,
-#block-container .web > .logo button, #block-container .web button button {
+#block-container .web:hover .block-logo,
+#block-container .web > .block-logo button,
+#block-container .web > .block-logo .block-logo, #block-container .web button button,
+#block-container .web button .block-logo {
   color: #926fb1;
 }
 
 #block-container .cyber:hover,
-#block-container .cyber > .logo, #block-container .cyber button {
+#block-container .cyber > .block-logo, #block-container .cyber button {
   background: #f62459;
 }
 
 #block-container .cyber:hover button,
-#block-container .cyber > .logo button, #block-container .cyber button button {
+#block-container .cyber:hover .block-logo,
+#block-container .cyber > .block-logo button,
+#block-container .cyber > .block-logo .block-logo, #block-container .cyber button button,
+#block-container .cyber button .block-logo {
   color: #f62459;
 }
 
 #block-container .training:hover,
-#block-container .training > .logo, #block-container .training button {
+#block-container .training > .block-logo, #block-container .training button {
   background: #926fb1;
 }
 
 #block-container .training:hover button,
-#block-container .training > .logo button, #block-container .training button button {
+#block-container .training:hover .block-logo,
+#block-container .training > .block-logo button,
+#block-container .training > .block-logo .block-logo, #block-container .training button button,
+#block-container .training button .block-logo {
   color: #926fb1;
 }
 
@@ -523,6 +559,11 @@ header {
   padding: 50px 30px;
 }
 
+#newsletter-container .news-inner {
+  width: 100%;
+  margin: 0 auto;
+}
+
 #newsletter-container h2,
 #newsletter-container .name,
 #newsletter-container .email {
@@ -585,6 +626,10 @@ header {
 #newsletter-container input[type="checkbox"] {
   border: 2px solid #333645;
   border-radius: 4px;
+}
+
+#newsletter-container .checkbox-label span {
+  font-weight: bolder;
 }
 
 .subscribe-btn button {
@@ -744,6 +789,7 @@ footer .social-grid a {
     width: 25%;
   }
   .flex-header #search-bar .search-btn button {
+    color: #fff;
     background: #999aa2;
   }
   .flex-header #nav {
@@ -764,11 +810,9 @@ footer .social-grid a {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-  }
-  #block-container > a:nth-child(n+4) {
     -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
   /*--- Card Styles ---*/
   .card-container {
@@ -838,6 +882,12 @@ footer .social-grid a {
   }
   .partners .partners-container div:not(:first-child) {
     margin: 20px 0 0 0;
+  }
+  /*--- Newsletter ---*/
+  #newsletter-container .news-inner {
+    max-width: 720px;
+    padding: 0 15px;
+    margin: 0 auto;
   }
   /*--- Footer ---*/
   footer {
@@ -929,10 +979,24 @@ footer .social-grid a {
   .flex-header #search-bar .search-btn {
     width: 63px;
   }
+  .flex-header #search-bar button {
+    color: #fff;
+  }
   .flex-header #nav {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
+  }
+  #img-slider .slide-img-container {
+    text-align: left;
+  }
+  #newsletter-container .news-inner {
+    max-width: 970px;
+  }
+  #newsletter-container .name,
+  #newsletter-container .email {
+    display: inline-block;
+    width: 49.6%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

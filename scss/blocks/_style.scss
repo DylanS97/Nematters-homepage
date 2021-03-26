@@ -9,10 +9,13 @@
         @include borders($border: 1px solid #ccc, $border-radius: 3px);
         text-align: center;
         font-size: .8rem;
+        &-logo {
+            color: #fff;
+        }
     }
     .block:hover {
         @include colours($colour: #fff);
-        > .logo, button {
+        > .block-logo, button {
             @include colours($background: $main-colour);
         }
     }

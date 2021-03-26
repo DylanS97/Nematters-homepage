@@ -19,6 +19,9 @@
     input[type="checkbox"] {
         @include borders($border: 2px solid $theme-colour, $border-radius: 4px);
     }
+    .checkbox-label span {
+        font-weight: bolder;
+    }
 }
 .subscribe-btn button {
     @include colours($colour: $main-colour, $background: $theme-colour);

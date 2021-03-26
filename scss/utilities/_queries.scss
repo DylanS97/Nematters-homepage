@@ -36,7 +36,7 @@
             .search-btn {
                 @include sizing($width: 25%);
                 button {
-                    background: #999aa2;
+                    @include colours($colour: $main-colour, $background: #999aa2);
                 }
             }
         }
@@ -52,9 +52,7 @@
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-evenly;
-        > a:nth-child(n+4) {
-            flex-grow: 1;
-        }
+        flex: 1;
     }
     /*--- Card Styles ---*/
     .card-container {
@@ -99,6 +97,12 @@
             div:not(:first-child) {
                 @include sizing($margin: 20px 0 0 0);
             }
+        }
+    }
+    /*--- Newsletter ---*/
+    #newsletter-container {
+        .news-inner {
+            @include sizing($max-w: 720px, $margin: 0 auto, $padding: 0 15px);
         }
     }
     /*--- Footer ---*/
@@ -173,9 +177,25 @@
             .search-btn {
                 @include sizing($width: 63px);
             }
+            button {
+                color: $main-colour;
+            }
         }
         #nav {
             order: 4;
+        }
+    }
+    #img-slider .slide-img-container {
+        text-align: left;
+    }
+    #newsletter-container {
+        .news-inner {
+            @include sizing($max-w: 970px);
+        }
+        .name,
+        .email {
+            display: inline-block;
+            @include sizing($width: per-line(2, 1px));
         }
     }
 }

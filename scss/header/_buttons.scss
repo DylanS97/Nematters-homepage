@@ -7,9 +7,8 @@
 #nav,
 #support .inner,
 #contact .inner {
-    padding: 7px 0;
+    @include sizing($padding: 7px 0);
 }
-
 /*--- Nav ---*/
 .inner-nav {
     @include sizing($height: 100%, $padding: 3px 15px);
@@ -58,6 +57,7 @@
         float: left;
     }
     div.search-btn {
+        font-size: 1.68rem;
         float: right;
     }
 }
@@ -78,6 +78,8 @@
     }
     div.first-search-btn {
         @include sizing($width: 10%);
+        color: #333645;
+        font-size: 1.5rem;
         float: right;
     }
 }

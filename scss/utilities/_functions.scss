@@ -2,10 +2,12 @@
 /*-- Functions ------------------------
 ---------------------------------------*/
 
-@function px-to-pc($target, $context: $max-width) {
+@function px-to-pc($target, $context: 1000px) {
     @return ($target / $context) * 100%;
 }
 
-// @function per-line($items) {
-//     $g-pct: px-to-pc()
-// }
+@function per-line($items, $gutter) {
+    $g-pct: px-to-pc($gutter) * 2; // 6%
+    $g-total: $items * $g-pct; 
+    @return (100% / $items) - $g-total;
+}
