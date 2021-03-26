@@ -39,18 +39,28 @@
             order: 2;
         }
     }
-    // #block-container {
-    //     flex-wrap: wrap;
-    //     flex-direction: row;
-    //     justify-content:stretch;
-    //     a {
-    //         flex-grow: 1;
-    //         flex-basis: 345px;
-    //         margin-top: 30px;
-    //     }
-    // }
-    // #latest-cards {
-    // }
+    #block-container {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        > a:nth-child(n+4) {
+            flex-grow: 1;
+        }
+    }
+    /*--- Card Styles ---*/
+    .card-container {
+        > div:nth-child(n+3) {
+            display: none;
+        }
+        @include flexy($dir: row);
+        .card-inner {
+            @include sizing($padding: 0 15px);
+        }
+        .card {
+            flex: 1;
+        }
+    }
+    }
 
     /*--- Clients Styles ---*/
     .clients {
@@ -94,6 +104,40 @@
             a {
                 @include sizing($min-w: 157px);
             }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header {
+        @include flexy($dir: row, $wrap: wrap, $just: space-evenly);
+        #support {
+            display: inherit;
+            order: 1;
+            background: purple;
+        }
+        #contact {
+            order: 2;
+        }
+        #search-container {
+            @include sizing($height: auto, $width: auto, $padding: 7px 0);
+        }
+        #search-bar {
+            order: 3;
+            @include sizing($height: 100%, $min-w: 63px, $margin: 0);
+            @include borders($border: 1px solid #999aa2);
+            .search-bar {
+                display: none;
+            }
+            .search-btn {
+                @include sizing($width: 100%);
+                button {
+                    background: #999aa2;
+                }
+            }
+        }
+        #nav {
+            order: 4;
         }
     }
 }
