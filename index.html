@@ -21,7 +21,7 @@
     <body>
         <!-- Header -->
         <header>
-            <div class="flex-header">
+            <div class="flex-header max-width">
                 <div class="header-left">
                     <div id="header-logo">
                         <a class="inner-logo" href="#home">
@@ -87,7 +87,7 @@
         <section id="img-slider">
             <div class="slide-img-container">
                 <img class="slide-img" src="images/temp-img.jpg" alt="Image">
-                <div class="inner-slide">
+                <div class="inner-slide max-width">
                     <h2>WEB DESIGN</h2>
                     <p>For businesses looking to make a strong and effective first impression.</p>
                     <a class="arrow-btn" href="#">
@@ -101,7 +101,7 @@
         </section><!-- /Image Slider -->
 
         <!-- Blocks -->
-        <section id="block-container">
+        <section id="block-container" class="max-width">
             <a id="first-block" class="block bespoke">
                 <div class="block-logo">
                     <div class="logo"><i class="fas fa-th"></i></div>
@@ -169,20 +169,22 @@
         
         <!-- Culture -->
         <section id="our-culture">
-            <h2>NETMATTERS</h2>
-            <p><strong>Netmatters Ltd is a leading wed design, IT support and digital marketing agency based in Wymondham, Norfolk.</strong></p>
-            <p>Founded in 2008, we work with businesses from a variety of industries to gain new prospects, nurture existing leads and further grow their sales.</p>
-            <p>We provide cost effective, reliable solutions to a range of services; from bespoke cloud-based management systems, workflow and IT solutions through to creative website development and integrated digital campaigning.</p>
-            <a class="arrow-btn" href="#">
-                <button>
-                    <p>OUR CULTURE</p>
-                    <img src="logos/317-arrow-right2.png">
-                </button>
-            </a>
+            <div class="inner-culture max-width">
+                <h2>NETMATTERS</h2>
+                <p><strong>Netmatters Ltd is a leading wed design, IT support and digital marketing agency based in Wymondham, Norfolk.</strong></p>
+                <p>Founded in 2008, we work with businesses from a variety of industries to gain new prospects, nurture existing leads and further grow their sales.</p>
+                <p>We provide cost effective, reliable solutions to a range of services; from bespoke cloud-based management systems, workflow and IT solutions through to creative website development and integrated digital campaigning.</p>
+                <a class="arrow-btn" href="#">
+                    <button>
+                        <p>OUR CULTURE</p>
+                        <img src="logos/317-arrow-right2.png">
+                    </button>
+                </a>
+            </div>
         </section><!-- /Culture -->
 
         <!-- Posted Cards -->
-        <section id="latest-cards">
+        <section id="latest-cards" class="max-width">
             <div class="header-latest">
                 <ul>
                     <span>LATEST</span>
@@ -248,38 +250,39 @@
 
         <!-- Newsletter -->
         <section id="newsletter-container">
-            <div class="news-inner">
-                <h2>Email Newsletter Sign-Up</h2>
-                <div class="name">
-                    <p>Your Name *</p>
-                    <input type="text">
-                </div>
-                <div class="email">
-                    <p>Your Email *</p>
-                    <input type="email">
-                </div>
-                <div class="grid">
-                    <div class="checkbox">
-                        <input id="newsletter" type="checkbox">
+            <div class="news-inner max-width">
+                <div class="inner">
+                    <h2>Email Newsletter Sign-Up</h2>
+                    <div class="name">
+                        <p>Your Name *</p>
+                        <input type="text">
                     </div>
-                    <div class="checkbox-label">
-                        <label>
-                            <span>Please tick this box if you wish to receive marketing information from us. Please see our <a>Privacy Policy</a> for more information on how we use your data.</span>
-                        </label>
+                    <div class="email">
+                        <p>Your Email *</p>
+                        <input type="email">
                     </div>
+                    <div class="grid">
+                        <div class="checkbox">
+                            <input id="newsletter" type="checkbox">
+                        </div>
+                        <div class="checkbox-label">
+                            <label>
+                                <span>Please tick this box if you wish to receive marketing information from us. Please see our <a>Privacy Policy</a> for more information on how we use your data.</span>
+                            </label>
+                        </div>
+                    </div>
+                    <a class="subscribe-btn" href="#">
+                        <button>
+                            <p>SUBSCRIBE</p>
+                        </button>
+                    </a>
                 </div>
-
-                <a class="subscribe-btn" href="#">
-                    <button>
-                        <p>SUBSCRIBE</p>
-                    </button>
-                </a>
             </div>
         </section><!-- /Newsletter -->
 
         <!-- Clients -->
         <section class="clients">
-            <div class="flex-clients">
+            <div class="flex-clients max-width">
                 <div>
                     <img src="images/client-busseys.png">
                 </div>
@@ -297,52 +300,54 @@
 
         <!-- Footer -->
         <footer>
-            <div class="contact">
-                <h2>CONTACT US</h2>
-                <ul>
-                    <li>11 Penfold Drive</li>
-                    <li>Wymondham</li>
-                    <li>Norfolk</li>
-                    <li>NR18 0WZ</li>
-                    <br>
-                    <li>Tel: <a href="tel:#">01603 70 40 20</a></li>
-                    <li>Email: <a href="mailto:support@netmatters.com">support@netmatters.com</a></li>
-                </ul>
-            </div>
-            <div class="about">
-                <h2>ABOUT NETMATTERS</h2>
-                <ul>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Our Careers</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Our Office Tour</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Uk Domains</a></li>
-                </ul>
-            </div>
-            <div class="website">
-                <h2>WEBSITE</h2>
-                <ul>
-                    <li>Sitemap</li>
-                    <li>&copy; Copyright Netmatters Ltd. 2021</li>
-                    <li>All rights reserved</li>
-                </ul>
-            </div>
-            <div class="social">
-                <h2>SOCIAL MEDIA</h2>
-                <div class="social-grid">
-                    <a id="fb-social" target="_blank" href="https://en-gb.facebook.com/netmatters/"><img src="logos/facebook2.png"></a>
-                    <a id="tw-social" target="_blank" href="https://twitter.com/netmattersltd"><img src="logos/twitter.png"></a>
-                    <a id="li-social" target="_blank" href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEMQaS4encnawAAAXhaUflowv6n8EhOB041l96rap2nxD0TveRMESffvqKlM9Ogcam8a-595LAei4gDoftlD35NQdU-kF0wILSdgIW0PyLe9GU5mfancAYG-w-q7rC1aASWDAo=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fnetmatters-ltd%2F"><img src="logos/linkedin.png"></a>
+            <div class="inner max-width">
+                <div class="contact">
+                    <h2>CONTACT US</h2>
+                    <ul>
+                        <li>11 Penfold Drive</li>
+                        <li>Wymondham</li>
+                        <li>Norfolk</li>
+                        <li>NR18 0WZ</li>
+                        <br>
+                        <li>Tel: <a href="tel:#">01603 70 40 20</a></li>
+                        <li>Email: <a href="mailto:support@netmatters.com">support@netmatters.com</a></li>
+                    </ul>
+                </div>
+                <div class="about">
+                    <h2>ABOUT NETMATTERS</h2>
+                    <ul>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Our Careers</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Our Office Tour</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Uk Domains</a></li>
+                    </ul>
+                </div>
+                <div class="website">
+                    <h2>WEBSITE</h2>
+                    <ul>
+                        <li>Sitemap</li>
+                        <li>&copy; Copyright Netmatters Ltd. 2021</li>
+                        <li>All rights reserved</li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <h2>SOCIAL MEDIA</h2>
+                    <div class="social-grid">
+                        <a id="fb-social" target="_blank" href="https://en-gb.facebook.com/netmatters/"><img src="logos/facebook2.png"></a>
+                        <a id="tw-social" target="_blank" href="https://twitter.com/netmattersltd"><img src="logos/twitter.png"></a>
+                        <a id="li-social" target="_blank" href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEMQaS4encnawAAAXhaUflowv6n8EhOB041l96rap2nxD0TveRMESffvqKlM9Ogcam8a-595LAei4gDoftlD35NQdU-kF0wILSdgIW0PyLe9GU5mfancAYG-w-q7rC1aASWDAo=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fnetmatters-ltd%2F"><img src="logos/linkedin.png"></a>
+                    </div>
                 </div>
             </div>
         </footer><!-- /Footer -->
 
         <!-- Partners -->
         <div class="partners">
-            <div class="partners-container">
+            <div class="partners-container max-width">
                 <div>
                     <img src="images/google-partner.png" alt="Google partner">
                 </div>

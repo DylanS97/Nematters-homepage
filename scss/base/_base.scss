@@ -15,6 +15,11 @@ button, a {
     cursor: pointer;
 }
 
+.max-width {
+    max-width: $s-max-w;
+    margin: auto;
+}
+
 /*-- Clients Layout -------------------
 ---------------------------------------*/
 

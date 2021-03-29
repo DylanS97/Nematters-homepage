@@ -102,11 +102,11 @@
     /*--- Newsletter ---*/
     #newsletter-container {
         .news-inner {
-            @include sizing($max-w: 720px, $margin: 0 auto, $padding: 0 15px);
+            @include sizing($padding: 0 15px);
         }
     }
     /*--- Footer ---*/
-    footer {
+    footer .inner {
         @include flexy($wrap: wrap);
         div {
             @include sizing($width: 50%);
@@ -121,6 +121,9 @@
 }
 
 @media only screen and (min-width: 992px) {
+    .max-width {
+        max-width: $m-max-w;
+    }
     .flex-header {
         justify-content: space-around;
         .header-left,
@@ -197,5 +200,11 @@
             display: inline-block;
             @include sizing($width: per-line(2, 1px));
         }
+    }
+}
+
+@media only screen and (min-width: 1260px) {
+    .max-width {
+        max-width: $l-max-w;
     }
 }

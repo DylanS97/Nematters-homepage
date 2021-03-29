@@ -3,9 +3,11 @@
 ---------------------------------------*/
 
 #newsletter-container {
-    @include sizing($padding: 50px 30px);
     .news-inner {
         @include sizing($width: 100%, $margin: 0 auto);
+    }
+    .inner {
+        @include sizing($padding: 50px 30px);
     }
     h2,
     .name,

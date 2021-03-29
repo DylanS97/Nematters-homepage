@@ -3,14 +3,13 @@
 ---------------------------------------*/
 
 #latest-cards {
-    @include sizing($padding: 0 15px);
     .header-latest,
     .header-latest *,
     ul {
         display: inline-block;
     }
     .header-latest {
-        @include sizing($width: 100%);
+        @include sizing($width: 100%, $padding: 0 15px);
         ul {
             @include sizing($margin: auto, $padding: 0);
             span {

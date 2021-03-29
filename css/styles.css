@@ -20,6 +20,11 @@ button, a {
   cursor: pointer;
 }
 
+.max-width {
+  max-width: 750px;
+  margin: auto;
+}
+
 /*-- Clients Layout -------------------
 ---------------------------------------*/
 .flex-clients {
@@ -457,16 +462,20 @@ header {
   padding: 50px 15px;
 }
 
+#our-culture .inner-culture {
+  padding: 0 15px;
+}
+
+#our-culture .inner-culture > .arrow-btn p {
+  margin: 0;
+}
+
 #our-culture h2 {
   margin: -6px 0 28px 0;
 }
 
 #our-culture p {
   margin: 0 0 25px 0;
-}
-
-#our-culture > .arrow-btn p {
-  margin: 0;
 }
 
 /*-- Culture Styles -------------------
@@ -483,10 +492,6 @@ header {
 
 /*-- Cards Layout --------------
 ---------------------------------------*/
-#latest-cards {
-  padding: 0 15px;
-}
-
 #latest-cards .header-latest,
 #latest-cards .header-latest *,
 #latest-cards ul {
@@ -495,6 +500,7 @@ header {
 
 #latest-cards .header-latest {
   width: 100%;
+  padding: 0 15px;
 }
 
 #latest-cards .header-latest ul {
@@ -555,13 +561,13 @@ header {
 
 /*-- Newsletter Layout ----------------
 ---------------------------------------*/
-#newsletter-container {
-  padding: 50px 30px;
-}
-
 #newsletter-container .news-inner {
   width: 100%;
   margin: 0 auto;
+}
+
+#newsletter-container .inner {
+  padding: 50px 30px;
 }
 
 #newsletter-container h2,
@@ -885,30 +891,31 @@ footer .social-grid a {
   }
   /*--- Newsletter ---*/
   #newsletter-container .news-inner {
-    max-width: 720px;
     padding: 0 15px;
-    margin: 0 auto;
   }
   /*--- Footer ---*/
-  footer {
+  footer .inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  footer div {
+  footer .inner div {
     width: 50%;
   }
-  footer .social-grid {
+  footer .inner .social-grid {
     margin: 0;
   }
-  footer .social-grid a {
+  footer .inner .social-grid a {
     min-width: 157px;
   }
 }
 
 @media only screen and (min-width: 992px) {
+  .max-width {
+    max-width: 970px;
+  }
   .flex-header {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -997,6 +1004,12 @@ footer .social-grid a {
   #newsletter-container .email {
     display: inline-block;
     width: 49.6%;
+  }
+}
+
+@media only screen and (min-width: 1260px) {
+  .max-width {
+    max-width: 1200px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
