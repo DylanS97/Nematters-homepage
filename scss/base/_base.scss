@@ -20,16 +20,12 @@ button, a {
     margin: auto;
 }
 
-/*-- Clients Layout -------------------
+/*-- Clients, Partner Layout ----------
+---- Navigation -----------------------
 ---------------------------------------*/
 
-.flex-clients {
-    display: none;
-}
-
-/*-- Partner Layout --------------------
----------------------------------------*/
-
-.partners-container {
+.flex-clients,
+.partners-container,
+#navigation {
     display: none;
 }

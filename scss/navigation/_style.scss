@@ -1,0 +1,27 @@
+
+.navigation-container {
+    background: $theme-colour;
+    .web {
+        color: $web-training-colour;
+    }
+    .support {
+        color: $it-support-colour;
+    }
+    .telecoms {
+        color: $telecom-colour;
+    }
+    .bespoke {
+        color: $bespoke-colour;
+    }
+    .marketing {
+        color: $marketing-colour;
+    }
+    .cyber {
+        color: $cyber-colour;
+    }
+    a {
+        border-left: 1px solid $d-theme;
+        border-right: 1px solid $l-theme;
+        color: $main-colour;
+    }
+}

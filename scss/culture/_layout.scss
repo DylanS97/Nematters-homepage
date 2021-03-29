@@ -4,9 +4,9 @@
 
 #our-culture {
     @include sizing($padding: 50px 15px);
-    .inner-culture {
+    .container-culture {
         padding: 0 15px;
-        > .arrow-btn p {
+        .arrow-btn p {
             @include sizing($margin: 0);
         }
     }

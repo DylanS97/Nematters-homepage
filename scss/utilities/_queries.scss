@@ -4,7 +4,6 @@
 
 @media only screen and (min-width: 768px) {
     .flex-header {
-        justify-content: space-around;
         .header-left,
         .header-right {
             justify-content: center;
@@ -56,13 +55,11 @@
     }
     /*--- Card Styles ---*/
     .card-container {
+        @include sizing($padding: 0 0 50px 0); 
         > div:nth-child(n+3) {
             display: none;
         }
         @include flexy($dir: row);
-        .card-inner {
-            @include sizing($padding: 0 15px);
-        }
         .card {
             flex: 1;
         }
@@ -72,7 +69,7 @@
     .clients {
         @include sizing($padding: 50px 0);
         .flex-clients {
-            @include flexy($just: space-evenly);
+            @include flexy($just: space-between);
             div {
                 @include sizing($height: 47px, $padding: 0 20px);
             }
@@ -125,7 +122,6 @@
         max-width: $m-max-w;
     }
     .flex-header {
-        justify-content: space-around;
         .header-left,
         .header-right {
             justify-content: center;
@@ -188,13 +184,16 @@
             order: 4;
         }
     }
+    #navigation {
+        display: contents;
+    }
     #img-slider .slide-img-container {
         text-align: left;
     }
+    .inner-slide {
+        @include sizing($width: 100%, $margin: 0);
+    }
     #newsletter-container {
-        .news-inner {
-            @include sizing($max-w: 970px);
-        }
         .name,
         .email {
             display: inline-block;
@@ -206,5 +205,20 @@
 @media only screen and (min-width: 1260px) {
     .max-width {
         max-width: $l-max-w;
+    }
+
+    #flex-header .bar-container {
+        display: contents;
+    }
+
+    footer .inner {
+        flex-wrap: nowrap;
+    }
+    .inner-culture {
+        width: 50%;
+    }
+
+    .social-grid a {
+        width: 7.5rem;
     }
 }

@@ -25,15 +25,12 @@ button, a {
   margin: auto;
 }
 
-/*-- Clients Layout -------------------
+/*-- Clients, Partner Layout ----------
+---- Navigation -----------------------
 ---------------------------------------*/
-.flex-clients {
-  display: none;
-}
-
-/*-- Partner Layout --------------------
----------------------------------------*/
-.partners-container {
+.flex-clients,
+.partners-container,
+#navigation {
   display: none;
 }
 
@@ -200,6 +197,77 @@ header {
   color: #333645;
   font-size: 1.5rem;
   float: right;
+}
+
+.navigation-container {
+  width: 100%;
+}
+
+.navigation-container .inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  border-left: 1px solid #494d62;
+  border-right: 1px solid #1d1f28;
+}
+
+.navigation-container .inner-container a {
+  display: inline-block;
+  text-align: center;
+  height: 6.25rem;
+  width: 100%;
+  padding: 1rem 0 0 0;
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.navigation-container .inner-container a > div * {
+  display: block;
+}
+
+.navigation-container .inner-container a .logo {
+  font-size: 1.5rem;
+  padding: 0 0 10px 0;
+}
+
+.navigation-container .inner-container a small {
+  font-size: .625rem;
+}
+
+.navigation-container {
+  background: #333645;
+}
+
+.navigation-container .web {
+  color: #926fb1;
+}
+
+.navigation-container .support {
+  color: #4183d7;
+}
+
+.navigation-container .telecoms {
+  color: #d64541;
+}
+
+.navigation-container .bespoke {
+  color: #67809f;
+}
+
+.navigation-container .marketing {
+  color: #2ecc71;
+}
+
+.navigation-container .cyber {
+  color: #f62459;
+}
+
+.navigation-container a {
+  border-left: 1px solid #1d1f28;
+  border-right: 1px solid #494d62;
+  color: #fff;
 }
 
 /*-- Slider Layout ---------------
@@ -462,11 +530,11 @@ header {
   padding: 50px 15px;
 }
 
-#our-culture .inner-culture {
+#our-culture .container-culture {
   padding: 0 15px;
 }
 
-#our-culture .inner-culture > .arrow-btn p {
+#our-culture .container-culture .arrow-btn p {
   margin: 0;
 }
 
@@ -518,6 +586,10 @@ header {
 
 #latest-cards .card-container .card {
   margin: 30px 0 0 0;
+}
+
+#latest-cards .card-container .card-inner {
+  padding: 0 15px;
 }
 
 #latest-cards .card-footer {
@@ -748,10 +820,6 @@ footer .social-grid a {
 /*-- Media queries --------------------
 ---------------------------------------*/
 @media only screen and (min-width: 768px) {
-  .flex-header {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
   .flex-header .header-left,
   .flex-header .header-right {
     -webkit-box-pack: center;
@@ -822,6 +890,7 @@ footer .social-grid a {
   }
   /*--- Card Styles ---*/
   .card-container {
+    padding: 0 0 50px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -832,9 +901,6 @@ footer .social-grid a {
   }
   .card-container > div:nth-child(n+3) {
     display: none;
-  }
-  .card-container .card-inner {
-    padding: 0 15px;
   }
   .card-container .card {
     -webkit-box-flex: 1;
@@ -849,9 +915,9 @@ footer .social-grid a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .clients .flex-clients div {
     height: 47px;
@@ -915,10 +981,6 @@ footer .social-grid a {
 @media only screen and (min-width: 992px) {
   .max-width {
     max-width: 970px;
-  }
-  .flex-header {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
   }
   .flex-header .header-left,
   .flex-header .header-right {
@@ -994,11 +1056,15 @@ footer .social-grid a {
         -ms-flex-order: 4;
             order: 4;
   }
+  #navigation {
+    display: contents;
+  }
   #img-slider .slide-img-container {
     text-align: left;
   }
-  #newsletter-container .news-inner {
-    max-width: 970px;
+  .inner-slide {
+    width: 100%;
+    margin: 0;
   }
   #newsletter-container .name,
   #newsletter-container .email {
@@ -1010,6 +1076,19 @@ footer .social-grid a {
 @media only screen and (min-width: 1260px) {
   .max-width {
     max-width: 1200px;
+  }
+  #flex-header .bar-container {
+    display: contents;
+  }
+  footer .inner {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .inner-culture {
+    width: 50%;
+  }
+  .social-grid a {
+    width: 7.5rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
