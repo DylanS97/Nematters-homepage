@@ -84,8 +84,7 @@
             }
         }
     }
-    .flex-clients img,
-    .partners-container img {
+    .grayscale {
         filter: grayscale(100%);
         @include sizing($height: 100%);
         &:hover {
@@ -97,13 +96,14 @@
         @include sizing($padding: 50px 0);
         .partners-container {
             @include flexy($wrap: wrap, $just: space-between);
+            gap: 20px;
             div {
                 @include sizing($height: 88px, $padding: 0 20px);
-                flex: 1 1;
+                flex: 1;
                 text-align: center;
-            }
-            div:not(:first-child) {
-                @include sizing($margin: 20px 0 0 0);
+                img {
+                    height: 100%;
+                }
             }
         }
     }
