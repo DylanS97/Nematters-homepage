@@ -10,6 +10,8 @@
     }
     .shadow-bottom {
         width: 100%;
+    }
+    .center {
         text-align: center;
     }
     .header-latest {
@@ -19,6 +21,7 @@
             @include sizing($margin: 0, $padding: 0);
             span {
                 @include sizing($padding: 34px 0);
+                font-weight: 600;
             }
         }
     }
@@ -41,7 +44,7 @@
             }
         }
         ul {
-            @include sizing($margin: 0 0 0 15px, $padding: 0);
+            @include sizing($margin: 0, $padding: 0 0 0 20px);
             li {
                 list-style-type: none;
             }

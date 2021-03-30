@@ -77,6 +77,9 @@
             @include sizing($height: 100%, $width: 100%);
             @include borders($border: none);
         }
+        input {
+            padding: 5px 15px;
+        }
     }
     div.first-search-bar {
         @include sizing($width: 90%);

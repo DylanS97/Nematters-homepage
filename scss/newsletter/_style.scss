@@ -22,6 +22,11 @@
     .checkbox-label span {
         font-weight: bolder;
     }
+    .name > p:after,
+    .email > p:after {
+        content: " *";
+        color: #d24d57;
+    }
 }
 .subscribe-btn button {
     @include colours($colour: $main-colour, $background: $theme-colour);

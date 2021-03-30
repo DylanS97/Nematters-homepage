@@ -52,11 +52,15 @@
         display: none;
     }
     
-    #block-container {
-        flex-wrap: wrap-reverse;
+    #block-container .row-2 {
+        @include flexy($wrap: wrap, $dir: row);
         > * {
-            flex: 1 1 16.8em;
+            flex: 1 1 per-line(2, 15px);
         }
+    }
+    /*--- Culture Styles ---*/
+    .container-culture {
+        padding: 0 15px;
     }
     /*--- Card Styles ---*/
     .card-container {
@@ -92,10 +96,11 @@
     .partners {
         @include sizing($padding: 50px 0);
         .partners-container {
-            @include flexy($wrap: wrap, $just: space-evenly);
+            @include flexy($wrap: wrap, $just: space-between);
             div {
                 @include sizing($height: 88px, $padding: 0 20px);
                 flex: 1 1;
+                text-align: center;
             }
             div:not(:first-child) {
                 @include sizing($margin: 20px 0 0 0);
@@ -203,11 +208,24 @@
     .inner-slide {
         @include sizing($width: 100%, $margin: 0);
     }
+    #block-container .row-1 {
+        @include flexy($dir: row);
+        > * {
+            flex: 1;
+        }
+    }
+    .flex-clients,
+    .flex-clients img {
+        @include sizing($height: 3.9rem);
+    }
     #newsletter-container {
         .name,
         .email {
             display: inline-block;
-            @include sizing($width: per-line(2, 1px));
+            @include sizing($width: per-line(2, 4px));
+        }
+        .email {
+            float: right;
         }
     }
 }
@@ -224,13 +242,20 @@
     .flex-header #search-bar .search-btn {
         @include sizing($width: 25%);
     }
+    /*--- Block Styles ---*/
+    #block-container .row-2 {
+        @include flexy($wrap: nowrap);
+    }
     /*--- Card Styles ---*/
     .card-container {
         > div:nth-child(n+3) {
             display: contents;
         }
     }
-
+    .flex-clients,
+    .flex-clients img {
+        @include sizing($height: 4.375rem);
+    }
     footer .inner {
         flex-wrap: nowrap;
     }

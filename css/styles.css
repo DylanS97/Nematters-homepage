@@ -228,6 +228,10 @@ header {
   border: none;
 }
 
+#first-search-bar div input {
+  padding: 5px 15px;
+}
+
 #first-search-bar div.first-search-bar {
   width: 90%;
   float: left;
@@ -454,8 +458,24 @@ header {
   padding: 50px 15px;
 }
 
-#block-container a:not(#first-block) {
-  margin: 30px 0 0 0;
+#block-container .row-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#block-container .row-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #block-container .block {
@@ -488,6 +508,12 @@ header {
 
 #block-container .block h5 {
   margin: 0 0 11px 0;
+}
+
+#block-container,
+.row-1,
+.row-2 {
+  gap: 30px;
 }
 
 /*-- Blocks Styles --------------------
@@ -628,10 +654,6 @@ header {
   padding: 50px 15px;
 }
 
-#our-culture .container-culture {
-  padding: 0 15px;
-}
-
 #our-culture .container-culture .arrow-btn p {
   margin: 0;
 }
@@ -675,6 +697,9 @@ header {
 
 #latest-cards .shadow-bottom {
   width: 100%;
+}
+
+#latest-cards .center {
   text-align: center;
 }
 
@@ -691,6 +716,7 @@ header {
 
 #latest-cards .header-latest ul span {
   padding: 34px 0;
+  font-weight: 600;
 }
 
 #latest-cards .card-container {
@@ -720,8 +746,8 @@ header {
 }
 
 #latest-cards .card-footer ul {
-  padding: 0;
-  margin: 0 0 0 15px;
+  padding: 0 0 0 20px;
+  margin: 0;
 }
 
 #latest-cards .card-footer ul li {
@@ -736,12 +762,25 @@ header {
 }
 
 .card-footer {
+  font-size: .875rem;
   border: none;
   background: #fff;
 }
 
 .card-footer p {
   color: #666;
+}
+
+.card-title {
+  font-size: 1rem;
+}
+
+.card-title:hover {
+  text-decoration: underline;
+}
+
+.card-text {
+  font-size: .8125rem;
 }
 
 /*-- Newsletter Layout ----------------
@@ -821,6 +860,12 @@ header {
 
 #newsletter-container .checkbox-label span {
   font-weight: bolder;
+}
+
+#newsletter-container .name > p:after,
+#newsletter-container .email > p:after {
+  content: " *";
+  color: #d24d57;
 }
 
 .subscribe-btn button {
@@ -999,14 +1044,25 @@ footer .social-grid a {
   #first-search-bar {
     display: none;
   }
-  #block-container {
-    -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
+  #block-container .row-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  #block-container > * {
+  #block-container .row-2 > * {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 16.8em;
-            flex: 1 1 16.8em;
+        -ms-flex: 1 1 44%;
+            flex: 1 1 44%;
+  }
+  /*--- Culture Styles ---*/
+  .container-culture {
+    padding: 0 15px;
   }
   /*--- Card Styles ---*/
   .card-container {
@@ -1064,9 +1120,9 @@ footer .social-grid a {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .partners .partners-container div {
     height: 88px;
@@ -1074,6 +1130,7 @@ footer .social-grid a {
     -webkit-box-flex: 1;
         -ms-flex: 1 1;
             flex: 1 1;
+    text-align: center;
   }
   .partners .partners-container div:not(:first-child) {
     margin: 20px 0 0 0;
@@ -1192,10 +1249,31 @@ footer .social-grid a {
     width: 100%;
     margin: 0;
   }
+  #block-container .row-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #block-container .row-1 > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .flex-clients,
+  .flex-clients img {
+    height: 3.9rem;
+  }
   #newsletter-container .name,
   #newsletter-container .email {
     display: inline-block;
-    width: 49.6%;
+    width: 48.4%;
+  }
+  #newsletter-container .email {
+    float: right;
   }
 }
 
@@ -1210,9 +1288,21 @@ footer .social-grid a {
   .flex-header #search-bar .search-btn {
     width: 25%;
   }
+  /*--- Block Styles ---*/
+  #block-container .row-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
   /*--- Card Styles ---*/
   .card-container > div:nth-child(n+3) {
     display: contents;
+  }
+  .flex-clients,
+  .flex-clients img {
+    height: 4.375rem;
   }
   footer .inner {
     -ms-flex-wrap: nowrap;
