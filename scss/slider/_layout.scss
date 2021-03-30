@@ -22,3 +22,7 @@
 .slide-img {
     @include sizing($width: 100%);
 }
+.slide-btn {
+    font-size: 1.25rem;
+    padding: 5px 20px;
+}

@@ -48,10 +48,10 @@
     }
     
     #block-container {
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-        flex: 1;
+        flex-wrap: wrap-reverse;
+        > * {
+            flex: 1 1 16.8em;
+        }
     }
     /*--- Card Styles ---*/
     .card-container {
@@ -71,7 +71,7 @@
         .flex-clients {
             @include flexy($just: space-between);
             div {
-                @include sizing($height: 47px, $padding: 0 20px);
+                @include sizing($height: 2.8rem, $padding: 0 20px);
             }
         }
     }
@@ -209,6 +209,13 @@
 
     #flex-header .bar-container {
         display: contents;
+    }
+
+    /*--- Card Styles ---*/
+    .card-container {
+        > div:nth-child(n+3) {
+            display: contents;
+        }
     }
 
     footer .inner {
