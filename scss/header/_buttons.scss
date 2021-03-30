@@ -45,7 +45,8 @@
 #search-bar {
     display: none;
     @include sizing($margin: 10px 0 0 0);
-    div {
+    div.search-bar,
+    div.search-btn {
         @include sizing($height: 100%);
         input,
         button {
@@ -60,6 +61,11 @@
         font-size: 1.68rem;
         float: right;
     }
+}
+.hide-bar {
+    display: inline-block;
+    height: 100%;
+    width: 75%;
 }
 #first-search-bar {
     @include sizing($height: 5vh, $width: 100%, $margin: 10px 0 0 0);

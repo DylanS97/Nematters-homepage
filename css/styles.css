@@ -25,6 +25,10 @@ button, a {
   margin: auto;
 }
 
+.caps {
+  text-transform: uppercase;
+}
+
 /*-- Clients, Partner Layout ----------
 ---- Navigation -----------------------
 ---------------------------------------*/
@@ -157,12 +161,15 @@ header {
   margin: 10px 0 0 0;
 }
 
-#search-bar div {
+#search-bar div.search-bar,
+#search-bar div.search-btn {
   height: 100%;
 }
 
-#search-bar div input,
-#search-bar div button {
+#search-bar div.search-bar input,
+#search-bar div.search-bar button,
+#search-bar div.search-btn input,
+#search-bar div.search-btn button {
   height: 100%;
   width: 100%;
   border: 1px solid #999aa2;
@@ -175,6 +182,12 @@ header {
 #search-bar div.search-btn {
   font-size: 1.68rem;
   float: right;
+}
+
+.hide-bar {
+  display: inline-block;
+  height: 100%;
+  width: 75%;
 }
 
 #first-search-bar {
@@ -867,9 +880,10 @@ footer .social-grid a {
     border: 1px solid #999aa2;
   }
   .flex-header #search-bar .search-bar {
-    width: 75%;
+    width: 100%;
   }
   .flex-header #search-bar .search-bar input {
+    padding: 5px 15px;
     background: #fff;
   }
   .flex-header #search-bar .search-btn {
@@ -1050,19 +1064,16 @@ footer .social-grid a {
         -ms-flex-order: 3;
             order: 3;
   }
-  .flex-header #search-bar .search-bar {
-    display: none;
-  }
   .flex-header #search-bar .search-btn {
-    width: 63px;
-  }
-  .flex-header #search-bar button {
-    color: #fff;
+    width: 4rem;
   }
   .flex-header #nav {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
+  }
+  .hide-bar {
+    display: none;
   }
   #navigation {
     display: contents;
@@ -1085,8 +1096,12 @@ footer .social-grid a {
   .max-width {
     max-width: 1200px;
   }
-  #flex-header .bar-container {
-    display: contents;
+  .hide-bar {
+    display: inline-block;
+    width: 75%;
+  }
+  .flex-header #search-bar .search-btn {
+    width: 25%;
   }
   /*--- Card Styles ---*/
   .card-container > div:nth-child(n+3) {

@@ -2,6 +2,7 @@
 /*-- Media queries --------------------
 ---------------------------------------*/
 
+// 768 pixels
 @media only screen and (min-width: 768px) {
     .flex-header {
         .header-left,
@@ -27,8 +28,9 @@
             @include sizing($height: 100%, $margin: 0);
             @include borders($border: 1px solid #999aa2);
             .search-bar {
-                @include sizing($width: 75%);
+                @include sizing($width: 100%);
                 input {
+                    @include sizing($padding: 5px 15px);
                     background: #fff;
                 }
             }
@@ -117,6 +119,7 @@
     }
 }
 
+// 992 pixels
 @media only screen and (min-width: 992px) {
     .max-width {
         max-width: $m-max-w;
@@ -170,19 +173,16 @@
         }
         #search-bar {
             order: 3;
-            .search-bar {
-                display: none;
-            }
             .search-btn {
-                @include sizing($width: 63px);
-            }
-            button {
-                color: $main-colour;
+                @include sizing($width: 4rem);
             }
         }
         #nav {
             order: 4;
         }
+    }
+    .hide-bar {
+        display: none;
     }
     #navigation {
         display: contents;
@@ -202,15 +202,18 @@
     }
 }
 
+// 1260 pixels
 @media only screen and (min-width: 1260px) {
     .max-width {
         max-width: $l-max-w;
     }
-
-    #flex-header .bar-container {
-        display: contents;
+    .hide-bar {
+        display: inline-block;
+        width: 75%;
     }
-
+    .flex-header #search-bar .search-btn {
+        @include sizing($width: 25%);
+    }
     /*--- Card Styles ---*/
     .card-container {
         > div:nth-child(n+3) {
