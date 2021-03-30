@@ -4,6 +4,9 @@
 
 .inner-nav {
     @include colours($colour: $main-colour, $background: $theme-colour);
+    &:hover {
+        @include colours($background: $d-theme);
+    }
     .nav-bars {
         @include colours($background: $main-colour);
     }

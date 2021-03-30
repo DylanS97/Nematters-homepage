@@ -7,6 +7,9 @@ footer, footer a {
 }
 footer {
     @include colours($background: $theme-colour);
+    a:hover {
+        text-decoration: underline;
+    }
     ul {
         font-size: 13px;
         list-style-type: none;

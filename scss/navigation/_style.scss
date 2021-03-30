@@ -1,27 +1,65 @@
 
 .navigation-container {
     background: $theme-colour;
-    .web {
+    .web .logo {
         color: $web-training-colour;
     }
-    .support {
+    .support .logo {
         color: $it-support-colour;
     }
-    .telecoms {
+    .telecoms .logo {
         color: $telecom-colour;
     }
-    .bespoke {
+    .bespoke .logo {
         color: $bespoke-colour;
     }
-    .marketing {
+    .marketing .logo {
         color: $marketing-colour;
     }
-    .cyber {
+    .cyber .logo {
         color: $cyber-colour;
     }
     a {
         border-left: 1px solid $d-theme;
         border-right: 1px solid $l-theme;
         color: $main-colour;
+    }
+
+    // HOVER STATES
+    .web:hover {
+        @include colours($background: $web-training-colour);
+        .logo {
+            @include colours($colour: $main-colour);
+        }
+    }
+    .support:hover {
+        @include colours($background: $it-support-colour);
+        .logo {
+            @include colours($colour: $main-colour);
+        }
+    }
+    .telecoms:hover {
+        @include colours($background: $telecom-colour);
+        .logo {
+            @include colours($colour: $main-colour);
+        }
+    }
+    .bespoke:hover {
+        @include colours($background: $bespoke-colour);
+        .logo {
+            @include colours($colour: $main-colour);
+        }
+    }
+    .marketing:hover {
+        @include colours($background: $marketing-colour);
+        .logo {
+            @include colours($colour: $main-colour);
+        }
+    }
+    .cyber:hover {
+        @include colours($background: $cyber-colour);
+        .logo {
+            @include colours($colour: $main-colour);
+        }
     }
 }

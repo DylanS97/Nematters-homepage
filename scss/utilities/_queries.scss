@@ -38,6 +38,9 @@
                 @include sizing($width: 25%);
                 button {
                     @include colours($colour: $main-colour, $background: #999aa2);
+                    &:hover {
+                        @include colours($background: darken(#999aa2, 10%));
+                    }
                 }
             }
         }
@@ -92,6 +95,7 @@
             @include flexy($wrap: wrap, $just: space-evenly);
             div {
                 @include sizing($height: 88px, $padding: 0 20px);
+                flex: 1 1;
             }
             div:not(:first-child) {
                 @include sizing($margin: 20px 0 0 0);
@@ -160,10 +164,16 @@
         }
         #support a {
             @include colours($background: $it-support-colour);
+            &:hover {
+                @include colours($background: darken($it-support-colour, 10%));
+            }
         }
 
         #contact a {
             @include colours($background: #999aa2);
+            &:hover {
+                @include colours($background: darken(#999aa2, 10%));
+            }
         }
         #contact {
             order: 2;

@@ -12,6 +12,9 @@
     }
     .web-img-btn {
         @include colours($colour: $main-colour, $background: $web-training-colour);
+        &:hover {
+            @include colours($background: darken($web-training-colour, 10%));
+        }
     }
 }
 .arrow-btn button {

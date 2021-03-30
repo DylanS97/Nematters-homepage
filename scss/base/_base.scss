@@ -8,11 +8,16 @@
 
 body {
     font-family: $font;
+    color: $main-colour;
     @include colours($colour: $theme-colour, $background: $body-colour);
 }
 
 button, a {
     cursor: pointer;
+}
+a:hover {
+    color: $main-colour;
+    text-decoration: none;
 }
 
 .max-width {
@@ -22,6 +27,13 @@ button, a {
 
 .caps {
     text-transform: uppercase;
+}
+
+.shadow-bottom {
+    box-shadow: 0 .5rem .5rem darken($main-colour, 10%);
+}
+.shadow-box {
+    box-shadow: 0 .25rem .5rem 0 darken($main-colour, 15%), 0 .4rem 1.25rem 0 darken($main-colour, 15%);
 }
 
 /*-- Clients, Partner Layout ----------

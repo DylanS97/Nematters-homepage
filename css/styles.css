@@ -12,12 +12,18 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  color: #fff;
   color: #333645;
   background: whitesmoke;
 }
 
 button, a {
   cursor: pointer;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .max-width {
@@ -27,6 +33,16 @@ button, a {
 
 .caps {
   text-transform: uppercase;
+}
+
+.shadow-bottom {
+  -webkit-box-shadow: 0 0.5rem 0.5rem #e6e6e6;
+          box-shadow: 0 0.5rem 0.5rem #e6e6e6;
+}
+
+.shadow-box {
+  -webkit-box-shadow: 0 0.25rem 0.5rem 0 #d9d9d9, 0 0.4rem 1.25rem 0 #d9d9d9;
+          box-shadow: 0 0.25rem 0.5rem 0 #d9d9d9, 0 0.4rem 1.25rem 0 #d9d9d9;
 }
 
 /*-- Clients, Partner Layout ----------
@@ -87,6 +103,10 @@ header {
 .inner-nav {
   color: #fff;
   background: #333645;
+}
+
+.inner-nav:hover {
+  background: #1d1f28;
 }
 
 .inner-nav .nav-bars {
@@ -261,33 +281,81 @@ header {
   background: #333645;
 }
 
-.navigation-container .web {
+.navigation-container .web .logo {
   color: #926fb1;
 }
 
-.navigation-container .support {
+.navigation-container .support .logo {
   color: #4183d7;
 }
 
-.navigation-container .telecoms {
+.navigation-container .telecoms .logo {
   color: #d64541;
 }
 
-.navigation-container .bespoke {
+.navigation-container .bespoke .logo {
   color: #67809f;
 }
 
-.navigation-container .marketing {
+.navigation-container .marketing .logo {
   color: #2ecc71;
 }
 
-.navigation-container .cyber {
+.navigation-container .cyber .logo {
   color: #f62459;
 }
 
 .navigation-container a {
   border-left: 1px solid #1d1f28;
   border-right: 1px solid #494d62;
+  color: #fff;
+}
+
+.navigation-container .web:hover {
+  background: #926fb1;
+}
+
+.navigation-container .web:hover .logo {
+  color: #fff;
+}
+
+.navigation-container .support:hover {
+  background: #4183d7;
+}
+
+.navigation-container .support:hover .logo {
+  color: #fff;
+}
+
+.navigation-container .telecoms:hover {
+  background: #d64541;
+}
+
+.navigation-container .telecoms:hover .logo {
+  color: #fff;
+}
+
+.navigation-container .bespoke:hover {
+  background: #67809f;
+}
+
+.navigation-container .bespoke:hover .logo {
+  color: #fff;
+}
+
+.navigation-container .marketing:hover {
+  background: #2ecc71;
+}
+
+.navigation-container .marketing:hover .logo {
+  color: #fff;
+}
+
+.navigation-container .cyber:hover {
+  background: #f62459;
+}
+
+.navigation-container .cyber:hover .logo {
   color: #fff;
 }
 
@@ -342,6 +410,10 @@ header {
 .slide-img-container .web-img-btn {
   color: #fff;
   background: #926fb1;
+}
+
+.slide-img-container .web-img-btn:hover {
+  background: #79539a;
 }
 
 .arrow-btn button {
@@ -584,6 +656,15 @@ header {
   font-weight: normal;
 }
 
+#our-culture .arrow-btn button {
+  color: #333645;
+  background: #fff;
+}
+
+#our-culture .arrow-btn button:hover {
+  background: #e6e6e6;
+}
+
 /*-- Cards Layout --------------
 ---------------------------------------*/
 #latest-cards .header-latest,
@@ -592,14 +673,20 @@ header {
   display: inline-block;
 }
 
+#latest-cards .shadow-bottom {
+  width: 100%;
+  text-align: center;
+}
+
 #latest-cards .header-latest {
   width: 100%;
   padding: 0 15px;
+  text-align: left;
 }
 
 #latest-cards .header-latest ul {
   padding: 0;
-  margin: auto;
+  margin: 0;
 }
 
 #latest-cards .header-latest ul span {
@@ -743,6 +830,10 @@ header {
   border-radius: 4px;
 }
 
+.subscribe-btn button:hover {
+  background: #1d1f28;
+}
+
 /*-- Newsletter Button ----------------
 ---------------------------------------*/
 .subscribe-btn,
@@ -814,6 +905,10 @@ footer, footer a {
 
 footer {
   background: #333645;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 footer ul {
@@ -892,6 +987,9 @@ footer .social-grid a {
   .flex-header #search-bar .search-btn button {
     color: #fff;
     background: #999aa2;
+  }
+  .flex-header #search-bar .search-btn button:hover {
+    background: #7e808a;
   }
   .flex-header #nav {
     -webkit-box-ordinal-group: 3;
@@ -973,6 +1071,9 @@ footer .social-grid a {
   .partners .partners-container div {
     height: 88px;
     padding: 0 20px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1;
+            flex: 1 1;
   }
   .partners .partners-container div:not(:first-child) {
     margin: 20px 0 0 0;
@@ -1048,8 +1149,14 @@ footer .social-grid a {
   .flex-header #support a {
     background: #4183d7;
   }
+  .flex-header #support a:hover {
+    background: #286abd;
+  }
   .flex-header #contact a {
     background: #999aa2;
+  }
+  .flex-header #contact a:hover {
+    background: #7e808a;
   }
   .flex-header #contact {
     -webkit-box-ordinal-group: 3;

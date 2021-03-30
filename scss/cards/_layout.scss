@@ -8,10 +8,15 @@
     ul {
         display: inline-block;
     }
+    .shadow-bottom {
+        width: 100%;
+        text-align: center;
+    }
     .header-latest {
         @include sizing($width: 100%, $padding: 0 15px);
+        text-align: left;
         ul {
-            @include sizing($margin: auto, $padding: 0);
+            @include sizing($margin: 0, $padding: 0);
             span {
                 @include sizing($padding: 34px 0);
             }

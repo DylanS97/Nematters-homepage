@@ -26,4 +26,7 @@
 .subscribe-btn button {
     @include colours($colour: $main-colour, $background: $theme-colour);
     @include borders($border: none, $border-radius: 4px);
+    &:hover {
+        @include colours($background: $d-theme);
+    }
 }
