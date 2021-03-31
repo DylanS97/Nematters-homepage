@@ -1,6 +1,7 @@
 
-/*--Header Buttons & Search Bar--------
----------------------------------------*/
+// Header Buttons -------------------------
+// ----------------------------------------
+
 .inner-nav {
     display: inline-block;
 }
@@ -9,7 +10,7 @@
 #contact .inner {
     @include sizing($padding: 7px 0);
 }
-/*--- Nav ---*/
+// Nav
 .inner-nav {
     @include sizing($height: 100%, $padding: 3px 15px);
 }
@@ -21,7 +22,7 @@
     }
 }
 
-/*--- Contact ---*/
+// Contact
 #contact {
     .fa-phone-volume {
         color: $theme-colour;
@@ -33,12 +34,12 @@
     }
 }
 
-/*--- Support ---*/
+// Support
 #support {
     display: none;
 }
 
-/*--- Search bar ---*/
+// Search Bars
 #search-container {
     @include sizing($width: 100%);
 }
@@ -94,4 +95,3 @@
         float: right;
     }
 }
-

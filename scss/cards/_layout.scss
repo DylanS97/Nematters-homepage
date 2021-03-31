@@ -1,6 +1,6 @@
 
-/*-- Cards Layout --------------
----------------------------------------*/
+// Cards Layout ---------------------------
+// ----------------------------------------
 
 #latest-cards {
     .header-latest,
@@ -41,15 +41,6 @@
             }
         }
     }
-    // .card-container {
-    //     @include sizing($padding: 0 0 50px 0);
-    //     .card {
-    //         @include sizing($margin: 30px 0 0 0);
-    //     }
-    //     .card-inner {
-    //         padding: 0 15px;
-    //     }
-    // }
     .card-footer {
         @include sizing($padding: 20px 0 0 0);
         .card-logo {

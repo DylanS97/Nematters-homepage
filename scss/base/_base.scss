@@ -1,6 +1,6 @@
 
-/*-- Body Styles ----------------------
----------------------------------------*/
+// Main Styles ----------------------------
+// ----------------------------------------
 * {
     box-sizing: border-box;
     letter-spacing: .4px;
@@ -47,9 +47,8 @@ a:hover {
     @include borders($border-radius: 4px);
 }
 
-/*-- Clients, Partner Layout ----------
----- Navigation -----------------------
----------------------------------------*/
+// Clients, Partner, Navigation -----------
+// ----------------------------------------
 
 .flex-clients,
 .partners-container,
