@@ -8,9 +8,9 @@
     button,
     button * {
         display: inline-block;
-        @include sizing($max-w: 225px, $margin: auto);
+        @include sizing($margin: auto);
     }
     button {
-        @include sizing($height: 100%, $width: 100%);
+        @include sizing($height: 100%);
     }
 }

@@ -10,13 +10,16 @@ body {
     font-family: $font;
     color: $main-colour;
     @include colours($colour: $theme-colour, $background: $body-colour);
+    margin: 0;
 }
 
-button, a {
+button,
+a,
+.card-top {
     cursor: pointer;
 }
+a,
 a:hover {
-    color: $main-colour;
     text-decoration: none;
 }
 
@@ -34,6 +37,14 @@ a:hover {
 }
 .shadow-box {
     box-shadow: 0 .25rem .5rem 0 darken($main-colour, 15%), 0 .4rem 1.25rem 0 darken($main-colour, 15%);
+}
+
+.btn {
+    display: inline-block;
+    font-size: $btn-font;
+    color: $main-colour;
+    padding: 5px 15px;
+    @include borders($border-radius: 4px);
 }
 
 /*-- Clients, Partner Layout ----------

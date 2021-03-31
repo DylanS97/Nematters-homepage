@@ -69,6 +69,7 @@
             display: none;
         }
         @include flexy($dir: row);
+        gap: 20px;
         .card {
             flex: 1;
         }
@@ -150,9 +151,7 @@
         #support a,
         #contact a {
             display: inline-block;
-            @include sizing($height: 100%, $padding: 5px 15px, $margin: 0 20px 0 0);
-            font-size: 1.125rem;
-            @include borders($border-radius: 4px);
+            @include sizing($height: 100%, $margin: 0 20px 0 0);
             @include colours($colour: #fff);
             .contents {
                 position: relative;
@@ -213,6 +212,13 @@
         > * {
             flex: 1;
         }
+    }
+    .card-top {
+        overflow: hidden;
+    }
+    .card-top:hover img {
+        transform: scale(1.1);
+        transition-duration: .4s;
     }
     .flex-clients,
     .flex-clients img {

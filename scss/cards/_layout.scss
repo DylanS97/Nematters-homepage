@@ -26,17 +26,33 @@
         }
     }
     .card-container {
-        @include sizing($padding: 0 0 50px 0);
+        @include sizing($padding: 0 15px 50px 15px);
         .card {
             @include sizing($margin: 30px 0 0 0);
         }
-        .card-inner {
-            padding: 0 15px;
+        .card-top img {
+            width: 100%;
+        }
+        .card-body {
+            @include sizing($padding: 30px);
+            h5,
+            > p {
+                margin: 0 0 15px 0;
+            }
         }
     }
+    // .card-container {
+    //     @include sizing($padding: 0 0 50px 0);
+    //     .card {
+    //         @include sizing($margin: 30px 0 0 0);
+    //     }
+    //     .card-inner {
+    //         padding: 0 15px;
+    //     }
+    // }
     .card-footer {
         @include sizing($padding: 20px 0 0 0);
-        .net-logo {
+        .card-logo {
             @include sizing($height: 3rem, $width: 3rem);
             float: left;
             img {

@@ -8,7 +8,7 @@
         @include colours($background: $main-colour);
         @include borders($border: 1px solid #ccc, $border-radius: 3px);
         text-align: center;
-        font-size: .8rem;
+        font-size: $xxxs-font;
         &-logo {
             color: #fff;
         }
@@ -43,6 +43,5 @@
 }
 .block-btn {
     @include borders($border: none, $border-radius: 4px);
-    font-size: 1rem;
     @include colours($colour: $main-colour);
 }

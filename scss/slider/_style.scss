@@ -5,10 +5,11 @@
 .slide-img-container {
     @include colours($colour: $main-colour);
     .inner-slide h2 {
-        font-size: 3rem;
+        font-size: $xxxl-font;
+        font-weight: normal;
     }
     .inner-slide > p {
-        font-size: 1.25rem;
+        font-size: $m-font;
     }
     .web-img-btn {
         @include colours($colour: $main-colour, $background: $web-training-colour);

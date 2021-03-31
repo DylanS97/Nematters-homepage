@@ -23,6 +23,7 @@
     @include sizing($width: 100%);
 }
 .slide-btn {
-    font-size: 1.25rem;
+    display: inline;
+    font-size: $m-font;
     padding: 5px 20px;
 }

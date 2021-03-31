@@ -15,14 +15,17 @@ body {
   color: #fff;
   color: #333645;
   background: whitesmoke;
+  margin: 0;
 }
 
-button, a {
+button,
+a,
+.card-top {
   cursor: pointer;
 }
 
+a,
 a:hover {
-  color: #fff;
   text-decoration: none;
 }
 
@@ -43,6 +46,14 @@ a:hover {
 .shadow-box {
   -webkit-box-shadow: 0 0.25rem 0.5rem 0 #d9d9d9, 0 0.4rem 1.25rem 0 #d9d9d9;
           box-shadow: 0 0.25rem 0.5rem 0 #d9d9d9, 0 0.4rem 1.25rem 0 #d9d9d9;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1.065rem;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 4px;
 }
 
 /*-- Clients, Partner Layout ----------
@@ -200,8 +211,11 @@ header {
 }
 
 #search-bar div.search-btn {
-  font-size: 1.68rem;
   float: right;
+}
+
+#search-bar div.search-btn button {
+  font-size: 1.5rem;
 }
 
 .hide-bar {
@@ -393,6 +407,7 @@ header {
 }
 
 .slide-btn {
+  display: inline;
   font-size: 1.25rem;
   padding: 5px 20px;
 }
@@ -405,6 +420,7 @@ header {
 
 .slide-img-container .inner-slide h2 {
   font-size: 3rem;
+  font-weight: normal;
 }
 
 .slide-img-container .inner-slide > p {
@@ -436,13 +452,11 @@ header {
 .arrow-btn button,
 .arrow-btn button * {
   display: inline-block;
-  max-width: 225px;
   margin: auto;
 }
 
 .arrow-btn button {
   height: 100%;
-  width: 100%;
 }
 
 /*-- Blocks Layout --------------------
@@ -508,6 +522,8 @@ header {
 
 #block-container .block h5 {
   margin: 0 0 11px 0;
+  font-size: 1.125rem;
+  font-weight: normal;
 }
 
 #block-container,
@@ -527,7 +543,7 @@ header {
   border: 1px solid #ccc;
   border-radius: 3px;
   text-align: center;
-  font-size: .8rem;
+  font-size: 0.8125rem;
 }
 
 #block-container .block-logo {
@@ -636,7 +652,6 @@ header {
 .block-btn {
   border: none;
   border-radius: 4px;
-  font-size: 1rem;
   color: #fff;
 }
 
@@ -720,28 +735,37 @@ header {
 }
 
 #latest-cards .card-container {
-  padding: 0 0 50px 0;
+  padding: 0 15px 50px 15px;
 }
 
 #latest-cards .card-container .card {
   margin: 30px 0 0 0;
 }
 
-#latest-cards .card-container .card-inner {
-  padding: 0 15px;
+#latest-cards .card-container .card-top img {
+  width: 100%;
+}
+
+#latest-cards .card-container .card-body {
+  padding: 30px;
+}
+
+#latest-cards .card-container .card-body h5,
+#latest-cards .card-container .card-body > p {
+  margin: 0 0 15px 0;
 }
 
 #latest-cards .card-footer {
   padding: 20px 0 0 0;
 }
 
-#latest-cards .card-footer .net-logo {
+#latest-cards .card-footer .card-logo {
   height: 3rem;
   width: 3rem;
   float: left;
 }
 
-#latest-cards .card-footer .net-logo img {
+#latest-cards .card-footer .card-logo img {
   height: 100%;
 }
 
@@ -759,6 +783,12 @@ header {
 .header-latest span {
   font-size: 20px;
   border-bottom: 5px solid #333645;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .card-footer {
@@ -781,6 +811,10 @@ header {
 
 .card-text {
   font-size: .8125rem;
+}
+
+.card-btn {
+  background: #926fb1;
 }
 
 /*-- Newsletter Layout ----------------
@@ -1074,6 +1108,7 @@ footer .social-grid a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 20px;
   }
   .card-container > div:nth-child(n+3) {
     display: none;
@@ -1180,10 +1215,7 @@ footer .social-grid a {
   .flex-header #contact a {
     display: inline-block;
     height: 100%;
-    padding: 5px 15px;
     margin: 0 20px 0 0;
-    font-size: 1.125rem;
-    border-radius: 4px;
     color: #fff;
   }
   .flex-header #support a .contents,
@@ -1261,6 +1293,15 @@ footer .social-grid a {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+  .card-top {
+    overflow: hidden;
+  }
+  .card-top:hover img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition-duration: .4s;
+            transition-duration: .4s;
   }
   .flex-clients,
   .flex-clients img {

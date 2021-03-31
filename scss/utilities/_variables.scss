@@ -1,6 +1,17 @@
 
 // Variables
 $font: 'Poppins', sans-serif;
+$xxxs-font: .8125rem; // 13px
+$xxs-font: .875rem; // 14px
+$xs-font: 1rem; // 16px
+$btn-font: 1.065rem; // 17px (Buttons)
+$s-font: 1.125rem; // 18px
+$m-font: 1.25rem; // 20px
+$log-font: 1.4375rem; // 23px
+$l-font: 1.5rem; // 24px
+$xl-font: 2rem; // 32px
+$xxl-font: 2.25rem; // 36px
+$xxxl-font: 3rem; // 48px
 
 $theme-colour: #333645;
 $l-theme: lighten(#333645, 10);
