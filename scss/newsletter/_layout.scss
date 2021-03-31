@@ -14,7 +14,8 @@
     .email {
         @include sizing($margin: 0 0 15px 0);
     }
-    p {
+    .name p,
+    .email p {
         @include sizing($margin: 0 0 5px 0);
     }
     label a {

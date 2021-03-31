@@ -21,7 +21,7 @@ footer {
             @include grids($g-t-c: 1fr 1fr, $g-t-r: auto, $gap: 30px 0);
             @include sizing($padding: 0);
             a {
-                @include sizing($padding: 12px 0, $margin: 0 15px);
+                @include sizing($margin: 0 15px);
             }
         }
     }

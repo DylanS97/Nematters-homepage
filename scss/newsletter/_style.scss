@@ -8,7 +8,8 @@
         font-size: 2.25rem;
         font-weight: normal;
     }
-    p {
+    p,
+    .checkbox-label span {
         font-weight: 600;
     }
     input[type="text"],
@@ -18,9 +19,6 @@
     }
     input[type="checkbox"] {
         @include borders($border: 2px solid $theme-colour, $border-radius: 4px);
-    }
-    .checkbox-label span {
-        font-weight: bolder;
     }
     .name > p:after,
     .email > p:after {

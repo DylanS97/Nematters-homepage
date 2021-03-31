@@ -11,11 +11,11 @@ footer {
         text-decoration: underline;
     }
     ul {
-        font-size: 13px;
+        font-size: $xxxs-font;
         list-style-type: none;
     }
     h2 {
-        font-size: 1rem;
+        font-size: $xs-font;
         font-weight: normal;
     }
     .social-grid {
@@ -31,6 +31,8 @@ footer {
         a {
             @include colours($background: #00000040);
             text-align: center;
+            font-size: $xl-font;
+            padding: 0;
         }
     }
 }

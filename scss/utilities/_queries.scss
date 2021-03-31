@@ -222,9 +222,18 @@
     .card-top {
         overflow: hidden;
     }
+    .card-top img {
+        transition-duration: .4s;
+    }
     .card-top:hover img {
         transform: scale(1.1);
-        transition-duration: .4s;
+    }
+    // Culture 
+    #our-culture {
+        background-image: url('/logos/netmatters-logo.png');
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-size: auto 100%;
     }
     // Clients
     .flex-clients,
@@ -250,12 +259,16 @@
         max-width: $l-max-w;
     }
     // Header
+    div#search-container {
+        display: inline-block;
+        width: 300px;
+    }
     .hide-bar {
         display: inline-block;
-        width: 75%;
+        width: 80%;
     }
     .flex-header #search-bar .search-btn {
-        @include sizing($width: 25%);
+        @include sizing($width: 20%);
     }
     // Blocks
     #block-container .row-2 {
