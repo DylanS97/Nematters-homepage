@@ -4,8 +4,10 @@
 
 .navigation-container {
     width: 100%;
+    position: relative;
     .inner-container {
         @include flexy($wrap: nowrap);
+        @include sizing($max-w: 1170px, $margin: auto);
         border-left: 1px solid $l-theme;
         border-right: 1px solid $d-theme;
         a {
@@ -16,7 +18,8 @@
             padding: 1rem 0 0 0;
             font-size: 1.125rem;
             line-height: 1;
-            > div * {
+            div.logo *,
+            div.caps * {
                 display: block;
             }
             .logo {
@@ -26,6 +29,29 @@
             small {
                 font-size: .625rem;
             }
+        }
+    }
+}
+.lower-nav-container,
+.lower-navigation + * {
+    visibility: hidden;
+    display: inline-block;
+}
+.lower-nav-container {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+    @include sizing($height: 45px, $width: 100%);
+    .lower-navigation {
+        display: flex;
+        list-style-type: none;
+        padding: 0 15px;
+        line-height: 3;
+        font-size: $xxxs-font;
+        li:nth-child(n+2):before {
+            content: "-";
+            margin: 0 20px;
         }
     }
 }

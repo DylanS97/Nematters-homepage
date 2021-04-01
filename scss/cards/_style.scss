@@ -28,6 +28,25 @@
 .card-text {
     font-size: .8125rem;
 }
-.card-btn {
-    background: $web-training-colour;
+.news-card {
+    h5 {
+        color: $web-training-colour;
+    }
+    .card-btn {
+        background: $web-training-colour;
+        &:hover {
+            background: darken($web-training-colour, 10%);
+        }
+    }
+}
+.case-studies {
+    h5 {
+        color: $case-studies-colour;
+    }
+    .card-btn {
+        background: $case-studies-colour;
+        &:hover {
+            background: darken($case-studies-colour, 10%);
+        }
+    }
 }

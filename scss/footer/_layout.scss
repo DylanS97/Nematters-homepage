@@ -2,7 +2,7 @@
 // Footer Layout --------------------------
 // ----------------------------------------
 
-footer {
+footer .inner {
     @include sizing($padding: 50px 0);
     ul {
         @include sizing($padding: 0);

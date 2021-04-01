@@ -64,3 +64,9 @@
     color: $colour;
     background: $background;
 }
+
+@mixin nav-hover($background: null,
+                 $visibility: visible) {
+    visibility: $visibility;
+    background: $background;
+}

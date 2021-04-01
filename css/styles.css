@@ -45,6 +45,8 @@ a:hover {
 .btn {
   display: inline-block;
   font-size: 1.065rem;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
   color: #fff;
   padding: 5px 15px;
   border-radius: 4px;
@@ -73,6 +75,7 @@ header {
       -ms-flex: 1;
           flex: 1;
   width: 100%;
+  padding: 0 15px;
 }
 
 .flex-header #header-logo {
@@ -245,6 +248,7 @@ header {
 
 .navigation-container {
   width: 100%;
+  position: relative;
 }
 
 .navigation-container .inner-container {
@@ -253,6 +257,8 @@ header {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  max-width: 1170px;
+  margin: auto;
   border-left: 1px solid #494d62;
   border-right: 1px solid #1d1f28;
 }
@@ -267,7 +273,8 @@ header {
   line-height: 1;
 }
 
-.navigation-container .inner-container a > div * {
+.navigation-container .inner-container a div.logo *,
+.navigation-container .inner-container a div.caps * {
   display: block;
 }
 
@@ -278,6 +285,36 @@ header {
 
 .navigation-container .inner-container a small {
   font-size: .625rem;
+}
+
+.lower-nav-container,
+.lower-navigation + * {
+  visibility: hidden;
+  display: inline-block;
+}
+
+.lower-nav-container {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 1;
+  height: 45px;
+  width: 100%;
+}
+
+.lower-nav-container .lower-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  padding: 0 15px;
+  line-height: 3;
+  font-size: 0.8125rem;
+}
+
+.lower-nav-container .lower-navigation li:nth-child(n+2):before {
+  content: "-";
+  margin: 0 20px;
 }
 
 .navigation-container {
@@ -362,28 +399,60 @@ header {
   color: #fff;
 }
 
+.navigation-container .web:hover div.lower-web {
+  visibility: visible;
+  background: #79539a;
+}
+
+.navigation-container .support:hover div.lower-support {
+  visibility: visible;
+  background: #286abd;
+}
+
+.navigation-container .telecoms:hover div.lower-telecoms {
+  visibility: visible;
+  background: #bc2c28;
+}
+
+.navigation-container .bespoke:hover div.lower-bespoke {
+  visibility: visible;
+  background: #526781;
+}
+
+.navigation-container .marketing:hover div.lower-marketing {
+  visibility: visible;
+  background: #25a25a;
+}
+
+.navigation-container .cyber:hover div.lower-cyber {
+  visibility: visible;
+  background: #de093f;
+}
+
 #img-slider,
 .slide-img {
   height: 80vh;
 }
 
 .slide-img-container {
+  background: -webkit-gradient(linear, left top, right top, from(#030303), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to right, #030303, rgba(0, 0, 0, 0));
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
   position: relative;
   text-align: center;
-  overflow: hidden;
-}
-
-.slide-img-container img {
-  width: auto;
+  background-image: url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.webp");
 }
 
 .slide-img-container .inner-slide {
   position: absolute;
-  margin: 0 auto;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  padding: 0 15px;
 }
 
 .slide-img-container .inner-slide h2 {
@@ -662,9 +731,18 @@ header {
   background: #333645;
 }
 
+#our-culture p {
+  line-height: 1.9;
+}
+
+#our-culture strong {
+  font-weight: 600;
+}
+
 #our-culture h2 {
   font-size: 2.25rem;
   font-weight: normal;
+  line-height: 1;
 }
 
 #our-culture .arrow-btn button {
@@ -714,17 +792,47 @@ header {
   margin: 30px 0 0 0;
 }
 
+#latest-cards .card-container .card-top {
+  position: relative;
+}
+
 #latest-cards .card-container .card-top img {
+  position: relative;
   width: 100%;
+}
+
+#latest-cards .card-container .card-top > .news-card {
+  background: #926fb1;
+}
+
+#latest-cards .card-container .card-top > .case-studies {
+  background: #d64541;
+}
+
+#latest-cards .card-container .card-top .tag {
+  position: absolute;
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 600;
+  padding: 0 10px;
+  top: .5rem;
+  right: 0;
 }
 
 #latest-cards .card-container .card-body {
   padding: 30px;
 }
 
-#latest-cards .card-container .card-body h5,
-#latest-cards .card-container .card-body > p {
+#latest-cards .card-container .card-body hr {
+  margin: 30px 0 0 0;
+}
+
+#latest-cards .card-container .card-body .card-title {
   margin: 0 0 15px 0;
+}
+
+#latest-cards .card-container .card-body .card-text {
+  margin: 0 0 25px 0;
 }
 
 #latest-cards .card-footer {
@@ -783,8 +891,28 @@ header {
   font-size: .8125rem;
 }
 
-.card-btn {
+.news-card h5 {
+  color: #926fb1;
+}
+
+.news-card .card-btn {
   background: #926fb1;
+}
+
+.news-card .card-btn:hover {
+  background: #79539a;
+}
+
+.case-studies h5 {
+  color: #d64541;
+}
+
+.case-studies .card-btn {
+  background: #d64541;
+}
+
+.case-studies .card-btn:hover {
+  background: #bc2c28;
 }
 
 #newsletter-container .news-inner {
@@ -849,6 +977,10 @@ header {
   font-weight: 600;
 }
 
+#newsletter-container span a {
+  text-decoration: underline;
+}
+
 #newsletter-container input[type="text"],
 #newsletter-container input[type="email"] {
   font-size: 1rem;
@@ -899,27 +1031,27 @@ header {
   padding: 0 10px;
 }
 
-footer {
+footer .inner {
   padding: 50px 0;
 }
 
-footer ul {
+footer .inner ul {
   padding: 0;
 }
 
-footer h2 {
+footer .inner h2 {
   margin: 0 0 26px 0;
 }
 
-footer > div {
+footer .inner > div {
   margin: 0 0 30px 0;
 }
 
-footer div:not(.social), footer .social h2 {
+footer .inner div:not(.social), footer .inner .social h2 {
   padding: 0 15px;
 }
 
-footer .social .social-grid {
+footer .inner .social .social-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -930,7 +1062,7 @@ footer .social .social-grid {
   padding: 0;
 }
 
-footer .social .social-grid a {
+footer .inner .social .social-grid a {
   margin: 0 15px;
 }
 
@@ -971,7 +1103,7 @@ footer .social-grid #li-social:hover {
 footer .social-grid a {
   background: #00000040;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.75rem;
   padding: 0;
 }
 
@@ -1022,6 +1154,7 @@ footer .social-grid a {
   .flex-header #search-bar .search-btn button {
     color: #fff;
     background: #999aa2;
+    border-radius: 0 3px 3px 0;
   }
   .flex-header #search-bar .search-btn button:hover {
     background: #7e808a;
@@ -1212,6 +1345,9 @@ footer .social-grid a {
   .flex-header #search-bar .search-btn {
     width: 4rem;
   }
+  .flex-header #search-bar .search-btn button {
+    border-radius: 3px;
+  }
   .flex-header #nav {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
@@ -1289,6 +1425,12 @@ footer .social-grid a {
   }
   .flex-header #search-bar .search-btn {
     width: 20%;
+  }
+  .flex-header #search-bar .search-btn button {
+    border-radius: 0 3px 3px 0;
+  }
+  .lower-nav-container .lower-navigation {
+    font-size: 1rem;
   }
   #block-container .row-2 {
     display: -webkit-box;

@@ -7,7 +7,7 @@ header {
 .flex-header {
     @include flexy($wrap: nowrap, $just: space-between);
     flex: 1;
-    @include sizing($width: 100%);
+    @include sizing($width: 100%, $padding: 0 15px);
     #header-logo {
         @include sizing($margin: 0 auto 0 0);
     }

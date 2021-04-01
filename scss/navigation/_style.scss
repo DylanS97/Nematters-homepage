@@ -65,4 +65,23 @@
             @include colours($colour: $main-colour);
         }
     }
+    // HOVER DROPDOWN
+    .web:hover div.lower-web {
+        @include nav-hover($background: darken($web-training-colour, 10%));
+    }
+    .support:hover div.lower-support {
+        @include nav-hover($background: darken($it-support-colour, 10%));
+    }
+    .telecoms:hover div.lower-telecoms {
+        @include nav-hover($background: darken($telecom-colour, 10%));
+    }
+    .bespoke:hover div.lower-bespoke {
+        @include nav-hover($background: darken($bespoke-colour, 10%));
+    }
+    .marketing:hover div.lower-marketing {
+        @include nav-hover($background: darken($marketing-colour, 10%));
+    }
+    .cyber:hover div.lower-cyber {
+        @include nav-hover($background: darken($cyber-colour, 10%));
+    }
 }

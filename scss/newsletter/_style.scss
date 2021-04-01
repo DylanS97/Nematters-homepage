@@ -12,6 +12,9 @@
     .checkbox-label span {
         font-weight: 600;
     }
+    span a {
+        text-decoration: underline;
+    }
     input[type="text"],
     input[type="email"] {
         font-size: 1rem;

@@ -39,6 +39,7 @@
                 @include sizing($width: 25%);
                 button {
                     @include colours($colour: $main-colour, $background: #999aa2);
+                    border-radius: 0 3px 3px 0;
                     &:hover {
                         @include colours($background: darken(#999aa2, 10%));
                     }
@@ -191,6 +192,9 @@
             order: 3;
             .search-btn {
                 @include sizing($width: 4rem);
+                button {
+                    border-radius: 3px;
+                }
             }
         }
         #nav {
@@ -269,6 +273,12 @@
     }
     .flex-header #search-bar .search-btn {
         @include sizing($width: 20%);
+        button {
+            border-radius: 0 3px 3px 0;
+        }
+    }
+    .lower-nav-container .lower-navigation {
+        font-size: $xs-font;
     }
     // Blocks
     #block-container .row-2 {
