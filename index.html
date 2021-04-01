@@ -313,10 +313,12 @@
                 <div class="card-container max-width">
                     <div class="card">
                         <div class="card-inner news-card">
-                            <div class="card-top">
-                                <img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/grants-available-for-R76J.jpg">
-                                <a href="#" class="news-card caps tag">news</a>
+                            <div class="card-img-container">
+                                <div id="card-1" class="card-top">
+                                    <img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/grants-available-for-R76J.jpg">
+                                </div>
                             </div>
+                            <a href="#" class="news-tag caps tag">news</a>
                             <div class="card-body">
                                 <a href="#"><h5 class="card-title">News</h5></a>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -334,10 +336,12 @@
                     </div>
                     <div class="card">
                         <div class="card-inner case-studies">
-                            <div class="card-top">
-                                <img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/case-study-warren-t8yt.jpg">
-                                <a href="#" class="case-studies caps tag">case-studies</a>
+                            <div class="card-img-container">
+                                <div id="card-2" class="card-top">
+                                    <img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/case-study-warren-t8yt.jpg">
+                                </div>
                             </div>
+                            <a href="#" class="case-tag caps tag">case-studies</a>
                             <div class="card-body">
                                 <a href="#"><h5 class="card-title">News</h5></a>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -353,12 +357,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-inner news-card">
-                        <div class="card">
-                            <div class="card-top">
-                                <img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/congratulations-to-samuel-pXTR.jpg">
-                                <a href="#" class="news-card caps tag">news</a>
+                    <div class="card-inner">
+                        <div class="card news-card">
+                            <div class="card-img-container">
+                                <div id="card-3" class="card-top">
+                                    <img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/congratulations-to-samuel-pXTR.jpg">
+                                </div>
                             </div>
+                            <a href="#" class="news-tag caps tag">news</a>
                             <div class="card-body">
                                 <a href="#"><h5 class="card-title">News</h5></a>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -381,17 +387,37 @@
         <!-- Clients -->
         <section class="clients">
             <div class="flex-clients max-width">
-                <div>
+                <div class="busseys each-client">
                     <img class="grayscale" src="images/client-busseys.png">
+                    <div class="client-info busseys-info">
+                        <h3>Busseys</h3>
+                        <div class="info-bar"></div>
+                        <p>One of the UK's leading Ford dealerships.</p>
+                    </div>
                 </div>
-                <div>
+                <div class="crane each-client">
                     <img class="grayscale" src="images/client-crane.png">
+                    <div class="client-info crane-info">
+                        <h3>Crane Golden Builders</h3>
+                        <div class="info-bar"></div>
+                        <p>Leading manufacturer and supplier of High-end garden rooms, summerhouses, workshops, and sheds in the uk.</p>
+                    </div>
                 </div>
-                <div>
+                <div class="beat each-client">
                     <img class="grayscale" src="images/client-beat.png">
+                    <div class="client-info beat-info">
+                        <h3>Beat</h3>
+                        <div class="info-bar"></div>
+                        <p>The UK's eating disorder charity founded in 1989.</p>
+                    </div>
                 </div>
-                <div>
+                <div class="northern-diver each-client">
                     <img class="grayscale" src="images/client-northern-diver.png">
+                    <div class="client-info nd-info">
+                        <h3>Northern Diver</h3>
+                        <div class="info-bar"></div>
+                        <p>Global water based equipment manufacturers for sport, military, commercial and rescue businesses.</p>
+                    </div>
                 </div>
             </div>
         </section><!-- /Clients -->
@@ -411,10 +437,11 @@
                     </div>
                     <div class="grid">
                         <div class="checkbox">
+                            <i class="fas fa-check"></i>
                             <input id="newsletter" type="checkbox">
                         </div>
                         <div class="checkbox-label">
-                            <label>
+                            <label for="newsletter">
                                 <span>Please tick this box if you wish to receive marketing information from us. Please see our <a>Privacy Policy</a> for more information on how we use your data.</span>
                             </label>
                         </div>
