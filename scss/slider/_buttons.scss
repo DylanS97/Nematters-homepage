@@ -4,7 +4,7 @@
 
 .arrow-btn {
     display: inline-block;
-    @include sizing($height: 5vh, $min-h: 47px);
+    @include sizing($height: 5vh);
     button,
     button * {
         display: inline-block;
@@ -12,5 +12,11 @@
     }
     button {
         @include sizing($height: 100%);
+        &.slide-btn {
+            height: 3.875rem;
+        }
+        i {
+            margin: 0 0 0 .75rem;
+        }
     }
 }

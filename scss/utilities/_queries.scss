@@ -82,10 +82,51 @@
         @include sizing($padding: 50px 0);
         .flex-clients {
             @include flexy($just: space-between);
+            position: relative;
+            .beat {
+                width: 9.2rem;
+            }
             div {
-                @include sizing($height: 2.8rem, $padding: 0 20px);
+                display: inline-block;
+                letter-spacing: -1px;
+                @include sizing($height: 45px, $padding: 0 20px);
+                text-align: center;
+                img {
+                    height: 100%;
+                }
             }
         }
+    }
+    .client-info,
+    .client-info + * {
+        visibility: hidden;
+    }
+    .info-bar {
+        display: inline-block;
+        width: 33px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: $main-colour;
+    }
+    .client-info {
+        bottom: 100%;
+        width: 260px;
+        padding: 20px;
+        color: $main-colour;
+        text-align: center;
+        h3 {
+            font-size: $s-font;
+            font-weight: normal;
+            margin: 0;
+        }
+        p {
+            font-size: $xxxs-font;
+            margin: 0;
+        }
+    }
+    .each-client:hover div.client-info {
+        visibility: visible;
+        background: $theme-colour;
     }
     .grayscale {
         filter: grayscale(100%);
@@ -223,25 +264,41 @@
         }
     }
     // Cards
-    .card-top {
+    .card-top,
+    .card {
         overflow: hidden;
     }
-    .card-top img {
+    .card-top {
         transition-duration: .4s;
     }
-    .card-top:hover img {
+    .card-top:hover {
         transform: scale(1.1);
+        img {
+            visibility: hidden;
+        }
+    }
+    .card-inner,
+    .card-body {
+        overflow: hidden;
+    }
+    #card-1:hover {
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://www.netmatters.co.uk/assets/images/thumbnails/thumb/grants-available-for-R76J.jpg');
+    }
+    #card-2:hover {
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://www.netmatters.co.uk/assets/images/thumbnails/thumb/case-study-warren-t8yt.jpg');
+    }
+    #card-3:hover {
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://www.netmatters.co.uk/assets/images/thumbnails/thumb/congratulations-to-samuel-pXTR.jpg');
     }
     // Culture 
     #our-culture {
-        background-image: url('/logos/netmatters-logo.png');
+        background-image: url('../logos/netmatters-logo.png');
         background-repeat: no-repeat;
-        background-position: 100%;
-        background-size: auto 100%;
+        background-size: 2100px;
+        background-position: 43% 41%;
     }
     // Clients
-    .flex-clients,
-    .flex-clients img {
+    .clients .flex-clients > div {
         @include sizing($height: 3.9rem);
     }
     // Newsletter
@@ -263,16 +320,16 @@
         max-width: $l-max-w;
     }
     // Header
-    div#search-container {
+    .flex-header div#search-container {
         display: inline-block;
-        width: 300px;
+        width: 18.9rem;
     }
     .hide-bar {
         display: inline-block;
-        width: 80%;
+        width: 79%;
     }
     .flex-header #search-bar .search-btn {
-        @include sizing($width: 20%);
+        @include sizing($width: 21%);
         button {
             border-radius: 0 3px 3px 0;
         }
@@ -295,15 +352,18 @@
         width: 50%;
     }
     // Clients
-    .flex-clients,
-    .flex-clients img {
+    .clients .flex-clients > div {
         @include sizing($height: 4.375rem);
     }
     // Footer
     footer .inner {
         flex-wrap: nowrap;
-    }
-    .social-grid a {
-        width: 7.5rem;
+        .social .social-grid {
+            grid-template-columns: 150px 150px;
+            a {
+                min-width: auto;
+                width: auto;
+            }
+        }
     }
 }

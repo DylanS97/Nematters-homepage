@@ -2,12 +2,12 @@
 // Main Styles ----------------------------
 // ----------------------------------------
 * {
+    font-family: $font;
     box-sizing: border-box;
     letter-spacing: .4px;
 }
 
 body {
-    font-family: $font;
     color: $main-colour;
     @include colours($colour: $theme-colour, $background: $body-colour);
     margin: 0;

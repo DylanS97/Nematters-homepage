@@ -33,6 +33,9 @@ footer {
             text-align: center;
             font-size: $social-font;
             padding: 0;
+            i {
+                line-height: 2;
+            }
         }
     }
 }

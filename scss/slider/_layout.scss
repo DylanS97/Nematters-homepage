@@ -6,14 +6,12 @@
     @include sizing($height: 80vh);
 }
 .slide-img-container {
-    background: linear-gradient(to right, rgb(3, 3, 3), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgb(3, 3, 3) 2%, rgba(0, 0, 0, 0)), url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
-    width: 100%;
+    @include sizing($height: 100%, $width: 100%);
     position: relative;
     text-align: center;
-    background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.webp');
     .inner-slide {
         position: absolute;
         top: 50%;
@@ -22,6 +20,9 @@
         padding: 0 15px;
         h2 {
             @include sizing($margin: 0 0 25px 0);
+        }
+        + p {
+            @include sizing($margin: 0 0 35px 0);
         }
     }
 }
