@@ -28,25 +28,52 @@
     .grid {
         @include grids($g-t-c: 2rem 1fr, $g-t-r: 1fr, $gap: 20px);
         @include sizing($margin: 0 0 20px 0);
-        .checkbox,
-        .checkbox-label span {
-            cursor: pointer;
-        }
         .checkbox {
+            display: block;
+            position: relative;
             @include borders($border: 3px solid $theme-colour, $border-radius: 3px);
             height: 2rem;
-            i {
-                visibility: hidden;
-                font-size: 1.25rem;
-                margin: auto;
+            user-select: none;
+            input[type="checkbox"] {
+                position: absolute;
+                opacity: 0;
+                @include sizing($height: 100%, $width: 100%, $margin: 0);
+                z-index: 1;
+            }
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include sizing($height: 100%, $width: 100%);
+                background: #ddd;
+            }
+            &:hover .checkmark {
+                background: #bbb;
+            }
+            input:checked ~ .checkmark {
+                background: $theme-colour;
+            }
+            .checkmark:after {
+                content: '';
+                color: white;
+                position: absolute;
+                display: none;
+            }
+            input:checked ~ .checkmark:after {
+                display: block;
+            }
+            .checkmark:after {
+                left: 9px;
+                top: 2px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                width: 5px;
+                height: 1rem;
+                transform: rotate(45deg);
             }
         }
-        div.checkbox:checked {
-            background: $theme-colour;
-        }
     }
-    input[type="checkbox"] {
-        visibility: hidden;
-        @include sizing($height: 32px, $width: 32px);
-    }
+    // .checkbox:checked input[type="checkbox"] {
+    //     visibility: visible;
+    // }
 }

@@ -1014,31 +1014,64 @@ header {
   margin: 0 0 20px 0;
 }
 
-#newsletter-container .grid .checkbox,
-#newsletter-container .grid .checkbox-label span {
-  cursor: pointer;
-}
-
 #newsletter-container .grid .checkbox {
+  display: block;
+  position: relative;
   border: 3px solid #333645;
   border-radius: 3px;
   height: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-#newsletter-container .grid .checkbox i {
-  visibility: hidden;
-  font-size: 1.25rem;
-  margin: auto;
+#newsletter-container .grid .checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  z-index: 1;
 }
 
-#newsletter-container .grid div.checkbox:checked {
+#newsletter-container .grid .checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #ddd;
+}
+
+#newsletter-container .grid .checkbox:hover .checkmark {
+  background: #bbb;
+}
+
+#newsletter-container .grid .checkbox input:checked ~ .checkmark {
   background: #333645;
 }
 
-#newsletter-container input[type="checkbox"] {
-  visibility: hidden;
-  height: 32px;
-  width: 32px;
+#newsletter-container .grid .checkbox .checkmark:after {
+  content: '';
+  color: white;
+  position: absolute;
+  display: none;
+}
+
+#newsletter-container .grid .checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+#newsletter-container .grid .checkbox .checkmark:after {
+  left: 9px;
+  top: 2px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  width: 5px;
+  height: 1rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 #newsletter-container {
@@ -1063,11 +1096,6 @@ header {
 #newsletter-container input[type="email"] {
   font-size: 1rem;
   border: 1px solid #ccc;
-}
-
-#newsletter-container input[type="checkbox"] {
-  border: 2px solid #333645;
-  border-radius: 4px;
 }
 
 #newsletter-container .name > p:after,
@@ -1294,23 +1322,27 @@ footer .social-grid a i {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
   }
   .clients .flex-clients .beat {
-    width: 9.2rem;
+    width: 47px;
   }
-  .clients .flex-clients div {
-    display: inline-block;
-    letter-spacing: -1px;
+  .clients .flex-clients > div {
     height: 45px;
     padding: 0 20px;
     text-align: center;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
-  .clients .flex-clients div img {
-    height: 100%;
+  .clients .flex-clients > div img {
+    max-height: 100%;
   }
   .client-info,
   .client-info + * {
@@ -1324,9 +1356,11 @@ footer .social-grid a i {
     background: #fff;
   }
   .client-info {
+    display: inline-block;
     bottom: 100%;
     width: 260px;
     padding: 20px;
+    margin: 0;
     color: #fff;
     text-align: center;
   }

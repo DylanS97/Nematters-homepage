@@ -20,9 +20,6 @@
         font-size: 1rem;
         @include borders($border: 1px solid #ccc);
     }
-    input[type="checkbox"] {
-        @include borders($border: 2px solid $theme-colour, $border-radius: 4px);
-    }
     .name > p:after,
     .email > p:after {
         content: " *";
