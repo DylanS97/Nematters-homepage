@@ -242,8 +242,11 @@ header {
 #first-search-bar div.first-search-btn {
   width: 10%;
   color: #333645;
-  font-size: 1.5rem;
   float: right;
+}
+
+#first-search-bar div.first-search-btn i {
+  font-size: 1.5rem;
 }
 
 .navigation-container {
@@ -1003,6 +1006,11 @@ header {
   padding: 5px 15px;
 }
 
+#newsletter-container .grid,
+#newsletter-container .grid * {
+  cursor: pointer;
+}
+
 #newsletter-container .grid {
   display: -ms-grid;
   display: grid;
@@ -1041,11 +1049,6 @@ header {
   left: 0;
   height: 100%;
   width: 100%;
-  background: #ddd;
-}
-
-#newsletter-container .grid .checkbox:hover .checkmark {
-  background: #bbb;
 }
 
 #newsletter-container .grid .checkbox input:checked ~ .checkmark {
@@ -1319,30 +1322,23 @@ footer .social-grid a i {
     padding: 50px 0;
   }
   .clients .flex-clients {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: relative;
-  }
-  .clients .flex-clients .beat {
-    width: 47px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 15px;
   }
   .clients .flex-clients > div {
+    position: relative;
     height: 45px;
     padding: 0 20px;
     text-align: center;
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
   }
   .clients .flex-clients > div img {
-    max-height: 100%;
+    height: 100%;
   }
   .client-info,
   .client-info + * {
@@ -1356,13 +1352,12 @@ footer .social-grid a i {
     background: #fff;
   }
   .client-info {
-    display: inline-block;
-    bottom: 100%;
+    bottom: 210%;
     width: 260px;
     padding: 20px;
-    margin: 0;
     color: #fff;
     text-align: center;
+    z-index: 2;
   }
   .client-info h3 {
     font-size: 1.125rem;
@@ -1373,7 +1368,22 @@ footer .social-grid a i {
     font-size: 0.8125rem;
     margin: 0;
   }
-  .each-client:hover div.client-info {
+  .client-center {
+    position: absolute;
+    left: -200%;
+    right: -200%;
+    margin: auto;
+  }
+  .arrow {
+    width: 3rem;
+    height: 3rem;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    bottom: 155%;
+    z-index: 1;
+  }
+  .each-client:hover div.client-info,
+  .each-client:hover div.arrow {
     visibility: visible;
     background: #333645;
   }
@@ -1399,6 +1409,7 @@ footer .social-grid a i {
         -ms-flex-pack: justify;
             justify-content: space-between;
     gap: 20px;
+    padding: 0 15px;
   }
   .partners .partners-container div {
     height: 88px;
@@ -1574,6 +1585,12 @@ footer .social-grid a i {
   .clients .flex-clients > div {
     height: 3.9rem;
   }
+  .clients .flex-clients > div .client-info {
+    bottom: 180%;
+  }
+  .clients .flex-clients > div .arrow {
+    bottom: 141%;
+  }
   #newsletter-container .name,
   #newsletter-container .email {
     display: inline-block;
@@ -1620,6 +1637,12 @@ footer .social-grid a i {
   }
   .clients .flex-clients > div {
     height: 4.375rem;
+  }
+  .clients .flex-clients > div .client-info {
+    bottom: 171%;
+  }
+  .clients .flex-clients > div .arrow {
+    bottom: 136%;
   }
   footer .inner {
     -ms-flex-wrap: nowrap;

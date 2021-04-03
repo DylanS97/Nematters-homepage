@@ -25,6 +25,10 @@
     input[type="email"] {
         @include sizing($height: 47px, $width: 100%, $padding: 5px 15px);
     }
+    .grid,
+    .grid * {
+        cursor: pointer;
+    }
     .grid {
         @include grids($g-t-c: 2rem 1fr, $g-t-r: 1fr, $gap: 20px);
         @include sizing($margin: 0 0 20px 0);
@@ -45,10 +49,6 @@
                 top: 0;
                 left: 0;
                 @include sizing($height: 100%, $width: 100%);
-                background: #ddd;
-            }
-            &:hover .checkmark {
-                background: #bbb;
             }
             input:checked ~ .checkmark {
                 background: $theme-colour;

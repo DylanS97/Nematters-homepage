@@ -81,22 +81,15 @@
     .clients {
         @include sizing($padding: 50px 0);
         .flex-clients {
-            @include flexy($just: center);
             position: relative;
-            // .busseys {
-            //     width: 13rem;
-            // }
-            .beat {
-                width: 47px;
-            }
+            @include flexy($just: space-between);
+            padding: 0 15px;
             > div {
-                // display: inline-block;
+                position: relative;
                 @include sizing($height: 45px, $padding: 0 20px);
                 text-align: center;
-                width: min-content;
-                flex: 1;
                 img {
-                    max-height: 100%;
+                    height: 100%;
                 }
             }
         }
@@ -113,13 +106,12 @@
         background: $main-colour;
     }
     .client-info {
-        display: inline-block;
-        bottom: 100%;
+        bottom: 210%;
         width: 260px;
         padding: 20px;
-        margin: 0;
         color: $main-colour;
         text-align: center;
+        z-index: 2;
         h3 {
             font-size: $s-font;
             font-weight: normal;
@@ -130,7 +122,20 @@
             margin: 0;
         }
     }
-    .each-client:hover div.client-info {
+    .client-center {
+        position: absolute;
+        left: -200%; right: -200%;
+        margin: auto;
+    }
+    .arrow {
+        width: 3rem;
+        height: 3rem;
+        transform: rotate(45deg);
+        bottom: 155%;
+        z-index: 1;
+    }
+    .each-client:hover div.client-info,
+    .each-client:hover div.arrow {
         visibility: visible;
         background: $theme-colour;
     }
@@ -147,6 +152,7 @@
         .partners-container {
             @include flexy($wrap: wrap, $just: space-between);
             gap: 20px;
+            padding: 0 15px;
             div {
                 @include sizing($height: 88px, $padding: 0 20px);
                 flex: 1;
@@ -306,6 +312,12 @@
     // Clients
     .clients .flex-clients > div {
         @include sizing($height: 3.9rem);
+        .client-info {
+            bottom: 180%;
+        }
+        .arrow {
+            bottom: 141%;
+        }
     }
     // Newsletter
     #newsletter-container {
@@ -360,6 +372,12 @@
     // Clients
     .clients .flex-clients > div {
         @include sizing($height: 4.375rem);
+        .client-info {
+            bottom: 171%;
+        }
+        .arrow {
+            bottom: 136%;
+        }
     }
     // Footer
     footer .inner {

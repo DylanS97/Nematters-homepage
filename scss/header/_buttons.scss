@@ -92,7 +92,9 @@
     div.first-search-btn {
         @include sizing($width: 10%);
         color: #333645;
-        font-size: 1.5rem;
         float: right;
+        i {
+            font-size: 1.5rem;
+        }
     }
 }
