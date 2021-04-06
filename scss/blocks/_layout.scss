@@ -7,12 +7,20 @@
     @include sizing($padding: 50px 15px);
     .row-1 {
         @include flexy($dir: column);
+        margin-bottom: 30px;
+        > a:nth-child(n+2) {
+            margin-top: 30px;
+        }
     }
     .row-2 {
         @include flexy($dir: column);
+        > a:nth-child(n+2) {
+            margin-top: 30px;
+        }
     }
     .block {
         @include sizing($padding: 30px);
+        // position: relative;
         &-bar,
         &-logo {
             @include sizing($margin: auto auto 17px auto);
@@ -36,10 +44,9 @@
             font-size: $s-font;
             font-weight: normal;
         }
+        .block-btn {
+            position: relative;
+            bottom: 0;
+        }
     }
-}
-#block-container,
-.row-1,
-.row-2 {
-    gap: 30px;
 }

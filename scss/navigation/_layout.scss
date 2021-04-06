@@ -7,7 +7,7 @@
     position: relative;
     .inner-container {
         @include flexy($wrap: nowrap);
-        @include sizing($max-w: 1170px, $margin: auto);
+        @include sizing($max-w: 940px, $margin: auto);
         border-left: 1px solid $l-theme;
         border-right: 1px solid $d-theme;
         a {

@@ -12,16 +12,6 @@
     flex-wrap: $wrap;
     justify-content: $just;
 }
-// Grid Mixin
-@mixin grids($disp: grid,
-             $g-t-c: null,
-             $g-t-r: null,
-             $gap: null) {
-    display: $disp;
-    grid-template-columns: $g-t-c;
-    grid-template-rows: $g-t-r;
-    gap: $gap;
-}
 // Measure Mixin
 @mixin sizing($height: null,
               $min-h: null,
@@ -43,6 +33,9 @@
 // Block Colours Mixin
 @mixin block-colours($background: null,
                      $colour: null) {
+    &:hover {
+        border: 1px solid $colour;
+    }
     &:hover,
     > .block-logo, button {
         background: $background;

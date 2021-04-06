@@ -21,13 +21,14 @@
             display: none;
         }
         #search-container {
-            @include sizing($height: auto, $width: auto, $padding: 7px 0);
+            @include sizing($height: auto, $width: 100%, $padding: 7px 0);
         }
         #search-bar {
-            display: contents;
+            display: inline-flex;
             order: 1;
             @include sizing($height: 100%, $margin: 0);
             @include borders($border: 1px solid #999aa2);
+            border-radius: 0 3px 3px 0;
             .search-bar {
                 @include sizing($width: 100%);
                 input {
@@ -39,7 +40,6 @@
                 @include sizing($width: 25%);
                 button {
                     @include colours($colour: $main-colour, $background: #999aa2);
-                    border-radius: 0 3px 3px 0;
                     &:hover {
                         @include colours($background: darken(#999aa2, 10%));
                     }
@@ -57,7 +57,14 @@
     #block-container .row-2 {
         @include flexy($wrap: wrap, $dir: row);
         > * {
-            flex: 1 1 per-line(2, 15px);
+            width: 47.9%;
+        }
+        > a:nth-child(2) {
+            margin-top: 0;
+        }
+        > a:nth-child(1),
+        > a:nth-child(3) {
+            margin-right: 30px;
         }
     }
     // Culture
@@ -71,10 +78,12 @@
             display: none;
         }
         @include flexy($dir: row);
-        gap: 20px;
         .card {
             flex: 1;
         }
+    }
+    #latest-cards .card-container > div:nth-child(n+2) {
+        margin: 30px 0 0 20px;
     }
 
     // Clients
@@ -151,11 +160,9 @@
         @include sizing($padding: 50px 0);
         .partners-container {
             @include flexy($wrap: wrap, $just: space-between);
-            gap: 20px;
             padding: 0 15px;
             div {
-                @include sizing($height: 88px, $padding: 0 20px);
-                flex: 1;
+                @include sizing($height: 88px, $min-w: 73.5px, $max-w: 260px, $padding: 0 20px);
                 text-align: center;
                 img {
                     height: 100%;
@@ -175,10 +182,15 @@
         div {
             @include sizing($width: 50%);
         }
-        .social-grid {
+        .website,
+        .social {
+            margin: 0;
+        }
+        .social .social-grid {
             @include sizing($margin: 0);
+            width: 100%;
             a {
-                @include sizing($min-w: 157px);
+                @include sizing($width: 155.1px);
             }
         }
     }
@@ -202,7 +214,7 @@
         #contact,
         #contact .fa-paper-plane,
         #contact span {
-            display: contents;
+            display: inline-flex;
         }
         #support a,
         #contact a {
@@ -241,13 +253,14 @@
                 display: none;
             }
         }
-        #search-bar {
+        #search-container {
             order: 3;
+            width: auto;
+            #search-bar {
+                border-radius: 3px;
+            }
             .search-btn {
                 @include sizing($width: 4rem);
-                button {
-                    border-radius: 3px;
-                }
             }
         }
         #nav {
@@ -259,7 +272,7 @@
     }
     // Navigation Bar
     #navigation {
-        display: contents;
+        display: flex;
     }
     // Image Slider
     #img-slider .slide-img-container {
@@ -274,6 +287,13 @@
         > * {
             flex: 1;
         }
+        > a:nth-child(n+2) {
+            margin-left: 30px;
+            margin-top: 0;
+        }
+    }
+    #block-container .row-2 > * {
+        width: 48.4%;
     }
     // Cards
     .card-top,
@@ -304,10 +324,10 @@
     }
     // Culture 
     #our-culture {
-        background-image: url('../logos/netmatters-logo.png');
+        background-image: url('../logos/branded.png');
         background-repeat: no-repeat;
-        background-size: 2100px;
-        background-position: 43% 41%;
+        background-position: right;
+        background-size: cover;
     }
     // Clients
     .clients .flex-clients > div {
@@ -330,6 +350,9 @@
             float: right;
         }
     }
+    footer .inner .social .social-grid a {
+        width: 210.1px;
+    }
 }
 
 // 1260 pixels
@@ -346,23 +369,33 @@
         display: inline-block;
         width: 79%;
     }
-    .flex-header #search-bar .search-btn {
-        @include sizing($width: 21%);
-        button {
-            border-radius: 0 3px 3px 0;
+    .flex-header #search-bar {
+        width: 100%;
+        border-radius: 0 3px 3px 0;
+        .search-btn {
+            @include sizing($width: 21%);
         }
     }
     .lower-nav-container .lower-navigation {
         font-size: $xs-font;
     }
+    #navigation .inner-container {
+        max-width: 1170px;
+    }
     // Blocks
     #block-container .row-2 {
         @include flexy($wrap: nowrap);
+        > a:nth-child(1) {
+            margin: 0;
+        }
+        > a:nth-child(n+2) {
+            margin: 0 0 0 30px;
+        }
     }
     // Cards
     .card-container {
         > div:nth-child(n+3) {
-            display: contents;
+            display: inline-flex;
         }
     }
     // Culture
@@ -383,10 +416,8 @@
     footer .inner {
         flex-wrap: nowrap;
         .social .social-grid {
-            grid-template-columns: 150px 150px;
             a {
-                min-width: auto;
-                width: auto;
+                width: 111.8px;
             }
         }
     }

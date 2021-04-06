@@ -29,7 +29,8 @@ footer {
             @include colours($background: $linked-in-colour);
         }
         a {
-            @include colours($background: #00000040);
+            // @include colours($background: #00000040);
+            background: darken(#333645, 6%);
             text-align: center;
             font-size: $social-font;
             padding: 0;

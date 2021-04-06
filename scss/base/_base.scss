@@ -46,6 +46,7 @@ a:hover {
     font-family: 'Poppins', sans-serif;
     color: $main-colour;
     padding: 5px 15px;
+    height: 47px;
     @include borders($border-radius: 4px);
 }
 
@@ -56,4 +57,8 @@ a:hover {
 .partners-container,
 #navigation {
     display: none;
+}
+
+.client .flex-client > div {
+    width: min-width;
 }

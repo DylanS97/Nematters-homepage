@@ -50,7 +50,7 @@
         input,
         button {
             @include sizing($height: 100%, $width: 100%);
-            @include borders($border: 1px solid #999aa2);
+            border: none;
         }
         input {
             font-size: $xs-font;

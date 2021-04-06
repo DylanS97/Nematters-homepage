@@ -31,42 +31,48 @@
     // HOVER STATES
     .web:hover {
         @include colours($background: $web-training-colour);
-        border: 1px solid $web-training-colour;
+        border-right: 1px solid $web-training-colour;
+        border-left: 1px solid $web-training-colour;
         .logo {
             @include colours($colour: $main-colour);
         }
     }
     .support:hover {
         @include colours($background: $it-support-colour);
-        border: 1px solid $it-support-colour;
+        border-right: 1px solid $it-support-colour;
+        border-left: 1px solid $it-support-colour;
         .logo {
             @include colours($colour: $main-colour);
         }
     }
     .telecoms:hover {
         @include colours($background: $telecom-colour);
-        border: 1px solid $telecom-colour;
+        border-right: 1px solid $telecom-colour;
+        border-left: 1px solid $telecom-colour;
         .logo {
             @include colours($colour: $main-colour);
         }
     }
     .bespoke:hover {
         @include colours($background: $bespoke-colour);
-        border: 1px solid $bespoke-colour;
+        border-right: 1px solid $bespoke-colour;
+        border-left: 1px solid $bespoke-colour;
         .logo {
             @include colours($colour: $main-colour);
         }
     }
     .marketing:hover {
         @include colours($background: $marketing-colour);
-        border: 1px solid $marketing-colour;
+        border-right: 1px solid $marketing-colour;
+        border-left: 1px solid $marketing-colour;
         .logo {
             @include colours($colour: $main-colour);
         }
     }
     .cyber:hover {
         @include colours($background: $cyber-colour);
-        border: 1px solid $cyber-colour;
+        border-right: 1px solid $cyber-colour;
+        border-left: 1px solid $cyber-colour;
         .logo {
             @include colours($colour: $main-colour);
         }

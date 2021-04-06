@@ -18,10 +18,12 @@ footer .inner {
     }
     .social {
         .social-grid {
-            @include grids($g-t-c: 1fr 1fr, $g-t-r: 55px, $gap: 30px 0);
+            > * {
+                display: inline-block;
+            }
             @include sizing($padding: 0);
             a {
-                @include sizing($margin: 0 15px);
+                @include sizing($width: 44.9%, $margin: 0 15px 30px 15px);
             }
         }
     }

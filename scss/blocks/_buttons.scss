@@ -4,5 +4,5 @@
 
 .block-btn {
     display: inline-block;
-    @include sizing($height: 5vh, $min-h: 47px);
+    @include sizing($height: 47px);
 }
