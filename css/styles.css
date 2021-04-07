@@ -975,8 +975,7 @@ header {
   height: 100%;
   width: 100%;
   top: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)));
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5));
+  background: #fff;
   z-index: 2;
   opacity: 0;
 }
@@ -1717,7 +1716,7 @@ footer .social-grid a i {
   .gradient:hover {
     -webkit-transition: opacity .4s;
     transition: opacity .4s;
-    opacity: 1;
+    opacity: .4;
   }
   #our-culture {
     background-image: url("../logos/branded.png");
