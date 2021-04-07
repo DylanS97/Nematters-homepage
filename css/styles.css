@@ -89,6 +89,7 @@ header {
 
 .flex-header .header-left {
   min-width: 0ch;
+  max-height: 62px;
 }
 
 .flex-header .header-left img {
@@ -451,13 +452,14 @@ header {
 
 #img-slider,
 .slide-img {
-  height: 80vh;
+  height: 83vh;
 }
 
 .slide-img-container {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(2%, #030303), to(rgba(0, 0, 0, 0))), url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.webp");
-  background-image: linear-gradient(to right, #030303 2%, rgba(0, 0, 0, 0)), url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.webp");
+  background-image: -webkit-gradient(linear, left top, right top, from(#030303), to(rgba(0, 0, 0, 0))), url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.jpg");
+  background-image: linear-gradient(90deg, #030303, rgba(0, 0, 0, 0)), url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -1338,6 +1340,10 @@ footer .social-grid a i {
   #first-search-bar {
     display: none;
   }
+  #img-slider,
+  .slide-img {
+    height: 87.6vh;
+  }
   #block-container .row-2 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1397,13 +1403,17 @@ footer .social-grid a i {
     padding: 0 15px;
   }
   .clients .flex-clients > div {
+    display: inline-block;
     position: relative;
     height: 45px;
+    min-width: 86px;
+    max-width: 247.5px;
     padding: 0 20px;
     text-align: center;
   }
   .clients .flex-clients > div img {
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
   }
   .client-info,
   .client-info + * {
@@ -1444,7 +1454,7 @@ footer .social-grid a i {
     height: 3rem;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
-    bottom: 155%;
+    bottom: 157%;
     z-index: 1;
   }
   .each-client:hover div.client-info,
@@ -1455,7 +1465,6 @@ footer .social-grid a i {
   .grayscale {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
-    height: 100%;
   }
   .grayscale:hover {
     -webkit-filter: none;
@@ -1470,20 +1479,47 @@ footer .social-grid a i {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     padding: 0 15px;
   }
-  .partners .partners-container div {
-    height: 88px;
-    min-width: 73.5px;
-    max-width: 260px;
+  .partners .partners-container .first-row,
+  .partners .partners-container .second-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 100%;
+  }
+  .partners .partners-container .first-row div,
+  .partners .partners-container .second-row div {
+    display: inline-block;
     padding: 0 20px;
     text-align: center;
   }
-  .partners .partners-container div img {
-    height: 100%;
+  .partners .partners-container .first-row {
+    height: 82px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .partners .partners-container .first-row div {
+    min-width: 73px;
+    max-width: 224px;
+  }
+  .partners .partners-container .first-row div img {
+    max-width: 100%;
+  }
+  .partners .partners-container .second-row {
+    height: 66px;
+    margin: 20px 0 0 0;
+  }
+  .partners .partners-container .second-row div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .partners .partners-container .second-row div img {
+    width: 100%;
   }
   #newsletter-container .news-inner {
     padding: 0 15px;
@@ -1603,6 +1639,10 @@ footer .social-grid a i {
   #img-slider .slide-img-container {
     text-align: left;
   }
+  #img-slider,
+  .slide-img {
+    height: 77vh;
+  }
   .inner-slide {
     width: 100%;
     margin: 0;
@@ -1664,12 +1704,24 @@ footer .social-grid a i {
   }
   .clients .flex-clients > div {
     height: 3.9rem;
+    min-width: 104px;
+    max-width: 329px;
   }
   .clients .flex-clients > div .client-info {
     bottom: 180%;
   }
   .clients .flex-clients > div .arrow {
     bottom: 141%;
+  }
+  .partners .partners-container .first-row {
+    height: 110px;
+  }
+  .partners .partners-container .first-row div {
+    min-width: 109px;
+    max-width: 285px;
+  }
+  .partners .partners-container .second-row {
+    height: 90px;
   }
   #newsletter-container .name,
   #newsletter-container .email {
@@ -1737,7 +1789,21 @@ footer .social-grid a i {
     bottom: 171%;
   }
   .clients .flex-clients > div .arrow {
-    bottom: 136%;
+    bottom: 136.5%;
+  }
+  .partners .partners-container .first-row {
+    height: 88px;
+  }
+  .partners .partners-container .first-row div {
+    min-width: 44px;
+    max-width: 220px;
+  }
+  .partners .partners-container .second-row {
+    height: 58px;
+  }
+  .partners .partners-container .second-row div img {
+    height: 100%;
+    width: auto;
   }
   footer .inner {
     -ms-flex-wrap: nowrap;

@@ -53,6 +53,11 @@
     #first-search-bar {
         display: none;
     }
+    // Slider
+    #img-slider,
+    .slide-img {
+        @include sizing($height: 87.6vh);
+    }
     // Blocks
     #block-container .row-2 {
         @include flexy($wrap: wrap, $dir: row);
@@ -94,11 +99,13 @@
             @include flexy($just: space-between);
             padding: 0 15px;
             > div {
+                display: inline-block;
                 position: relative;
-                @include sizing($height: 45px, $padding: 0 20px);
+                @include sizing($height: 45px, $min-w:86px, $max-w: 247.5px, $padding: 0 20px);
                 text-align: center;
                 img {
-                    height: 100%;
+                    max-width: 100%;
+                    max-height: 100%;
                 }
             }
         }
@@ -140,7 +147,7 @@
         width: 3rem;
         height: 3rem;
         transform: rotate(45deg);
-        bottom: 155%;
+        bottom: 157%;
         z-index: 1;
     }
     .each-client:hover div.client-info,
@@ -150,7 +157,6 @@
     }
     .grayscale {
         filter: grayscale(100%);
-        @include sizing($height: 100%);
         &:hover {
             filter: none;
         }
@@ -159,13 +165,37 @@
     .partners {
         @include sizing($padding: 50px 0);
         .partners-container {
-            @include flexy($wrap: wrap, $just: space-between);
+            @include flexy($wrap: wrap);
             padding: 0 15px;
-            div {
-                @include sizing($height: 88px, $min-w: 73.5px, $max-w: 260px, $padding: 0 20px);
-                text-align: center;
-                img {
-                    height: 100%;
+            .first-row,
+            .second-row {
+                @include flexy($wrap: nowrap);
+                @include sizing($width: 100%);
+                div {
+                    display: inline-block;
+                    padding: 0 20px;
+                    text-align: center;
+                }
+            }
+            .first-row {
+                height: 82px;
+                justify-content: space-between;
+                div {
+                    min-width: 73px;
+                    max-width: 224px;
+                    img {
+                        max-width: 100%;;
+                    }
+                }
+            }
+            .second-row {
+                height: 66px;
+                margin: 20px 0 0 0;
+                div {
+                    flex: 1;
+                    img {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -278,6 +308,10 @@
     #img-slider .slide-img-container {
         text-align: left;
     }
+    #img-slider,
+    .slide-img {
+        @include sizing($height: 77vh);
+    }
     .inner-slide {
         @include sizing($width: 100%, $margin: 0);
     }
@@ -331,12 +365,27 @@
     }
     // Clients
     .clients .flex-clients > div {
-        @include sizing($height: 3.9rem);
+        @include sizing($height: 3.9rem, $min-w: 104px, $max-w: 329px);
         .client-info {
             bottom: 180%;
         }
         .arrow {
             bottom: 141%;
+        }
+    }
+    // Partners
+    .partners {
+        .partners-container {
+            .first-row {
+                height: 110px;
+                div {
+                    min-width: 109px;
+                    max-width: 285px;
+                }
+            }
+            .second-row {
+                height: 90px;
+            }
         }
     }
     // Newsletter
@@ -409,7 +458,28 @@
             bottom: 171%;
         }
         .arrow {
-            bottom: 136%;
+            bottom: 136.5%;
+        }
+    }
+    // Partners
+    .partners {
+        .partners-container {
+            .first-row {
+                height: 88px;
+                div {
+                    min-width: 44px;
+                    max-width: 220px;
+                }
+            }
+            .second-row {
+                height: 58px;
+                div {
+                    img {
+                        height: 100%;
+                    width: auto;
+                    }
+                }
+            }
         }
     }
     // Footer
