@@ -523,7 +523,7 @@ header {
 
 .arrow-btn {
   display: inline-block;
-  height: 5vh;
+  height: 47px;
 }
 
 .arrow-btn button,
@@ -952,6 +952,7 @@ header {
 #card-1,
 #card-2,
 #card-3 {
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 0;
@@ -967,6 +968,17 @@ header {
 
 #card-3 {
   background-image: url("https://www.netmatters.co.uk/assets/images/thumbnails/thumb/congratulations-to-samuel-pXTR.jpg");
+}
+
+.gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5));
+  z-index: 2;
+  opacity: 0;
 }
 
 .header-latest span {
@@ -1342,7 +1354,7 @@ footer .social-grid a i {
   }
   #img-slider,
   .slide-img {
-    height: 87.6vh;
+    height: 89vh;
   }
   #block-container .row-2 {
     display: -webkit-box;
@@ -1641,7 +1653,7 @@ footer .social-grid a i {
   }
   #img-slider,
   .slide-img {
-    height: 77vh;
+    height: 78.7vh;
   }
   .inner-slide {
     width: 100%;
@@ -1673,6 +1685,7 @@ footer .social-grid a i {
     overflow: hidden;
   }
   .card-top {
+    position: relative;
     -webkit-transition-duration: .4s;
             transition-duration: .4s;
   }
@@ -1687,14 +1700,10 @@ footer .social-grid a i {
   .card-body {
     overflow: hidden;
   }
-  #card-1:hover {
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://www.netmatters.co.uk/assets/images/thumbnails/thumb/grants-available-for-R76J.jpg");
-  }
-  #card-2:hover {
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://www.netmatters.co.uk/assets/images/thumbnails/thumb/case-study-warren-t8yt.jpg");
-  }
-  #card-3:hover {
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://www.netmatters.co.uk/assets/images/thumbnails/thumb/congratulations-to-samuel-pXTR.jpg");
+  .gradient:hover {
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s;
+    opacity: 1;
   }
   #our-culture {
     background-image: url("../logos/branded.png");
@@ -1711,7 +1720,7 @@ footer .social-grid a i {
     bottom: 180%;
   }
   .clients .flex-clients > div .arrow {
-    bottom: 141%;
+    bottom: 142%;
   }
   .partners .partners-container .first-row {
     height: 110px;

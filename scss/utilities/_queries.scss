@@ -56,7 +56,7 @@
     // Slider
     #img-slider,
     .slide-img {
-        @include sizing($height: 87.6vh);
+        @include sizing($height: 89vh);
     }
     // Blocks
     #block-container .row-2 {
@@ -310,7 +310,7 @@
     }
     #img-slider,
     .slide-img {
-        @include sizing($height: 77vh);
+        @include sizing($height: 78.7vh);
     }
     .inner-slide {
         @include sizing($width: 100%, $margin: 0);
@@ -335,6 +335,7 @@
         overflow: hidden;
     }
     .card-top {
+        position: relative;
         transition-duration: .4s;
     }
     .card-top:hover {
@@ -347,14 +348,9 @@
     .card-body {
         overflow: hidden;
     }
-    #card-1:hover {
-        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://www.netmatters.co.uk/assets/images/thumbnails/thumb/grants-available-for-R76J.jpg');
-    }
-    #card-2:hover {
-        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://www.netmatters.co.uk/assets/images/thumbnails/thumb/case-study-warren-t8yt.jpg');
-    }
-    #card-3:hover {
-        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://www.netmatters.co.uk/assets/images/thumbnails/thumb/congratulations-to-samuel-pXTR.jpg');
+    .gradient:hover {
+        transition: opacity .4s;
+        opacity: 1;
     }
     // Culture 
     #our-culture {
@@ -370,7 +366,7 @@
             bottom: 180%;
         }
         .arrow {
-            bottom: 141%;
+            bottom: 142%;
         }
     }
     // Partners
