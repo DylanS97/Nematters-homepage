@@ -36,7 +36,7 @@ a:hover {
     box-shadow: 0 1rem 2rem darken($main-colour, 10%);
 }
 .shadow-box {
-    box-shadow: 0 .25rem .5rem 0 darken($main-colour, 15%), 0 .4rem 1.25rem 0 darken($main-colour, 15%);
+    box-shadow: .4rem .4rem 1rem 0 darken($main-colour, 5%), -.4rem -.4rem 1rem 0 darken($main-colour, 5%);
 }
 
 .btn {

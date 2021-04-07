@@ -20,7 +20,6 @@
     }
     .block {
         @include sizing($padding: 30px);
-        // position: relative;
         &-bar,
         &-logo {
             @include sizing($margin: auto auto 17px auto);
@@ -43,10 +42,6 @@
             @include sizing($margin: 0 0 11px 0);
             font-size: $s-font;
             font-weight: normal;
-        }
-        .block-btn {
-            position: relative;
-            bottom: 0;
         }
     }
 }

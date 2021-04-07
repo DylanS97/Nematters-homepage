@@ -38,8 +38,8 @@ a:hover {
 }
 
 .shadow-box {
-  -webkit-box-shadow: 0 0.25rem 0.5rem 0 #d9d9d9, 0 0.4rem 1.25rem 0 #d9d9d9;
-          box-shadow: 0 0.25rem 0.5rem 0 #d9d9d9, 0 0.4rem 1.25rem 0 #d9d9d9;
+  -webkit-box-shadow: 0.4rem 0.4rem 1rem 0 #f2f2f2, -0.4rem -0.4rem 1rem 0 #f2f2f2;
+          box-shadow: 0.4rem 0.4rem 1rem 0 #f2f2f2, -0.4rem -0.4rem 1rem 0 #f2f2f2;
 }
 
 .btn {
@@ -209,6 +209,7 @@ header {
 }
 
 #search-bar div.search-btn button {
+  border-radius: 0;
   font-size: 1.5rem;
 }
 
@@ -216,6 +217,10 @@ header {
   display: inline-block;
   height: 100%;
   width: 75%;
+}
+
+.first-outer {
+  padding: 0 15px;
 }
 
 #first-search-bar {
@@ -317,7 +322,7 @@ header {
   display: flex;
   list-style-type: none;
   padding: 0 15px;
-  line-height: 3;
+  line-height: 3.5;
   font-size: 0.8125rem;
 }
 
@@ -461,6 +466,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
   height: 100%;
   width: 100%;
   position: relative;
@@ -477,10 +483,10 @@ header {
 }
 
 .slide-img-container .inner-slide h2 {
-  margin: 0 0 25px 0;
+  margin: 0 0 15px 0;
 }
 
-.slide-img-container .inner-slide + p {
+.slide-img-container .inner-slide > p {
   margin: 0 0 35px 0;
 }
 
@@ -616,11 +622,6 @@ header {
   margin: 0 0 11px 0;
   font-size: 1.125rem;
   font-weight: normal;
-}
-
-#block-container .block .block-btn {
-  position: relative;
-  bottom: 0;
 }
 
 #block-container {
@@ -852,7 +853,7 @@ header {
 }
 
 #latest-cards .card-container {
-  padding: 0 15px 50px 15px;
+  padding: 50px 15px;
 }
 
 #latest-cards .card-container .card-inner {
@@ -862,7 +863,6 @@ header {
 
 #latest-cards .card-container .card {
   position: relative;
-  margin: 30px 0 0 0;
 }
 
 #latest-cards .card-container .card-top {
@@ -1399,7 +1399,7 @@ footer .social-grid a i {
             flex: 1;
   }
   #latest-cards .card-container > div:nth-child(n+2) {
-    margin: 30px 0 0 20px;
+    margin: 0 0 0 20px;
   }
   .clients {
     padding: 50px 0;
@@ -1771,15 +1771,16 @@ footer .social-grid a i {
     display: inline-block;
     width: 79%;
   }
-  .flex-header #search-bar {
+  .flex-header #search-container #search-bar {
     width: 100%;
     border-radius: 0 3px 3px 0;
   }
-  .flex-header #search-bar .search-btn {
+  .flex-header #search-container #search-bar .search-btn {
     width: 21%;
   }
   .lower-nav-container .lower-navigation {
     font-size: 1rem;
+    line-height: 3;
   }
   #navigation .inner-container {
     max-width: 1170px;
@@ -1804,6 +1805,7 @@ footer .social-grid a i {
   }
   .inner-culture {
     width: 50%;
+    padding: 0 15px 0 0;
   }
   .clients .flex-clients > div {
     height: 4.375rem;

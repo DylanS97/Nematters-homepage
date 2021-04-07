@@ -62,6 +62,7 @@
     div.search-btn {
         float: right;
         button {
+            border-radius: 0;
             font-size: $l-font;
         }
     }
@@ -70,6 +71,9 @@
     display: inline-block;
     height: 100%;
     width: 75%;
+}
+.first-outer {
+    padding: 0 15px;
 }
 #first-search-bar {
     @include sizing($height: 5vh, $width: 100%, $margin: 10px 0 0 0);

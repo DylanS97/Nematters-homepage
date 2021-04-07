@@ -10,6 +10,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
     @include sizing($height: 100%, $width: 100%);
     position: relative;
     text-align: center;
@@ -20,9 +21,9 @@
         transform: translate(-50%, -50%);
         padding: 0 15px;
         h2 {
-            @include sizing($margin: 0 0 25px 0);
+            @include sizing($margin: 0 0 15px 0);
         }
-        + p {
+        > p {
             @include sizing($margin: 0 0 35px 0);
         }
     }

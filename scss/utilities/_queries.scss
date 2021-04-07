@@ -88,7 +88,7 @@
         }
     }
     #latest-cards .card-container > div:nth-child(n+2) {
-        margin: 30px 0 0 20px;
+        margin: 0 0 0 20px;
     }
 
     // Clients
@@ -428,7 +428,7 @@
         display: inline-block;
         width: 79%;
     }
-    .flex-header #search-bar {
+    .flex-header #search-container #search-bar {
         width: 100%;
         border-radius: 0 3px 3px 0;
         .search-btn {
@@ -437,6 +437,7 @@
     }
     .lower-nav-container .lower-navigation {
         font-size: $xs-font;
+        line-height: 3;
     }
     #navigation .inner-container {
         max-width: 1170px;
@@ -460,6 +461,7 @@
     // Culture
     .inner-culture {
         width: 50%;
+        padding: 0 15px 0 0;
     }
     // Clients
     .clients .flex-clients > div {
