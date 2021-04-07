@@ -3,7 +3,7 @@
 // ----------------------------------------
 
 #block-container {
-    @include colours($background: $body-colour);
+    @include colours($background: $main-colour);
     .block {
         @include colours($background: $main-colour);
         @include borders($border: 1px solid #ccc, $border-radius: 3px);
