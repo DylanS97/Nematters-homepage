@@ -7,7 +7,7 @@
 }
 
 @function per-line($items, $gutter) {
-    $g-pct: px-to-pc($gutter) * 2; // 6%
+    $g-pct: px-to-pc($gutter) * 2;
     $g-total: $items * $g-pct; 
     @return (100% / $items) - $g-total;
 }

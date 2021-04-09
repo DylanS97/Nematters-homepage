@@ -4,19 +4,18 @@
 
 .arrow-btn {
     display: inline-block;
-    @include sizing($height: 47px);
     button,
     button * {
         display: inline-block;
         @include sizing($margin: auto);
     }
     button {
-        @include sizing($height: 100%);
-        &.slide-btn {
-            height: 3.875rem;
-        }
         i {
             margin: 0 0 0 .75rem;
         }
     }
+}
+.arrow-btn,
+.arrow-btn button {
+    @include sizing($min-h: 62px);
 }

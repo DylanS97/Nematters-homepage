@@ -15,7 +15,7 @@
     }
     .block:hover {
         @include colours($colour: $main-colour);
-        > .block-bar, .block-logo, button {
+        > .block-bar, .block-logo, .block-btn {
             @include colours($background: $main-colour);
         }
     }

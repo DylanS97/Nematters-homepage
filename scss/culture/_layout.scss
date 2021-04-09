@@ -8,6 +8,11 @@
         .arrow-btn p {
             @include sizing($margin: 0);
         }
+        .arrow-btn,
+        .arrow-btn button {
+            min-height: 47px;
+            height: auto;
+        }
     }
     h2 {
         @include sizing($margin: -6px 0 28px 0);

@@ -37,9 +37,9 @@
         border: 1px solid $colour;
     }
     &:hover,
-    > .block-logo, button {
+    > .block-logo, .block-btn {
         background: $background;
-        button,
+        .block-btn,
         .block-logo {
             color: $colour;
         }

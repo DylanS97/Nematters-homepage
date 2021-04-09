@@ -54,6 +54,10 @@
         }
         input {
             font-size: $xs-font;
+            transition: .2s ease-in-out;
+            &:focus {
+                @extend %focus;
+            }
         }
     }
     div.search-bar {
@@ -64,6 +68,9 @@
         button {
             border-radius: 0;
             font-size: $l-font;
+            &:focus {
+                outline: none;
+            }
         }
     }
 }
@@ -84,17 +91,20 @@
         button {
             @include sizing($height: 100%, $width: 100%);
             @include borders($border: none);
+            &:focus {
+                outline: none;
+            }
         }
         input {
             padding: 5px 15px;
         }
     }
     div.first-search-bar {
-        @include sizing($width: 90%);
+        @include sizing($width: 90%, $max-w: calc(100% - 2rem));
         float: left;
     }
     div.first-search-btn {
-        @include sizing($width: 10%);
+        @include sizing($width: 10%, $min-w: 2rem);
         color: #333645;
         float: right;
         i {

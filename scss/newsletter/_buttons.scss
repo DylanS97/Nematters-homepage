@@ -9,12 +9,12 @@
 
 }
 .subscribe-btn {
-    @include sizing($height: 5vh, $min-h: 47px);
+    @include sizing($min-h: 47px);
     button,
     button * {
         @include sizing($margin: auto);
     }
     button {
-        @include sizing($height: 100%, $width: 100%, $padding: 0 10px);
+        @include sizing($width: 100%, $padding: 0 15px);
     }
 }

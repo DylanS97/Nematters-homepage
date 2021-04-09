@@ -27,11 +27,10 @@
             display: inline-flex;
             order: 1;
             @include sizing($height: 100%, $margin: 0);
-            @include borders($border: 1px solid #999aa2);
-            border-radius: 0 3px 3px 0;
             .search-bar {
                 @include sizing($width: 100%);
                 input {
+                    @include borders($border: 1px solid #999aa2, $border-radius: 0);
                     @include sizing($padding: 5px 15px);
                     background: #fff;
                 }
@@ -40,6 +39,7 @@
                 @include sizing($width: 25%);
                 button {
                     @include colours($colour: $main-colour, $background: #999aa2);
+                    border-radius: 0 3px 3px 0;
                     &:hover {
                         @include colours($background: darken(#999aa2, 10%));
                     }
@@ -56,7 +56,7 @@
     // Slider
     #img-slider,
     .slide-img {
-        @include sizing($height: 89vh);
+        @include sizing($height: calc(100vh - 109px));
     }
     // Blocks
     #block-container .row-2 {
@@ -85,6 +85,7 @@
         @include flexy($dir: row);
         .card {
             flex: 1;
+            margin-top: 0;
         }
     }
     #latest-cards .card-container > div:nth-child(n+2) {
@@ -182,7 +183,7 @@
             .second-row {
                 @include flexy($wrap: nowrap);
                 @include sizing($width: 100%);
-                div {
+                > div {
                     display: inline-block;
                     padding: 0 20px;
                     text-align: center;
@@ -193,9 +194,17 @@
                 justify-content: space-between;
                 div {
                     min-width: 73px;
-                    max-width: 224px;
+                    max-width: 250px;
                     img {
                         max-width: 100%;;
+                    }
+                    &#google {
+                        box-shadow: 2px 2px 3px darken($main-colour, 15%);
+                        font-size: 0;
+                        > img {
+                            height: 100%;
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -230,12 +239,9 @@
         .social {
             margin: 0;
         }
-        .social .social-grid {
+        .social .inner-social {
             @include sizing($margin: 0);
             width: 100%;
-            a {
-                @include sizing($width: 155.1px);
-            }
         }
     }
 }
@@ -300,11 +306,11 @@
         #search-container {
             order: 3;
             width: auto;
-            #search-bar {
-                border-radius: 3px;
-            }
             .search-btn {
                 @include sizing($width: 4rem);
+                > button {
+                    border-radius: 3px;
+                }
             }
         }
         #nav {
@@ -322,9 +328,12 @@
     #img-slider .slide-img-container {
         text-align: left;
     }
+    .slide-img-container .inner-slide {
+        max-width: 970px;
+    }
     #img-slider,
     .slide-img {
-        @include sizing($height: 78.7vh);
+        @include sizing($height: calc(100vh - 209px));
     }
     .inner-slide {
         @include sizing($width: 100%, $margin: 0);
@@ -409,9 +418,6 @@
             float: right;
         }
     }
-    footer .inner .social .social-grid a {
-        width: 210.1px;
-    }
 }
 
 // 1260 pixels
@@ -430,9 +436,11 @@
     }
     .flex-header #search-container #search-bar {
         width: 100%;
-        border-radius: 0 3px 3px 0;
         .search-btn {
             @include sizing($width: 21%);
+            > button {  
+                border-radius: 0 3px 3px 0;
+            }
         }
     }
     .lower-nav-container .lower-navigation {
@@ -442,6 +450,11 @@
     #navigation .inner-container {
         max-width: 1170px;
     }
+    // Slider
+    .slide-img-container .inner-slide {
+        max-width: 1200px;
+    }
+
     // Blocks
     #block-container .row-2 {
         @include flexy($wrap: nowrap);
@@ -497,10 +510,8 @@
     // Footer
     footer .inner {
         flex-wrap: nowrap;
-        .social .social-grid {
-            a {
-                width: 111.8px;
-            }
+        > div:not(#social) {
+            margin: 0;
         }
     }
 }

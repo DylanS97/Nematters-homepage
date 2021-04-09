@@ -16,7 +16,6 @@
             height: 6.25rem;
             width: 100%;
             padding: 1rem 0 0 0;
-            font-size: 1.125rem;
             line-height: 1;
             div.logo *,
             div.caps * {
@@ -28,6 +27,11 @@
             }
             small {
                 font-size: .625rem;
+            }
+            h5 {
+                font-size: 1.125rem;
+                margin: 0;
+                font-weight: normal;
             }
         }
     }

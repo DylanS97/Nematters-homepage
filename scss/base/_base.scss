@@ -4,13 +4,13 @@
 * {
     font-family: $font;
     box-sizing: border-box;
-    letter-spacing: .4px;
 }
 
 body {
     color: $main-colour;
     @include colours($colour: $theme-colour, $background: $main-colour);
     margin: 0;
+    letter-spacing: .4px;
 }
 
 button,
@@ -39,11 +39,19 @@ a:hover {
     box-shadow: .4rem .4rem 1rem 0 darken($main-colour, 5%), -.4rem -.4rem 1rem 0 darken($main-colour, 5%);
 }
 
+.blue-focus:focus {
+    outline: none;
+    box-shadow: -1px -1px 7px 0 lighten(#5bc0de, 20%), 1px 1px 7px 0 lighten(#5bc0de, 20%);
+}
+%focus {
+    border: 1px solid #5bc0de;
+}
+
 .btn {
     display: inline-block;
     font-size: $btn-font;
     font-weight: 400;
-    font-family: 'Poppins', sans-serif;
+    font-family: $font;
     color: $main-colour;
     padding: 5px 15px;
     height: 47px;

@@ -30,23 +30,23 @@
 }
 .news-card {
     h5 {
-        color: $web-training-colour;
+        color: $marketing-colour;
     }
     .card-btn {
-        background: $web-training-colour;
+        background: $marketing-colour;
         &:hover {
-            background: darken($web-training-colour, 10%);
+            background: darken($marketing-colour, 10%);
         }
     }
 }
-.case-studies {
+.careers-card {
     h5 {
-        color: $case-studies-colour;
+        color: $it-support-colour;
     }
     .card-btn {
-        background: $case-studies-colour;
+        background: $it-support-colour;
         &:hover {
-            background: darken($case-studies-colour, 10%);
+            background: darken($it-support-colour, 10%);
         }
     }
 }
