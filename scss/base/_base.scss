@@ -41,10 +41,10 @@ a:hover {
 
 .blue-focus:focus {
     outline: none;
-    box-shadow: -1px -1px 7px 0 lighten(#5bc0de, 20%), 1px 1px 7px 0 lighten(#5bc0de, 20%);
+    box-shadow: -1px -1px 7px 0 lighten($border-blue, 20%), 1px 1px 7px 0 lighten($border-blue, 20%);
 }
 %focus {
-    border: 1px solid #5bc0de;
+    border: 1px solid $border-blue;
 }
 
 .btn {
