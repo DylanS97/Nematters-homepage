@@ -1,0 +1,174 @@
+.hidden-track, .title-banner, .contact-details, .contact-form, .locations, .contact-det-form {
+    .container {
+        max-width: $s-max-w;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hidden-track {
+    display: none;
+    border-top: 1px solid $theme-colour;
+    .container {
+        padding-top: 14px;
+        padding-bottom: 13px;
+    }
+    ul {
+        list-style-type: none;
+        font-size: 0.8125rem;
+        margin: 0;
+        padding: 0;
+        > li {
+            display: inline-block;
+            > a {
+                color: $theme-colour;
+                font-weight: 600;
+            }
+        }
+        > :not(:first-child)::before {
+            content: "/";
+            padding: 0 10px 0 5px;
+        }
+    }
+}
+
+.title-banner {
+    background: $theme-colour;
+    margin: 0 0 50px 0;
+    .container {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        color: $main-colour;
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 400;
+            margin: 0;
+            line-height: 1;
+        }
+    }
+}
+
+.contact-det-form .container {
+    padding: 0;
+    .contact-details, .contact-form {
+        padding: 0 15px;
+    }
+}
+.contact-details {
+    .det-container {
+        > p {
+            font-size: 1rem;
+            margin: 0 0 25px 0;
+            > strong {
+                font-weight: 550;
+            }
+            > a {
+                display: block;
+                font-size: 1.625rem;
+                font-weight: 600;
+                color: map-get($map: $services-colours, $key: "web");
+            }
+        }
+        .accordion {
+            display: none;
+            .acc-container {
+                > p {
+                    margin: 0 0 25px 0;
+                    strong {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        .accordion-open {
+            height: auto;
+        }
+    }
+}
+
+.contact-form {
+    .form-container {
+        form {
+            input, textarea {
+                width: 100%;
+                margin: 0 0 15px 0;
+                padding: 5px 15px;
+                @include borders($border: 1px solid #ccc);
+                &:focus {
+                    @extend %focus;
+                }
+            }
+            .contact-error {
+                border-color: $case-studies-colour;
+            }
+            label {
+                display: inline-block;
+                font-weight: 600;
+                letter-spacing: .8px;
+                margin: 0 0 5px 0;
+                i {
+                    color: $required-colour;
+                }
+            }
+            input {
+                height: 47px;
+            }
+            textarea {
+                height: 100px;
+            }
+            .btn {
+                background: $theme-colour;
+                border: none;
+                &:hover {
+                    background: $d-theme;
+                }
+            }
+        }
+    }
+}
+
+.locations {
+    display: block;
+    padding: 50px 0;
+    .container {
+        padding: 0 15px;
+        .maps-containers {
+            padding: 0 15px;
+        }
+    }
+    .block {
+        .locations-logo {
+            color: $main-colour;
+            @include sizing($height: 60px, $width: 60px);
+            margin: 0 auto 17px auto;
+            background: $theme-colour;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            .home-logo {
+                position: relative;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+        > p {
+            margin: 0;
+            letter-spacing: .6px;
+            &:last-child {
+                margin: 0 0 13px 0;
+            }
+        }
+    }
+}
+#map-loc-1, #map-loc-2 {
+    height: 300px;
+    width: 100%;
+}
+
+.contact-vers > div {
+    width: calc(100% / 4);
+}

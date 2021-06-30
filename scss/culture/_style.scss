@@ -1,0 +1,24 @@
+
+// Culture Styles -------------------------
+// ----------------------------------------
+
+#our-culture {
+    @include colours($colour: $main-colour, $background: $theme-colour);
+    p {
+        line-height: 1.9;
+    }
+    strong {
+        font-weight: 600;
+    }
+    h2 {
+        font-size: 2.25rem;
+        font-weight: normal;
+        line-height: 1;
+    }
+    .arrow-btn button {
+        @include colours($colour: $theme-colour, $background: $main-colour);
+        &:hover {
+            background: darken($main-colour, 10%);
+        }
+    }
+}

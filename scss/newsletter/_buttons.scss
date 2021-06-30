@@ -1,0 +1,20 @@
+
+// Newsletter Buttons ---------------------
+// ----------------------------------------
+
+.subscribe-btn,
+.subscribe-btn button,
+.subscribe-btn button * {
+    display: inline-block;
+
+}
+.subscribe-btn {
+    @include sizing($min-h: 47px);
+    button,
+    button * {
+        @include sizing($margin: auto);
+    }
+    button {
+        @include sizing($width: 100%, $padding: 0 15px);
+    }
+}

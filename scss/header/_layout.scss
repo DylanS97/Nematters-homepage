@@ -1,0 +1,46 @@
+
+// Header Layout --------------------------
+// ----------------------------------------
+.header-placeholder {
+    width: 100%;
+    height: 166px;
+}
+.header-nav {
+    position: static;
+}
+.header-container {
+    padding: 0 0 20px 0;
+}
+.flex-header {
+    @include flexy($wrap: nowrap, $just: space-between);
+    flex: 1;
+    @include sizing($width: 100%, $padding: 0 15px);
+    #header-logo {
+        @include sizing($margin: 0 auto 0 0);
+    }
+    .header-left {
+        min-width: 0ch;
+        max-height: 89px;
+        padding: 20px 0 7px 0;
+        img {
+            width: 100%;
+        }
+    }
+    .header-right {
+        @include flexy($wrap: nowrap, $just: flex-end);
+        > div {
+            padding: 27px 0 7px 0;
+        }
+    }
+}
+.sticky-header {
+    position: fixed;
+    top: -100%;
+    width: calc(100% - 17px);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: top ease-in-out .4s;
+    z-index: 10;
+}
+.show-sticky-header {
+    top: -1px;
+}

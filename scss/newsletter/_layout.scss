@@ -1,0 +1,85 @@
+
+// Newsletter Layout ----------------------
+// ----------------------------------------
+
+#newsletter-container {
+    .news-inner {
+        @include sizing($width: 100%, $margin: 0 auto);
+    }
+    .inner {
+        @include sizing($padding: 50px 30px);
+    }
+    h2,
+    .name,
+    .email {
+        @include sizing($margin: 0 0 15px 0);
+    }
+    .name p,
+    .email p {
+        @include sizing($margin: 0 0 5px 0);
+    }
+    label a {
+        @include sizing($height: auto, $width: auto);
+    }
+    input[type="text"],
+    input[type="email"] {
+        @include sizing($height: 47px, $width: 100%, $padding: 5px 15px);
+    }
+}
+
+.grid,
+.grid * {
+    cursor: pointer;
+}
+.grid {
+    @include flexy($wrap: nowrap);
+    @include sizing($margin: 0 0 20px 0);
+    .checkbox {
+        min-width: 2rem;
+        position: relative;
+        @include borders($border: 3px solid $theme-colour, $border-radius: 3px);
+        height: 2rem;
+        user-select: none;
+        margin: 0 20px 0 0;
+        input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            @include sizing($height: 100%, $width: 100%, $margin: 0);
+            z-index: 1;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include sizing($height: 100%, $width: 100%);
+        }
+        input:checked ~ .checkmark {
+            background: $theme-colour;
+        }
+        .checkmark:after {
+            content: '';
+            color: white;
+            position: absolute;
+            display: none;
+        }
+        input:checked ~ .checkmark:after {
+            display: block;
+        }
+        .checkmark:after {
+            left: 9px;
+            top: 2px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            width: 5px;
+            height: 1rem;
+            transform: rotate(45deg);
+        }
+    }
+    .checkbox-label {
+        display: inline;
+        width: auto;
+        span {
+            margin: 0;
+        }
+    }
+}

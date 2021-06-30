@@ -1,0 +1,55 @@
+
+// Mixins ---------------------------------
+// ----------------------------------------
+
+// Flexbox Mixin
+@mixin flexy($disp: flex,
+             $dir: null,
+             $wrap: null,
+             $just: null) {
+    display: $disp;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $just;
+}
+// Measure Mixin
+@mixin sizing($height: null,
+              $min-h: null,
+              $max-h: null,
+              $width: null,
+              $min-w: null,
+              $max-w: null,
+              $padding: null,
+              $margin: null) {
+    height: $height;
+    min-height: $min-h;
+    max-height: $max-h;
+    width: $width;
+    min-width: $min-w;
+    max-width: $max-w;
+    padding: $padding;
+    margin: $margin;
+}
+// Border Mixin
+@mixin borders($border: null,
+               $border-radius: null) {
+    border: $border;
+    border-radius: $border-radius;
+}
+// Colours Mixin
+@mixin colours($colour: null,
+               $background: null) {
+    color: $colour;
+    background: $background;
+}
+
+@mixin nav-hover($background: null,
+                 $visibility: visible) {
+    visibility: $visibility;
+    background: $background;
+}
+
+@mixin slideShow($img: null,
+                 $grad: linear-gradient(90deg, rgba(3, 3, 3, 1), rgba(0, 0, 0, 0))) {
+    background-image: $grad + ", " + $img;
+}
