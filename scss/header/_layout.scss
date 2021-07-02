@@ -41,6 +41,9 @@
     transition: top ease-in-out .4s;
     z-index: 10;
 }
+.mob-header {
+    width: 100%;
+}
 .show-sticky-header {
     top: -1px;
 }

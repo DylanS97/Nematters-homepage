@@ -511,6 +511,10 @@ footer,
   z-index: 10;
 }
 
+.mob-header {
+  width: 100%;
+}
+
 .show-sticky-header {
   top: -1px;
 }
@@ -1884,7 +1888,7 @@ footer .inner-social a i {
   margin: 0 0 13px 0;
 }
 
-#map-loc-1, #map-loc-2 {
+#map-loc-0, #map-loc-1 {
   height: 300px;
   width: 100%;
 }

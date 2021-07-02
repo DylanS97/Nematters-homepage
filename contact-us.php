@@ -92,7 +92,7 @@
                             <p>Norfolk</p>
                             <p>NR18 0WZ</p>
                         </a>
-                        <div id="map-loc-1"></div>
+                        <div id="map-loc-0"></div>
                     </div>
                     <div class="maps-containers">
                         <a class="block web shadow-box">
@@ -107,7 +107,7 @@
                             <p>Norfolk</p>
                             <p>NR31 7RA</p>
                         </a>
-                        <div id="map-loc-2"></div>
+                        <div id="map-loc-1"></div>
                     </div>
                 </div>
             </section>

@@ -197,6 +197,11 @@ $('.page-contents').on('scroll', function() {
 
     if (this.scrollTop > head_height) {
         $('.header-nav').addClass('sticky-header');
+        if (getScrollbarWidth() === 0) {
+            $('.header-nav').addClass('mob-header');
+        } else {
+            $('.header-nav').removeClass('mob-header');
+        }
     }
 
     if (this.scrollTop <= previousPosition && this.scrollTop > head_height) {
@@ -210,6 +215,28 @@ $('.page-contents').on('scroll', function() {
 
     previousPosition = this.scrollTop;
 });
+function getScrollbarWidth() {
+
+    // Creating invisible container
+    const outer = document.createElement('div');
+    outer.style.visibility = 'hidden';
+    outer.style.overflow = 'scroll'; // forcing scrollbar to appear
+    outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps
+    document.body.appendChild(outer);
+  
+    // Creating inner element and placing it in the container
+    const inner = document.createElement('div');
+    outer.appendChild(inner);
+  
+    // Calculating difference between container's full width and the child width
+    const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth);
+  
+    // Removing temporary elements from the DOM
+    outer.parentNode.removeChild(outer);
+  
+    return scrollbarWidth;
+  
+}
 
 
 //** COOKIES */
@@ -229,29 +256,40 @@ function checkCookies() {
 
 
 //** MAPS */
+const locations = [
+    {lat:52.57581327996856, lng:1.1363904052819627},
+    {lat:52.55699602616733, lng:1.7125076375741055}
+];
 function initMap() {
     // Map options
-    let options1 = {
-        zoom: 11,
-        center: {lat:52.57581327996856, lng:1.1363904052819627}
-    }
-    let options2 = {
-        zoom: 11,
-        center: {lat:52.55699602616733, lng:1.7125076375741055}
-    }
+    let options = [
+        {
+            zoom: 11,
+            center: locations[0],
+            gestureHandling: "cooperative"
+        },
+        {
+            zoom: 11,
+            center: locations[1],
+            gestureHandling: "cooperative"
+        }
+    ]
 
     // New map
-    let map = new google.maps.Map(document.getElementById('map-loc-1'), options1);
-    let map2 = new google.maps.Map(document.getElementById('map-loc-2'), options2);
+    let maps = Array();
+
+    for (let i = 0; i < 2; i++) {
+        maps[i] = new google.maps.Map(document.getElementById("map-loc-".concat(i)), options[i]);
+    }
 
     // Add marker
-    let marker1 = new google.maps.Marker({
-        position:{lat:52.57581327996856, lng:1.1363904052819627},
-        map:map
-    });
-    let marker2 = new google.maps.Marker({
-        position:{lat:52.55699602616733, lng:1.7125076375741055},
-        map:map2
+    setMarker(locations[0], maps[0]);
+    setMarker(locations[1], maps[1]);
+}
+function setMarker(coords, id) {
+    let marker = new google.maps.Marker({
+        position: coords,
+        map:id
     });
 }
 
@@ -270,6 +308,7 @@ $('.trigger').on("click", function() {
         open = false;
     }
 });
+
 
 //** FROM VALIDATION */
 $('#contact-form-btn').on('click', (e) => {
@@ -313,7 +352,6 @@ $('#contact-form-btn').on('click', (e) => {
     }
 
 });
-
 function ValidEmail(email) {
 
     const match = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9]+).([a-z]+).([a-z]+)$/;
@@ -324,7 +362,6 @@ function ValidEmail(email) {
 
     return false;
 }
-
 function ValidNumber(num) {
 
     const match1 = /^\d{10}$/;
