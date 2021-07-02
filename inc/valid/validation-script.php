@@ -20,6 +20,7 @@ if (isset($_POST['email']) && $_POST['email'] != '') {
         $query->bindParam(':message', $sanitized[3]);
     
         $query->execute();
+        echo "<script>alert('Successfully added to database')</script>";
 
     } else if (!$valid) {
         return;
