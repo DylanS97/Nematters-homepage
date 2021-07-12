@@ -1,7 +1,7 @@
 <?php
     include_once 'inc/connection.php';
 
-    $sql = "SELECT * FROM news";
+    $sql = "SELECT * FROM news ORDER BY upload_date DESC LIMIT 3";
     $results = $db->query($sql);
 ?>
 
@@ -260,17 +260,17 @@
                     </div>
                     <div class="shadow-bottom">
                         <div class="card-container max-width">
-                            <?php foreach ($results as $card) {?>
+                            <?php $i = 1; foreach ($results as $card) {?>
                             <div class="card">
-                                <div <?php echo ' class="card-inner ' . $card['category'] . '-card"'; ?> >
+                                <div class="card-inner" >
                                     <div class="card-img-container">
-                                        <div <?php echo ' id="card-' . $card['id'] . '" ' ?> class="card-top">
+                                        <div <?php echo 'style="background-image: url(\'' . $card['image'] . '\')" ' ?> class="card-top image-position">
                                             <img <?php echo ' src="' . $card['image'] . '" alt="' . $card['image_alt'] . '"'; ?>>
                                             <div class="gradient"></div>
                                         </div>
                                     </div>
-                                    <a href="#" <?php echo 'class="' . $card['category'] . '-tag ' . 'caps tag support"' ?> ><?php echo $card['category']; ?></a>
-                                    <div class="card-body">
+                                    <a href="#" <?php echo 'class="caps tag tag-' . $i . '"' ?> class="caps tag"><?php echo $card['category']; ?></a>
+                                    <div <?php echo 'class="card-body ' . 'card-' . $i . '"' ?>>
                                         <a href="#"><h5 class="card-title"><?php echo $card['title'] ?></h5></a>
                                         <p class="card-text"><?php echo $card['description'] ?></p>
                                         <a href="#" class="btn card-btn caps">read more</a>
@@ -279,13 +279,13 @@
                                             <div class="card-logo"><img <?php echo 'src="' . $card['pro_image'] . '" alt="' . $card['upload_by'] . '"'; ?> ></div>
                                             <ul>
                                                 <li><span><strong>Posted by <?php echo $card['upload_by']; ?></strong></span></li>
-                                                <li><span class="date-posted"><?php echo $card['upload_date'] ?></span></li>
+                                                <li><span class="date-posted"><?php echo date("d F Y", strtotime($card['upload_date'])) ?></span></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <?php } ?>
+                            <?php $i++; } ?>
                         </div>
                     </div>
                 </section><!-- /Posted Cards -->

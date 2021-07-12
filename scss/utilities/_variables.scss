@@ -23,13 +23,15 @@ $body-colour: rgb(245, 245, 245);
 $border-blue: #5bc0de;
 $case-studies-colour: #d64541;
 $required-colour: #d24d57;
+$success-colour: #4bb543;
+$fail-colour: #ff0033;
 
 $services-colours: (
     "web": #926fb1,
+    "marketing": #2ecc71,
     "support": #4183d7,
     "telecoms": #d64541,
     "bespoke": #67809f,
-    "marketing": #2ecc71,
     "cyber": #f62459
 );
 

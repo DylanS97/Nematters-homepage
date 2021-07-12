@@ -28,7 +28,24 @@
 .card-text {
     font-size: .8125rem;
 }
-.news-card {
+.tag-1 {
+    background: map-get($services-colours, "web");
+}
+.card-1 {
+    h5 {
+        color: map-get($services-colours, "web");
+    }
+    .card-btn {
+        background: map-get($services-colours, "web");
+        &:hover {
+            background: darken(map-get($services-colours, "web"), 10%);
+        }
+    }
+}
+.tag-2 {
+    background: map-get($services-colours, "marketing");
+}
+.card-2 {
     h5 {
         color: map-get($services-colours, "marketing");
     }
@@ -39,7 +56,10 @@
         }
     }
 }
-.careers-card {
+.tag-3 {
+    background: map-get($services-colours, "support");
+}
+.card-3 {
     h5 {
         color: map-get($services-colours, "support");
     }

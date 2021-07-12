@@ -60,12 +60,6 @@
                 text-decoration: underline;
             }
         }
-        .news-tag {
-            background: map-get($services-colours, "marketing");
-        }
-        .careers-tag {
-            background: map-get($services-colours, "support");
-        }
         .card-body {
             @include sizing($padding: 30px);
             z-index: 1;
@@ -107,22 +101,11 @@
         }
     }
 }
-#card-1,
-#card-2,
-#card-3 {
+.image-position {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 0;
-}
-#card-1 {
-    background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/thumb/it-project-manager-lKVK.jpg');
-}
-#card-2 {
-    background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/thumb/2nd-line-support-eTYH.jpg');
-}
-#card-3 {
-    background-image: url('https://www.netmatters.co.uk/assets/images/thumbnails/thumb/march-2021-notables-oFgT.jpg');
 }
 .gradient {
     position: absolute;

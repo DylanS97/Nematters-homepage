@@ -175,12 +175,14 @@ try {
 $('.inner-nav').on('click', () => {
     $('.page-contents').addClass('side-bar-shift');
     $('.overlay-placeholder').addClass('overlay');
+    $('.overlay-placeholder').addClass('overlay-width');
     $('.bar-1').addClass('nav-merge-down');
     $('.bar-3').addClass('nav-merge-up');
     $('.bar-2').addClass('nav-middle');
     $('.overlay-placeholder').on('click', () => {
         $('.page-contents').removeClass('side-bar-shift');
         $('.overlay-placeholder').removeClass('overlay');
+        $('.overlay-placeholder').removeClass('overlay-width');
         $('.bar-1').removeClass('nav-merge-down');
         $('.bar-3').removeClass('nav-merge-up');
         $('.bar-2').removeClass('nav-middle');
@@ -372,4 +374,11 @@ function ValidNumber(num) {
     }
 
     return false;
+}
+
+function success() {
+    $('.added-contact').addClass('show-message');
+    setTimeout(function () {
+        $('.added-contact').removeClass('show-message');
+    }, 3000);
 }

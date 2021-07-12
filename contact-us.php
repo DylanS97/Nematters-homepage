@@ -1,7 +1,3 @@
-<?php
-    include 'inc/valid/validation-script.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,6 +18,12 @@
         <title>Contact Us | Netmatters</title>
     </head>
     <body>
+        <div class="added-contact">
+            <div class="message">
+                <span>Successfully added details to database.</span>
+            </div>
+            <div class="icon"><i class="fas fa-check"></i></div>
+        </div>
 
         <div class="overlay-placeholder"></div>
         
@@ -126,5 +128,8 @@
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPeHxaG88NIBNtTZ1zO_x-JhLW4jGctKA&callback=initMap"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="js/app.js"></script>
+        <?php
+            include 'inc/valid/validation-script.php';
+        ?>
     </body>
 </html>
