@@ -11,11 +11,6 @@ function scripts() {
         .pipe(uglify())
         .pipe(gulp.dest('js-min'))
 }
-// function minify() {
-//     return gulp.src('js-src/app.js')
-//         .pipe(uglify())
-//         .pipe(gulp.dest('js-min'))
-// }
 
 exports.scripts = scripts;
 
