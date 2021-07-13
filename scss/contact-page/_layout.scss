@@ -199,9 +199,14 @@
     }
     > .icon {
         font-size: 2rem;
-        color: $success-colour;
     }
 }
 .show-message {
     top: 20px;
+}
+.success {
+    color: $success-colour;
+}
+.fail {
+    color: $fail-colour;
 }

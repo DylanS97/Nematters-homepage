@@ -2,14 +2,8 @@
 <?php
 include_once 'inc/connection.php';
 
-$sql_entries = "SELECT id FROM contact ORDER BY id DESC LIMIT 1";
+$sql_entries = "SELECT * FROM contact";
 $entries = $db->query($sql_entries);
-
-// foreach($entries as $entry) {
-//     echo $entry['id'];
-// }
-
-// var_dump($total_entries);
 
 $sql = "INSERT INTO contact(name, email, telephone, subject, message) VALUES (:name, :email, :phone, :subject, :message)";
 $query = $db->prepare($sql);
@@ -23,26 +17,17 @@ if (isset($_POST['email']) && $_POST['email'] != '') {
 
         $sanitized = sanitizeFields();
 
-        // foreach ($entries as $entry) {
-        //     echo '<script>alert(${$entry["name"]})</script>';
-        //     if ($entry['name'] === $sanitized[0] && 
-        //         $entry['email'] === $POST_['email'] && 
-        //         $entry['telephone'] === $sanitized[1] &&
-        //         $entry['subject'] === $sanitized[2] && 
-        //         $entry['message'] === $sanitized[3]) {
-        //         echo '<script>alert("Already in table")</script>';
-        //         return;
-        //     }
-        // }
-    
-        $query->bindParam(':name', $sanitized[0]);
-        $query->bindParam(':phone', $sanitized[1]);
-        $query->bindParam(':subject', $sanitized[2]);
-        $query->bindParam(':message', $sanitized[3]);
-    
-        $query->execute();
+        if (!checkDuplicate($entries, $sanitized)) {
+        
+            $query->bindParam(':name', $sanitized[0]);
+            $query->bindParam(':phone', $sanitized[1]);
+            $query->bindParam(':subject', $sanitized[2]);
+            $query->bindParam(':message', $sanitized[3]);
+        
+            $query->execute();
 
-        echo '<script>success();</script>';
+            echo '<script>success();</script>';
+        } else return;
 
     } else {
         return;
@@ -111,13 +96,18 @@ function sanitizeFields() {
     return $output;
 }
 
-// function successMessage() {
-//     $popup = '<div class="added-contact">';
-//     $popup .= '<div class="message">';
-//     $popup .= '<span>Successfully added details to Database.</span>';
-//     $popup .= '</div>';
-//     $popup .= '<div class="success icon"><i class="fas fa-check"></i></div>';
-//     $popup .= '</div>';
+function checkDuplicate($exists, $new = []) {
 
-//     echo $popup;
-// }
+    foreach ($exists as $exist) {
+        if ($exist['name'] === $new[0] && 
+            $exist['email'] === $_POST['email'] && 
+            $exist['telephone'] === $new[1] &&
+            $exist['subject'] === $new[2] && 
+            $exist['message'] === $new[3]) {
+                echo '<script>alreadyExists();</script>';
+                return true;
+        }
+    }
+
+    return false;
+}

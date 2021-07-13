@@ -1933,11 +1933,18 @@ footer .inner-social a i {
 
 .added-contact > .icon {
   font-size: 2rem;
-  color: #4bb543;
 }
 
 .show-message {
   top: 20px;
+}
+
+.success {
+  color: #4bb543;
+}
+
+.fail {
+  color: #ff0033;
 }
 
 @media only screen and (min-width: 768px) {

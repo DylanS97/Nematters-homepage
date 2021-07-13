@@ -377,8 +377,23 @@ function ValidNumber(num) {
 }
 
 function success() {
+    $('.added-contact span').html('Successfully added details to database.');
+    $('.added-contact > .icon').html('<i class="fas fa-check"></i>');
+    $('.added-contact > .icon').addClass('success');
     $('.added-contact').addClass('show-message');
     setTimeout(function () {
         $('.added-contact').removeClass('show-message');
+        $('.added-contact > .icon').removeClass('success');
+    }, 3000);
+}
+
+function alreadyExists() {
+    $('.added-contact span').html('Already exists in the database.');
+    $('.added-contact > .icon').html('<i class="fas fa-times"></i>');
+    $('.added-contact > .icon').addClass('fail');
+    $('.added-contact').addClass('show-message');
+    setTimeout(function () {
+        $('.added-contact').removeClass('show-message');
+        $('.added-contact > .icon').removeClass('fail');
     }, 3000);
 }

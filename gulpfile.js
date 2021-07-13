@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 
 // Javascript
 function scripts() {
@@ -7,8 +8,14 @@ function scripts() {
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        .pipe(gulp.dest('js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('js-min'))
 }
+// function minify() {
+//     return gulp.src('js-src/app.js')
+//         .pipe(uglify())
+//         .pipe(gulp.dest('js-min'))
+// }
 
 exports.scripts = scripts;
 

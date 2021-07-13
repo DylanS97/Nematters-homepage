@@ -20,9 +20,9 @@
     <body>
         <div class="added-contact">
             <div class="message">
-                <span>Successfully added details to database.</span>
+                <span></span>
             </div>
-            <div class="icon"><i class="fas fa-check"></i></div>
+            <div class="icon"></div>
         </div>
 
         <div class="overlay-placeholder"></div>
@@ -127,7 +127,7 @@
         <!-- JavaScript -->	
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPeHxaG88NIBNtTZ1zO_x-JhLW4jGctKA&callback=initMap"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="js/app.js"></script>
+        <script src="js-min/app.js"></script>
         <?php
             include 'inc/valid/validation-script.php';
         ?>
