@@ -1,0 +1,72 @@
+
+// Card Styles ----------------------------
+// ----------------------------------------
+
+.header-latest span {
+    font-size: 20px;
+    border-bottom: 5px solid $theme-colour;
+}
+.card {
+    background: $main-colour;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.card-footer {
+    font-size: .875rem;
+    @include borders($border: none);
+    background: $main-colour;
+    p {
+        @include colours($colour: #666);
+    }
+}
+.card-title {
+    font-size: 1rem;
+}
+.card-title:hover {
+    text-decoration: underline;
+}
+.card-text {
+    font-size: .8125rem;
+}
+.tag-1 {
+    background: map-get($services-colours, "web");
+}
+.card-1 {
+    h5 {
+        color: map-get($services-colours, "web");
+    }
+    .card-btn {
+        background: map-get($services-colours, "web");
+        &:hover {
+            background: darken(map-get($services-colours, "web"), 10%);
+        }
+    }
+}
+.tag-2 {
+    background: map-get($services-colours, "marketing");
+}
+.card-2 {
+    h5 {
+        color: map-get($services-colours, "marketing");
+    }
+    .card-btn {
+        background: map-get($services-colours, "marketing");
+        &:hover {
+            background: darken(map-get($services-colours, "marketing"), 10%);
+        }
+    }
+}
+.tag-3 {
+    background: map-get($services-colours, "support");
+}
+.card-3 {
+    h5 {
+        color: map-get($services-colours, "support");
+    }
+    .card-btn {
+        background: map-get($services-colours, "support");
+        &:hover {
+            background: darken(map-get($services-colours, "support"), 10%);
+        }
+    }
+}

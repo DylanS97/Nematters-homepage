@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Stylesheet -->
-        <link rel="stylesheet" href="css-min/styles.min.css">
+        <link rel="stylesheet" href="public/css/styles.css">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -127,7 +127,7 @@
         <!-- JavaScript -->	
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPeHxaG88NIBNtTZ1zO_x-JhLW4jGctKA&callback=initMap"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="js-min/app.js"></script>
+        <script src="public/js/app.js"></script>
         <?php
             include 'inc/valid/validation-script.php';
         ?>

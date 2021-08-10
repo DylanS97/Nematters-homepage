@@ -1,0 +1,101 @@
+
+// Main Styles ----------------------------
+// ----------------------------------------
+* {
+    font-family: $font;
+    box-sizing: border-box;
+}
+
+body {
+    color: $main-colour;
+    @include colours($colour: $theme-colour, $background: $main-colour);
+    margin: 0;
+    letter-spacing: .4px;
+}
+
+.page-contents {
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    transition: ease-in-out .4s;
+    background-color: $main-colour;
+}
+
+button,
+a,
+.card-top {
+    cursor: pointer;
+}
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.max-width {
+    max-width: $s-max-w;
+    margin: auto;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.shadow-bottom {
+    box-shadow: 0 1rem 2rem darken($main-colour, 10%);
+}
+.shadow-box {
+    box-shadow: .4rem .4rem 1rem 0 darken($main-colour, 5%), -.4rem -.4rem 1rem 0 darken($main-colour, 5%);
+}
+
+.blue-focus {
+    transition: .2s ease-in-out;
+}
+.blue-focus:focus {
+    outline: none;
+    box-shadow: -1px -1px 7px 0 lighten($border-blue, 20%), 1px 1px 7px 0 lighten($border-blue, 20%);
+}
+%focus {
+    border: 1px solid $border-blue;
+}
+
+.btn {
+    display: inline-block;
+    font-size: $btn-font;
+    font-weight: 400;
+    font-family: $font;
+    color: $main-colour;
+    padding: 5px 15px;
+    height: 47px;
+    @include borders($border-radius: 4px);
+}
+
+// Clients, Partner, Navigation -----------
+// ----------------------------------------
+
+.flex-clients,
+.partners-container,
+#navigation {
+    display: none;
+}
+
+.client .flex-client > div {
+    width: min-width;
+}
+
+// Background colour for sections ---------
+// ----------------------------------------
+header,
+#navigation,
+#img-slider,
+#block-container,
+#our-culture,
+#latest-cards,
+.clients,
+#newsletter-container,
+footer,
+.partners {
+    background-color: $main-colour;
+}

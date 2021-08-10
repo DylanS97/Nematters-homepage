@@ -1,0 +1,136 @@
+.side-menu {
+    width: 275px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    overflow-y: scroll;
+    z-index: -1000000;
+    background-color: $theme-colour;
+    a {
+        display: block;
+    }
+    .side-inner,
+    a {
+        color: $body-colour;
+    }
+    .side-upper-container {
+        padding: 20px;
+        border-bottom: 1px solid darken($theme-colour, 10%);
+        > div > a {
+            width: 100%;
+            padding: 19px 0 18px 0;
+            outline: 1px solid darken($theme-colour, 10%);
+            border: 1px solid lighten($theme-colour, 10%);
+            border-radius: 1px;
+            line-height: 1.4;
+            div.logo {
+                font-size: 1.25rem;
+                padding: 0 0 5px 0;
+            }
+            div.caps {
+                small {
+                    font-size: .675rem;
+                }
+                h5 {
+                    font-size: 1.175rem;
+                    font-weight: 400;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .side-upper-container > div {
+        margin: 20px 0 0 0;
+    }
+    a.side-contact {
+        font-size: 1.175rem;
+    }
+    .side-upper-container > div:hover > a,
+    .side-lower-container > div:hover > a {
+        background-color: lighten($theme-colour, 3%);
+    }
+    .side-lower-container > div > * {
+        text-align: left;
+    }
+    .side-lower-container > div > a {
+        width: 100%;
+        border: none;
+        border-top: .5px solid lighten($theme-colour, 10%);
+        border-bottom: .5px solid darken($theme-colour, 10%);
+        padding: 20px;
+        div.caps {
+            font-size: 1.25rem;
+            h5 {
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+    }
+    .side-lower-container > div > ul > li {
+        border-top: .5px solid lighten($theme-colour, 1%);
+        border-bottom: .5px solid darken($theme-colour, 10%);
+        padding: 15px 20px;
+        > a {
+            font-size: .875rem;
+            span::before {
+                content: '\BB';
+                padding: 0 15px 0 0;
+            }
+        }
+    }
+    .side-upper-container > div > ul,
+    .side-lower-container > div > ul {
+        background-color: rgba(0,0,0,.25);
+        padding: 0;
+        margin: 0;
+    }
+    .side-upper-container > div > ul {
+        border-radius: 2px;
+        margin-top: 20px;
+        li:not(:last-child) {
+            border-bottom: 1px solid darken($theme-colour, 10%);
+        }
+        li:not(:first-child) {
+            border-top: .5px solid lighten($theme-colour, 1%);
+        }
+        li {
+            list-style-type: none;
+            a {
+                padding: 10px;
+            }
+        }
+    }
+}
+.side-bar-shift {
+    right: 275px;
+}
+
+.nav-merge-down {
+    transform: translateY(8px) rotate(495deg);
+}
+.nav-middle {
+    transform: rotate(405deg);
+}
+.nav-merge-up {
+    transform: translateY(-8px) rotate(405deg);
+}
+
+.overlay-placeholder {
+    position: fixed;
+    height: 100vh;
+    width: calc(100% - 17px);
+    background-color: #000000;
+    opacity: 0;
+    transition: ease-in-out .4s;
+    cursor: pointer;
+    z-index: -10;
+}
+.overlay {
+    width: 100%;
+    opacity: .5;
+    z-index: 100000;
+}
+.overlay-width {
+    width: calc(100% - 275px);
+}

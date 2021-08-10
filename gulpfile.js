@@ -4,17 +4,17 @@ const uglify = require('gulp-uglify');
 
 // Javascript
 function scripts() {
-    return gulp.src('js-src/app.js')
+    return gulp.src('resources/js/app.js')
         .pipe(babel({
             presets: ['@babel/env']
         }))
         .pipe(uglify())
-        .pipe(gulp.dest('js-min'))
+        .pipe(gulp.dest('public/js'))
 }
 
 exports.scripts = scripts;
 
 // Watch
 gulp.task('watch', function() {
-    return gulp.watch('js-src/' + 'app.js', scripts);
+    return gulp.watch('resources/js/' + 'app.js', scripts);
 });

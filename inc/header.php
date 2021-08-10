@@ -6,7 +6,7 @@
                 <div class="header-left">
                     <div id="header-logo">
                         <a class="inner-logo" href="index.php">
-                            <img src="logos/title.png" alt="Netmatters Title">
+                            <img src="public/logos/title.png" alt="Netmatters Title">
                         </a>
                     </div>
                 </div>

@@ -1,0 +1,47 @@
+
+
+// Variables
+$font: 'Poppins', sans-serif;
+$xxxs-font: .8125rem; // 13px
+$xxs-font: .875rem; // 14px
+$xs-font: 1rem; // 16px
+$btn-font: 1.065rem; // 17px (Buttons)
+$s-font: 1.125rem; // 18px
+$m-font: 1.25rem; // 20px
+$log-font: 1.4375rem; // 23px
+$l-font: 1.5rem; // 24px
+$social-font: 1.75rem; // 28px
+$xl-font: 2rem; // 32px
+$xxl-font: 2.25rem; // 36px
+$xxxl-font: 3rem; // 48px
+
+$theme-colour: #333645;
+$l-theme: lighten(#333645, 10);
+$d-theme: darken(#333645, 10);
+$main-colour: #fff;
+$body-colour: rgb(245, 245, 245);
+$border-blue: #5bc0de;
+$case-studies-colour: #d64541;
+$required-colour: #d24d57;
+$success-colour: #4bb543;
+$fail-colour: #ff0033;
+
+$services-colours: (
+    "web": #926fb1,
+    "marketing": #2ecc71,
+    "support": #4183d7,
+    "telecoms": #d64541,
+    "bespoke": #67809f,
+    "cyber": #f62459
+);
+
+$social-colours: (
+    "facebook": #3b5998,
+    "twitter": #00aced,
+    "linked-in": #0077b5,
+);
+
+$max-width: 100%;
+$s-max-w: 750px;
+$m-max-w: 970px;
+$l-max-w: 1200px;

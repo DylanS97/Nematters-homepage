@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Stylesheet -->
-        <link rel="stylesheet" href="css-min/styles.min.css">
+        <link rel="stylesheet" href="public/css/styles.css">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -294,8 +294,8 @@
                 <section class="clients">
                     <div class="flex-clients max-width">
                         <div class="busseys each-client">
-                            <img class="grey" src="images/clients/busseys-grey.jpg" alt="Busseys">
-                            <img class="colour" src="images/clients/client-busseys.png" alt="Busseys">
+                            <img class="grey" src="public/images/clients/busseys-grey.jpg" alt="Busseys">
+                            <img class="colour" src="public/images/clients/client-busseys.png" alt="Busseys">
                             <div class="client-center client-info busseys-info">
                                 <h3>Busseys</h3>
                                 <div class="info-bar"></div>
@@ -304,8 +304,8 @@
                             <div class="client-center arrow"></div>
                         </div>
                         <div class="crane each-client">
-                            <img class="grey" src="images/clients/crane-grey.jpg" alt="Crane">
-                            <img class="colour" src="images/clients/client-crane.png" alt="Crane">
+                            <img class="grey" src="public/images/clients/crane-grey.jpg" alt="Crane">
+                            <img class="colour" src="public/images/clients/client-crane.png" alt="Crane">
                             <div class="client-center client-info crane-info">
                                 <h3>Crane Golden Builders</h3>
                                 <div class="info-bar"></div>
@@ -314,8 +314,8 @@
                             <div class="client-center arrow"></div>
                         </div>
                         <div class="beat each-client">
-                            <img class="grey" src="images/clients/beat-grey.jpg" alt="Beat">
-                            <img class="colour" src="images/clients/client-beat.png" alt="Beat">
+                            <img class="grey" src="public/images/clients/beat-grey.jpg" alt="Beat">
+                            <img class="colour" src="public/images/clients/client-beat.png" alt="Beat">
                             <div class="client-center client-info beat-info">
                                 <h3>Beat</h3>
                                 <div class="info-bar"></div>
@@ -324,8 +324,8 @@
                             <div class="client-center arrow"></div>
                         </div>
                         <div class="northern-diver each-client">
-                            <img class="grey" src="images/clients/north-grey.jpg" alt="Northern Diver">
-                            <img class="colour northern" src="images/clients/client-northern-diver.png" alt="Northern Diver">
+                            <img class="grey" src="public/images/clients/north-grey.jpg" alt="Northern Diver">
+                            <img class="colour northern" src="public/images/clients/client-northern-diver.png" alt="Northern Diver">
                             <div class="client-center client-info nd-info">
                                 <h3>Northern Diver</h3>
                                 <div class="info-bar"></div>
@@ -347,6 +347,6 @@
 
         <!-- JavaScript -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="js-min/app.js"></script>
+        <script src="public/js/app.js"></script>
     </body>
 </html>
